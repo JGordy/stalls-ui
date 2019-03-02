@@ -13,6 +13,7 @@
         "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
         "start-react": "react-scripts start",
         "start": "npm-run-all -p watch-css start-react",
+        "storybook": "start-storybook -p 9001 -c .storybook",
         "build-react": "react-scripts build",
         "build": "npm-run-all -s build-css build-react",
         "test": "react-scripts test --env=jsdom",
@@ -26,5 +27,8 @@
         "not dead",
         "not ie <= 11",
         "not op_mini all"
-    ]
+    ],
+    "devDependencies": {
+        "@storybook/react": "^4.1.13"
+    }
 }
