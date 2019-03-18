@@ -1,6 +1,7 @@
 import React from "react";
+// import PropTypes from 'prop-types';
 
-import "./Button.css";
+import "../../styles/Button.css";
 
 const Button = props => (
     <div
@@ -15,5 +16,9 @@ const Button = props => (
         {props.label}
     </div>
 );
+
+Button.propTypes = {};
+
+Button.defaultProps = {};
 
 export default Button;
