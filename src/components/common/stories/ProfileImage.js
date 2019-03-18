@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import ProfileImage from "../../src/components/common/ProfileImage";
+import ProfileImage from "../ProfileImage";
 
 storiesOf("ProfileImage", module)
     .add("default", () => (

@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 // import FontAwesome from '../FontAwesome/FontAwesome';
-import '../../styles/ProfileImage.css';
+import './styles/ProfileImage.css';
 
 const ProfileImage = ({
     roundImage,

@@ -1,7 +1,7 @@
 import React from "react";
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-import "../../styles/Button.css";
+import "./styles/Button.css";
 
 const Button = props => (
     <div
@@ -17,8 +17,12 @@ const Button = props => (
     </div>
 );
 
-Button.propTypes = {};
+Button.propTypes = {
+    active: PropTypes.bool,
+};
 
-Button.defaultProps = {};
+Button.defaultProps = {
+    active: true,
+};
 
 export default Button;

@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import MiniButton from "../../src/components/common/MiniButton";
+import MiniButton from "../MiniButton";
 
 storiesOf("MiniButton", module)
     .add("active with fill", () => (
