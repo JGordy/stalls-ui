@@ -29,6 +29,7 @@
         "not op_mini all"
     ],
     "devDependencies": {
-        "@storybook/react": "^4.1.13"
+        "@storybook/react": "^5.0.1",
+        "prop-types": "^15.7.2"
     }
 }
