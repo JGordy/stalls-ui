@@ -1,10 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import MiniButton from "../MiniButton";
+import MiniButton from "../src/MiniButton";
+import Glyphicon from '../src/Glyphicon';
 
 storiesOf("MiniButton", module)
-    .add("active with fill", () => (
-        <MiniButton className="success">•</MiniButton>
+    .add("W/ Font Awesome icon", () => (
+        <MiniButton className="success">
+            <Glyphicon icon={'home'} />
+        </MiniButton>
     ))
     // .add("active with no fill", () => (
     //     <MiniButton />

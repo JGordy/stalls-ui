@@ -1,11 +1,9 @@
-import { configure } from "@storybook/react";
+import { configure } from '@storybook/react';
+
+const req = require.context('../src/components', true, /\.stories\.js$/);
 
 function loadStories() {
-    require('../src/components/common/stories/index.js');
-    require('../src/components/common/stories/Button');
-    require('../src/components/common/stories/MiniButton');
-    require('../src/components/common/stories/ProfileImage');
-    // You can require as many stories as you need.
+    req.keys().forEach(filename => req(filename));
 }
 
 configure(loadStories, module);

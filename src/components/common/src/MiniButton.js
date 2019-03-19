@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles/MiniButton.css';
+import '../styles/MiniButton.css';
 
 const MiniButton = ({
     classname,
     onClick,
-    children
-}) =>
-    (
+    children,
+}) => (
         <div
             className={`btns success ${classname}`}
             onClick={(e) => onClick(e)}
