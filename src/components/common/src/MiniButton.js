@@ -16,8 +16,22 @@ const MiniButton = ({
     );
 
 MiniButton.propTypes = {
+    /**
+    * The class to pass to the root node
+    */
     classname: PropTypes.string,
-    onClick: PropTypes.func
+    /**
+    * On click handler
+    */
+    onClick: PropTypes.func,
+    /**
+    * The children for the component to render
+    */
+    children: PropTypes.node,
+};
+
+MiniButton.defaultProps = {
+    // onClick: () => { },
 };
 
 export default MiniButton;

@@ -9,6 +9,8 @@ src/**/*.css
 
 # testing
 /coverage
+jest-test-results.json
+.jest-test-results.json
 
 # production
 /build

@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 
-import '../../../config/fontawesome';
+import 'config/fontawesome';
 
 const Glyphicon = ({
     icon,
@@ -25,7 +25,10 @@ Glyphicon.propTypes = {
     /**
      * The font awesome icon to render
      */
-    icon: PropTypes.string.isRequired,
+    icon: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string),
+    ]).isRequired,
     /**
     * The function to call on click
     */
