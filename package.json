@@ -21,7 +21,8 @@
         "storybook": "start-storybook -p 9001 -c .storybook",
         "build-react": "react-scripts build",
         "build": "npm-run-all -s build-css build-react",
-        "test": "react-scripts test --env=jsdom",
+        "test": "CI=true react-scripts test --env=jsdom",
+        "test:generate-output": "BABEL_ENV=test jest --json --outputFile=src/jest-test-results.json",
         "eject": "react-scripts eject"
     },
     "eslintConfig": {
@@ -34,7 +35,14 @@
         "not op_mini all"
     ],
     "devDependencies": {
+        "@storybook/addon-jest": "^5.0.3",
         "@storybook/react": "^5.0.1",
+        "babel-jest": "^23.6.0",
+        "enzyme": "^3.9.0",
+        "enzyme-adapter-react-16": "^1.11.2",
+        "eslint-plugin-react": "^7.12.4",
+        "jest": "^23.6.0",
+        "jest-cli": "^24.5.0",
         "prop-types": "^15.7.2"
     }
 }
