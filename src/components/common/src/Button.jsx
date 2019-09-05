@@ -1,32 +1,35 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import Glyphicon from './Glyphicon';
 
 import "../styles/Button.css";
 
 const Button = ({
-    active,
+    disabled,
     fill,
+    icon,
     label,
 }) => (
         <div
             className={`Button ${
-                active
-                    ? fill
-                        ? `active fill`
-                        : `active no-fill`
-                    : `disabled`
+                disabled
+                    ? `disabled`
+                    : fill
+                        ? `fill`
+                        : `no-fill`
                 }`}
         >
+            {icon && <Glyphicon icon={icon} />}
             {label}
         </div>
     );
 
 Button.propTypes = {
-    active: PropTypes.bool,
+    disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
-    active: true,
+    disabled: false,
 };
 
 export default Button;

@@ -16,7 +16,17 @@ const Modal = ({
 
     const { isShowing, toggle } = useModal();
 
-    const onKeyDown = ({ keyCode }) => keyCode === 27 && toggle();
+    const showModal = () => {
+        toggle();
+        modalRef.current.focus();
+    }
+
+    const hideModal = () => {
+        toggle();
+        buttonRef.current.focus();
+    }
+
+    const onKeyDown = ({ keyCode }) => keyCode === 27 && hideModal();
 
     const onClickAway = (e) => {
         if (modalRef && modalRef.current.contains(e.target)) return; // Does this work??
@@ -27,14 +37,14 @@ const Modal = ({
         <Fragment>
             <ModalTrigger
                 text={triggerText}
-                show={toggle}
+                show={showModal}
                 buttonRef={buttonRef}
             />
             {isShowing &&
                 <ModalContent
                     ariaLabel={ariaLabel}
                     buttonRef={buttonRef}
-                    hide={toggle}
+                    hide={hideModal}
                     modalRef={modalRef}
                     onClickAway={onClickAway}
                     onKeyDown={onKeyDown}

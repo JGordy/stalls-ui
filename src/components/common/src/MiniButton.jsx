@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import '../styles/MiniButton.css';
 
 const MiniButton = ({
-    classname,
+    className,
     onClick,
     children,
 }) => (
         <div
-            className={`btns success ${classname}`}
-            onClick={(e) => onClick(e)}
+            className={`btns ${className}`}
+            onClick={className !== 'disabled' ? (e) => onClick(e) : null}
         >
             {children}
         </div>
@@ -19,7 +19,7 @@ MiniButton.propTypes = {
     /**
     * The class to pass to the root node
     */
-    classname: PropTypes.string,
+    className: PropTypes.string,
     /**
     * On click handler
     */

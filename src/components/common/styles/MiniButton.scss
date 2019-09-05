@@ -15,4 +15,10 @@
     &.success {
         background-color: $bright-green;
     }
+
+    &.disabled {
+        background-color: $color-text-lighter;
+        color: $color-text-lighter;
+        pointer-events: none;
+    }
 }

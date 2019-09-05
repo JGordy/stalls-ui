@@ -4,11 +4,14 @@ import Button from "../src/Button";
 
 storiesOf("Button", module)
     .add("active with fill", () => (
-        <Button label={`continue`} fill={true} active />
+        <Button label='continue' fill={true} />
     ))
     .add("active with no fill", () => (
-        <Button label={`sign up`} fill={false} active />
+        <Button label='sign up' fill={false} />
     ))
     .add("disabled", () => (
-        <Button label={`continue`} active={false} />
+        <Button label='continue' disabled />
+    ))
+    .add("with Icon", () => (
+        <Button label='share' icon='share-alt' fill />
     ));

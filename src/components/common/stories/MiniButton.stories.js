@@ -10,13 +10,17 @@ storiesOf("MiniButton", module)
     .addDecorator(withTests({ results }))
     .addParameters({ jest: ['MiniButton.spec.js'] })
     .add("W/ Font Awesome icon", () => (
-        <MiniButton className="success">
+        <MiniButton>
             <Glyphicon icon={'home'} />
         </MiniButton>
     ))
-    // .add("active with no fill", () => (
-    //     <MiniButton />
-    // ))
-    // .add("disabled", () => (
-    //     <MiniButton />
-    // ));
+    .add("With 'success' classname", () => (
+        <MiniButton className="success">
+            <Glyphicon icon={'plus'} />
+        </MiniButton>
+    ))
+    .add("disabled", () => (
+        <MiniButton className="disabled">
+            <Glyphicon icon={'plus'} />
+        </MiniButton>
+    ));
