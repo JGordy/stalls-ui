@@ -7,4 +7,4 @@ export {
     ModalTrigger,
     ProfileImage,
     TextInput,
-} from './components/common';
+} from './components';

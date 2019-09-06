@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 
-import 'config/fontawesome';
+import '../../../config/fontawesome';
 
 const Glyphicon = ({
     icon,
