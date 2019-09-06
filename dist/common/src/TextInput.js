@@ -8,9 +8,9 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-require("../styles/TextInput.css");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import "../styles/TextInput.css";
 
 var TextInput = function TextInput(_ref) {
     var _ref$type = _ref.type,
