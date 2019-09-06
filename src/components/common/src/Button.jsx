@@ -5,19 +5,21 @@ import Glyphicon from './Glyphicon';
 import "../styles/Button.css";
 
 const Button = ({
+    bsStyle,
     disabled,
-    fill,
     icon,
+    inverted,
     label,
+    onClick,
 }) => (
         <div
-            className={`Button ${
-                disabled
-                    ? `disabled`
-                    : fill
-                        ? `fill`
-                        : `no-fill`
-                }`}
+            className={
+                `Button
+                ${bsStyle}
+                ${inverted ? 'inverted' : null}
+                ${disabled ? 'disabled' : null}`
+            }
+            onClick={onClick}
         >
             {icon && <Glyphicon icon={icon} />}
             {label}

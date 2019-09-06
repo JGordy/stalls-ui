@@ -3,15 +3,24 @@ import { storiesOf } from "@storybook/react";
 import Button from "../src/Button";
 
 storiesOf("Button", module)
-    .add("active with fill", () => (
-        <Button label='continue' fill={true} />
+    .add("w/ bsStyle of success", () => (
+        <Button label='continue' bsStyle='success' />
     ))
-    .add("active with no fill", () => (
-        <Button label='sign up' fill={false} />
+    .add("w/ bsStyle of warning", () => (
+        <Button label='continue' bsStyle='warning' />
+    ))
+    .add("w/ bsStyle of danger", () => (
+        <Button label='continue' bsStyle='danger' />
+    ))
+    .add("w/ bsStyle of info", () => (
+        <Button label='continue' bsStyle='info' />
+    ))
+    .add("w/ inverted prop", () => (
+        <Button label='sign up' bsStyle='success' inverted />
     ))
     .add("disabled", () => (
         <Button label='continue' disabled />
     ))
     .add("with Icon", () => (
-        <Button label='share' icon='share-alt' fill />
+        <Button label='share' icon='share-alt' bsStyle='success' />
     ));

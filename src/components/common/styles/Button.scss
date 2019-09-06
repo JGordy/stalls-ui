@@ -1,15 +1,31 @@
 @import "../../../styles/theme";
 
+$button-background: $light-gray;
+$button-shadow: $black-10;
+$button-color: $color-text-contrast-lighter;
+
+@mixin button-styles($background, $color) {
+    background: $background;
+    box-shadow: 7px 7px 50px 0px rgba($background, 0.5);
+    color: $color;
+}
+
 .Button {
+    @include button-styles($button-background, $button-color);
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    height: 2.5rem;
+    padding: 0.75rem 0.25rem;
     width: 100%;
     max-width: 10rem;
 
-    border-radius: 5px;
+    background: $button-background;
+    box-shadow: 0 6px 8px 0 $button-background;
+    color: $button-color;
+
+    border-radius: 3px;
 
     font-family: $primary-font;
     font-size: 1rem;
@@ -19,23 +35,30 @@
 
     cursor: pointer;
 
-    &.active {
+    &.success {
+        @include button-styles($success, $white);
+    }
+
+    &.warning {
+        @include button-styles($warning, $white);
+    }
+
+    &.danger {
+        @include button-styles($danger, $white);
+    }
+
+    &.info {
+        @include button-styles($info, $white);
     }
 
     &.disabled {
-        border: 2px solid $color-text-lighter;
-        color: $color-text-lighter;
+        @include button-styles($color-text-lighter, $color-text-lighter);
     }
 
-    &.fill {
-        background: $green;
-        box-shadow: 0 6px 8px 0 rgba(103, 194, 172, 0.5);
-        color: $white;
-    }
-
-    &.no-fill {
-        border: 2px solid $blue;
-        color: $blue;
+    &.inverted {
+        background: $light-gray;
+        border: 2px solid $button-background;
+        color: $button-background;
     }
 
     svg {

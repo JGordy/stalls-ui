@@ -1,0 +1,24 @@
+src/**/*.scss
+
+src/components/common/stories
+
+# dependencies
+/node_modules
+
+/build
+
+# tests
+__mocks__/
+jest-test-results.json
+setupTests.js
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
