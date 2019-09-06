@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Glyphicon from './Glyphicon';
 import '../styles/ProfileImage.css';
 
-import 'config/fontawesome';
+import '../../../config/fontawesome';
 
 const ProfileImage = ({
     roundImage,
