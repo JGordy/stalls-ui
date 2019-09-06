@@ -33,7 +33,7 @@
         "storybook": "start-storybook -p 9001 -c .storybook",
         "build:react": "react-scripts build",
         "build": "npm-run-all -s build:css build:react",
-        "build:babel": "NODE_ENV=production babel src --out-dir dist --copy-files --ignore spec.js,test.js,__snapshots__",
+        "build:babel": "NODE_ENV=production babel src --out-dir dist --copy-files --presets=react,env,stage-2 --ignore spec.js,test.js,__snapshots__",
         "build:publish": "npm run build-css && rm -rf dist && npm run build:babel",
         "test": "CI=true react-scripts test --env=jsdom",
         "test:generate-output": "BABEL_ENV=test jest --json --outputFile=src/jest-test-results.json",
