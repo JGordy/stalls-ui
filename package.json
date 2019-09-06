@@ -3,7 +3,15 @@
     "version": "0.1.1",
     "author": "JGordy",
     "license": "MIT",
-    "repository": "JGordy/@jgordy24/stalls-ui",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JGordy/stalls-ui"
+    },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.17",
         "@fortawesome/free-brands-svg-icons": "^5.8.1",
@@ -17,14 +25,22 @@
         "react-dom": "^16.8.5",
         "react-scripts": "^3.0.1"
     },
+    "babel": {
+        "presets": [
+            "react",
+            "env",
+            "stage-2"
+        ]
+    },
     "scripts": {
-        "build-css": "node-sass-chokidar src/ -o src/",
-        "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-        "start-react": "react-scripts start",
-        "start": "npm-run-all -p watch-css start-react",
+        "build:css": "node-sass-chokidar src/ -o src/",
+        "watch:css": "npm run build:css && node-sass-chokidar src/ -o src/ --watch --recursive",
+        "start:react": "react-scripts start",
+        "start": "npm-run-all -p watch:css start:react",
         "storybook": "start-storybook -p 9001 -c .storybook",
-        "build-react": "react-scripts build",
-        "build": "npm-run-all -s build-css build-react",
+        "build:react": "react-scripts build",
+        "build": "npm-run-all -s build:css build:react",
+        "build:publish": "rm -rf dist && NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore spec.js,test.js,__snapshots__",
         "test": "CI=true react-scripts test --env=jsdom",
         "test:generate-output": "BABEL_ENV=test jest --json --outputFile=src/jest-test-results.json",
         "eject": "react-scripts eject"
@@ -41,7 +57,11 @@
     "devDependencies": {
         "@storybook/addon-jest": "^5.0.3",
         "@storybook/react": "^5.0.1",
+        "babel-cli": "^6.26.0",
         "babel-jest": "^24.8.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
         "enzyme": "^3.9.0",
         "enzyme-adapter-react-16": "^1.11.2",
         "eslint-plugin-react": "^7.12.4",

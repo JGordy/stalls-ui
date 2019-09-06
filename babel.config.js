@@ -19,6 +19,7 @@ module.exports = {
         },
         production: {
             presets: [
+                ["react", "env", "stage-2"],
                 ['@babel/preset-env', { modules: false }],
                 '@babel/preset-flow',
                 '@babel/preset-react'

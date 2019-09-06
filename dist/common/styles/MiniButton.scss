@@ -1,0 +1,24 @@
+@import "../../../styles/theme";
+
+.btns {
+    align-items: center;
+    background-color: $light-gray;
+    border-radius: 50%;
+    border: none;
+    color: $white !important;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    height: 2.5rem;
+    width: 2.5rem;
+
+    &.success {
+        background-color: $bright-green;
+    }
+
+    &.disabled {
+        background-color: $color-text-lighter;
+        color: $color-text-lighter;
+        pointer-events: none;
+    }
+}
