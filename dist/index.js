@@ -1,79 +1,56 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
-var _Button = require('./components/common/Button');
+var _common = require('./components/common');
 
 Object.defineProperty(exports, 'Button', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Button).default;
-  }
+    enumerable: true,
+    get: function get() {
+        return _common.Button;
+    }
 });
-
-var _Glyphicon = require('./components/common/Glyphicon');
-
 Object.defineProperty(exports, 'Glyphicon', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Glyphicon).default;
-  }
+    enumerable: true,
+    get: function get() {
+        return _common.Glyphicon;
+    }
 });
-
-var _MiniButton = require('./components/common/MiniButton');
-
 Object.defineProperty(exports, 'MiniButton', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_MiniButton).default;
-  }
+    enumerable: true,
+    get: function get() {
+        return _common.MiniButton;
+    }
 });
-
-var _Modal = require('./components/common/Modal');
-
 Object.defineProperty(exports, 'Modal', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Modal).default;
-  }
+    enumerable: true,
+    get: function get() {
+        return _common.Modal;
+    }
 });
-
-var _ModalContent = require('./components/common/ModalContent');
-
 Object.defineProperty(exports, 'ModalContent', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_ModalContent).default;
-  }
+    enumerable: true,
+    get: function get() {
+        return _common.ModalContent;
+    }
 });
-
-var _ModalTrigger = require('./components/common/ModalTrigger');
-
 Object.defineProperty(exports, 'ModalTrigger', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_ModalTrigger).default;
-  }
+    enumerable: true,
+    get: function get() {
+        return _common.ModalTrigger;
+    }
 });
-
-var _ProfileImage = require('./components/common/ProfileImage');
-
 Object.defineProperty(exports, 'ProfileImage', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_ProfileImage).default;
-  }
+    enumerable: true,
+    get: function get() {
+        return _common.ProfileImage;
+    }
 });
-
-var _TextInput = require('./components/common/TextInput');
-
 Object.defineProperty(exports, 'TextInput', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_TextInput).default;
-  }
+    enumerable: true,
+    get: function get() {
+        return _common.TextInput;
+    }
 });
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
