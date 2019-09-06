@@ -1,6 +1,6 @@
 {
     "name": "@jgordy24/stalls-ui",
-    "version": "0.2.3",
+    "version": "0.2.2",
     "author": "JGordy",
     "license": "MIT",
     "main": "dist/index.js",
@@ -40,7 +40,7 @@
         "storybook": "start-storybook -p 9001 -c .storybook",
         "build:react": "react-scripts build",
         "build": "npm-run-all -s build:css build:react",
-        "build:publish": "rm -rf dist && NODE_ENV=production babel src/components src/config --out-dir dist --copy-files --ignore spec.js,test.js,__snapshots__",
+        "build:publish": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore spec.js,test.js,__snapshots__",
         "test": "CI=true react-scripts test --env=jsdom",
         "test:generate-output": "BABEL_ENV=test jest --json --outputFile=src/jest-test-results.json",
         "eject": "react-scripts eject"

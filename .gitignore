@@ -14,6 +14,7 @@ jest-test-results.json
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
