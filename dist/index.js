@@ -4,53 +4,53 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _common = require('./components/common');
+var _components = require('./components');
 
 Object.defineProperty(exports, 'Button', {
     enumerable: true,
     get: function get() {
-        return _common.Button;
+        return _components.Button;
     }
 });
 Object.defineProperty(exports, 'Glyphicon', {
     enumerable: true,
     get: function get() {
-        return _common.Glyphicon;
+        return _components.Glyphicon;
     }
 });
 Object.defineProperty(exports, 'MiniButton', {
     enumerable: true,
     get: function get() {
-        return _common.MiniButton;
+        return _components.MiniButton;
     }
 });
 Object.defineProperty(exports, 'Modal', {
     enumerable: true,
     get: function get() {
-        return _common.Modal;
+        return _components.Modal;
     }
 });
 Object.defineProperty(exports, 'ModalContent', {
     enumerable: true,
     get: function get() {
-        return _common.ModalContent;
+        return _components.ModalContent;
     }
 });
 Object.defineProperty(exports, 'ModalTrigger', {
     enumerable: true,
     get: function get() {
-        return _common.ModalTrigger;
+        return _components.ModalTrigger;
     }
 });
 Object.defineProperty(exports, 'ProfileImage', {
     enumerable: true,
     get: function get() {
-        return _common.ProfileImage;
+        return _components.ProfileImage;
     }
 });
 Object.defineProperty(exports, 'TextInput', {
     enumerable: true,
     get: function get() {
-        return _common.TextInput;
+        return _components.TextInput;
     }
 });
