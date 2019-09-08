@@ -22,9 +22,6 @@ module.exports = {
                 ['@babel/preset-env', { modules: false }],
                 '@babel/preset-flow',
                 '@babel/preset-react',
-                ['react',
-                    'env',
-                    'stage-2']
             ],
             plugins: [
                 '@babel/plugin-syntax-dynamic-import',
