@@ -1,13 +1,19 @@
 @import "../../../styles/theme";
 
 $button-background: $light-gray;
-$button-shadow: $black-10;
 $button-color: $color-text-contrast-lighter;
 
 @mixin button-styles($background, $color) {
     background: $background;
     box-shadow: 7px 7px 50px 0px rgba($background, 0.5);
     color: $color;
+
+    &.inverted {
+        background: $white;
+        border: 2px solid $background;
+        color: $background;
+        padding: 0.63rem 0.13rem
+    }
 }
 
 .Button {
@@ -40,7 +46,7 @@ $button-color: $color-text-contrast-lighter;
     }
 
     &.warning {
-        @include button-styles($warning, $white);
+        @include button-styles($warning, $blackish);
     }
 
     &.danger {
@@ -52,13 +58,9 @@ $button-color: $color-text-contrast-lighter;
     }
 
     &.disabled {
-        @include button-styles($color-text-lighter, $color-text-lighter);
-    }
-
-    &.inverted {
-        background: $light-gray;
-        border: 2px solid $button-background;
-        color: $button-background;
+        @include button-styles($color-text-lighter, $black-20);
+        pointer-events: none;
+        cursor: none;
     }
 
     svg {

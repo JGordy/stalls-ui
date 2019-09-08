@@ -11,15 +11,17 @@ const Button = ({
     inverted,
     label,
     onClick,
+    ...rest
 }) => (
         <div
             className={
                 `Button
                 ${bsStyle}
-                ${inverted ? 'inverted' : null}
-                ${disabled ? 'disabled' : null}`
+                ${inverted ? 'inverted' : ''}
+                ${disabled ? 'disabled' : ''}`
             }
-            onClick={onClick}
+            onClick={disabled ? (e) => onClick(e) : null}
+            {...rest}
         >
             {icon && <Glyphicon icon={icon} />}
             {label}

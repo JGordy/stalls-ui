@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import MiniButton from "../src/MiniButton";
-import Glyphicon from '../src/Glyphicon';
 
 import results from '../../../../src/jest-test-results.json';
 import { withTests } from '@storybook/addon-jest';
@@ -10,17 +9,23 @@ storiesOf("MiniButton", module)
     .addDecorator(withTests({ results }))
     .addParameters({ jest: ['MiniButton.spec.js'] })
     .add("W/ Font Awesome icon", () => (
-        <MiniButton>
-            <Glyphicon icon={'home'} />
-        </MiniButton>
+        <MiniButton bsStyle="success" icon='home' />
     ))
     .add("With 'success' classname", () => (
-        <MiniButton className="success">
-            <Glyphicon icon={'plus'} />
-        </MiniButton>
+        <MiniButton bsStyle="success" icon='plus' />
+    ))
+    .add("With 'warning' classname", () => (
+        <MiniButton bsStyle="warning" icon='plus' />
+    ))
+    .add("With 'danger' classname", () => (
+        <MiniButton bsStyle="danger" icon='times' />
+    ))
+    .add("With 'info' classname", () => (
+        <MiniButton bsStyle="info" icon='plus' />
+    ))
+    .add("With 'inverted' classname", () => (
+        <MiniButton bsStyle="warning" icon='plus' inverted />
     ))
     .add("disabled", () => (
-        <MiniButton className="disabled">
-            <Glyphicon icon={'plus'} />
-        </MiniButton>
+        <MiniButton icon='plus' disabled />
     ));

@@ -1,17 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Glyphicon from './Glyphicon';
+
 import '../styles/MiniButton.css';
 
 const MiniButton = ({
+    bsStyle,
     className,
+    disabled,
+    icon,
+    inverted,
     onClick,
-    children,
+    ...rest
 }) => (
         <div
-            className={`btns ${className}`}
-            onClick={className !== 'disabled' ? (e) => onClick(e) : null}
+            className={
+                `btns
+                ${bsStyle}
+                ${inverted ? 'inverted' : ''}
+                ${disabled ? 'disabled' : ''}`
+            }
+            onClick={disabled ? (e) => onClick(e) : null}
+            {...rest}
         >
-            {children}
+            <Glyphicon icon={icon} />
         </div>
     );
 
