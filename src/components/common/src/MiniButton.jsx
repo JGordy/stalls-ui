@@ -6,7 +6,6 @@ import '../styles/MiniButton.css';
 
 const MiniButton = ({
     bsStyle,
-    className,
     disabled,
     icon,
     inverted,
@@ -29,20 +28,35 @@ const MiniButton = ({
 
 MiniButton.propTypes = {
     /**
-    * The class to pass to the root node
+    * The style name to apply to the button
     */
-    className: PropTypes.string,
+    bsStyle: PropTypes.oneOf([
+        'success',
+        'warning',
+        'danger',
+        'info',
+    ]),
+    /**
+    * Is the button disabled?
+    */
+    disabled: PropTypes.bool,
     /**
     * On click handler
     */
     onClick: PropTypes.func,
     /**
-    * The children for the component to render
+    * The icon name for the Glyphicon component
     */
-    children: PropTypes.node,
+    icon: PropTypes.string,
+    /**
+    * Boolean to render an inverted color scheme
+    */
+    inverted: PropTypes.bool,
 };
 
 MiniButton.defaultProps = {
+    disabled: false,
+    inverted: false,
     // onClick: () => { },
 };
 

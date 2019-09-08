@@ -29,11 +29,36 @@ const Button = ({
     );
 
 Button.propTypes = {
+    /**
+    * The style name to apply to the button
+    */
+    bsStyle: PropTypes.oneOf([
+        'success',
+        'warning',
+        'danger',
+        'info',
+    ]),
+    /**
+    * Is the button disabled?
+    */
     disabled: PropTypes.bool,
+    /**
+    * On click handler
+    */
+    onClick: PropTypes.func,
+    /**
+    * The icon name for the Glyphicon component
+    */
+    icon: PropTypes.string,
+    /**
+    * Boolean to render an inverted color scheme
+    */
+    inverted: PropTypes.bool,
 };
 
 Button.defaultProps = {
     disabled: false,
+    inverted: false,
 };
 
 export default Button;
