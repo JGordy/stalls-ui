@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 import '../styles/ModalTrigger.css';
 
 const ModalTrigger = ({
@@ -6,14 +7,13 @@ const ModalTrigger = ({
     show,
     text,
 }) => (
-        <button
-            className="c-btn"
+        <Button
             aria-label="Open Modal"
-            ref={buttonRef}
+            bsStyle="success"
+            buttonRef={buttonRef}
             onClick={show}
-        >
-            {text}
-        </button>
+            label={text}
+        />
     );
 
 export default ModalTrigger;

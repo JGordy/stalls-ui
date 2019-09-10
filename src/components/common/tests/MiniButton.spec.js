@@ -6,6 +6,8 @@ import MiniButton from '../src/MiniButton';
 
 const defaultProps = {
     className: 'submit',
+    icon: 'times',
+    bsStyle: 'success',
     style: {
         color: 'white'
     },
@@ -17,6 +19,7 @@ const wrapper = shallow(<MiniButton {...defaultProps} />);
 describe('<MiniButton />', () => {
 
     it('renders without crashing', () => {
+        console.log("Wrapper: ", wrapper.debug());
         expect(wrapper.exists('.btns')).toBe(true);
     });
 

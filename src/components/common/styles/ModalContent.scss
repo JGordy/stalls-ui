@@ -8,7 +8,7 @@
     height: 100%;
     z-index: 10; // This must be at a higher index to the rest of your page content
     transform: translateZ(0);
-    background-color: rgba(#000, 0.15);
+    background-color: $black-30;
 }
 
 .c-modal {
@@ -19,6 +19,7 @@
     height: 100%;
     padding: 2.5em 1.5em 1.5em 1.5em;
     background-color: $white;
+    border-radius: 3px;
     box-shadow: 0 0 10px 3px $black-10;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;

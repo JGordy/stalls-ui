@@ -6,6 +6,7 @@ import "../styles/Button.css";
 
 const Button = ({
     bsStyle,
+    buttonRef,
     disabled,
     icon,
     inverted,
@@ -20,7 +21,8 @@ const Button = ({
                 ${inverted ? 'inverted' : ''}
                 ${disabled ? 'disabled' : ''}`
             }
-            onClick={disabled ? (e) => onClick(e) : null}
+            onClick={disabled ? null : (e) => onClick(e)}
+            ref={buttonRef}
             {...rest}
         >
             {icon && <Glyphicon icon={icon} />}
