@@ -31,8 +31,6 @@ const ModalContent = ({
     onKeyDown,
     role = 'dialog',
 }) => {
-    console.warn("Modal Ref: ", modalRef);
-
 
     useLockBodyScroll();
 
@@ -41,13 +39,13 @@ const ModalContent = ({
             className="c-modal-cover"
             aria-modal="true"
             aria-label={ariaLabel}
-            onClickAway={onClickAway}
             onKeyDown={onKeyDown}
             role={role}
             tabIndex="-1"
+            onClick={onClickAway}
+            ref={modalRef}
         >
             <div
-                ref={modalRef}
                 className="c-modal"
             >
                 {renderCloseButton(buttonRef, hide)}

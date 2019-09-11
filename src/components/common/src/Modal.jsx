@@ -18,7 +18,7 @@ const Modal = ({
 
     const showModal = () => {
         toggle();
-        modalRef.current.focus();
+        // modalRef.current.focus();
     }
 
     const hideModal = () => {
@@ -28,11 +28,9 @@ const Modal = ({
 
     const onKeyDown = ({ keyCode }) => keyCode === 27 && hideModal();
 
-    const onClickAway = (e) => {
-        console.warn(modalRef);
-        console.warn(modalRef && modalRef.current.contains(e.target));
-
-        if (modalRef && modalRef.current.contains(e.target)) return; // Does this work??
+    const onClickAway = ({ target }) => {
+        if (!modalRef) return;
+        if (modalRef.current.className !== target.className) return;
         toggle();
     };
 
