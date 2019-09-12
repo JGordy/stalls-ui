@@ -23,7 +23,10 @@ const App = () => {
             <Button
                 bsStyle='success'
                 label='label-text-here'
+<<<<<<< HEAD
                 onClick={handleClick}
+=======
+>>>>>>> bce0fb45e74d0267137437c80dc2ad6621eaf7c6
             />
         </div>
     );

@@ -23,4 +23,7 @@ storiesOf("Button", module)
     ))
     .add("with Icon", () => (
         <Button label='share' icon='share-alt' bsStyle='success' />
+    ))
+    .add("with href", () => (
+        <Button label='navigate' bsStyle='info' href='#' />
     ));

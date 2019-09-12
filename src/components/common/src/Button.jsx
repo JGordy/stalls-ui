@@ -1,34 +1,74 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import Glyphicon from './Glyphicon';
+import { Link } from 'react-router-dom';
 
 import "../styles/Button.css";
 
 const Button = ({
     bsStyle,
     buttonRef,
+    linkContext,
     disabled,
+    href,
     icon,
     inverted,
     label,
     onClick,
     ...rest
-}) => (
-        <div
-            className={
-                `Button
+}) => {
+
+    const buttonProps = {
+        className: `Button
                 ${bsStyle}
                 ${inverted ? 'inverted' : ''}
-                ${disabled ? 'disabled' : ''}`
-            }
-            onClick={disabled ? null : (e) => onClick(e)}
-            ref={buttonRef}
-            {...rest}
-        >
+                ${disabled ? 'disabled' : ''}`,
+        onClick: !disabled && onClick ? onClick : undefined,
+        ref: buttonRef,
+        ...rest
+    }
+
+    const children = (
+        <React.Fragment>
             {icon && <Glyphicon icon={icon} />}
             {label}
-        </div>
+        </React.Fragment>
     );
+
+    if (href) {
+        const isExternalLink = (href) => href.includes('https://');
+        if (isExternalLink) {
+            return (
+                <a
+                    href={href}
+                    target={'_blank'}
+                    rel={'nofollow noopener noreferrer'}
+                    {...buttonProps}
+                >
+                    {children}
+                </a>
+            );
+        } else {
+            return (
+                <Link
+                    to={{
+                        pathname: href,
+                        state: { linkContext }
+                    }}
+                    {...buttonProps}
+                >
+                    {children}
+                </Link>
+            );
+        }
+    }
+
+    return (
+        <button {...buttonProps}>
+            {children}
+        </button>
+    )
+};
 
 Button.propTypes = {
     /**

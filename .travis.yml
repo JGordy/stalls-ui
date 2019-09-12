@@ -6,8 +6,9 @@ cache:
   directories:
     - node_modules
 script: 
-  - npm test
+  - npm install
   - npm run build
+  - npm test
 notifications:
   slack: generositymarket:ZeAVzH5Ww7PB50ugNnwl5JuT
 # deploy:
