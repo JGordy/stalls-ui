@@ -31,6 +31,7 @@ MiniButton.propTypes = {
     * The style name to apply to the button
     */
     bsStyle: PropTypes.oneOf([
+        'default',
         'success',
         'warning',
         'danger',

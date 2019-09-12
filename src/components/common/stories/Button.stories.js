@@ -2,24 +2,29 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import Button from "../src/Button";
 
+import results from '../../../../src/jest-test-results.json';
+import { withTests } from '@storybook/addon-jest';
+
 storiesOf("Button", module)
-    .add("w/ bsStyle of success", () => (
-        <Button label='continue' bsStyle='success' />
-    ))
-    .add("w/ bsStyle of warning", () => (
-        <Button label='continue' bsStyle='warning' />
-    ))
-    .add("w/ bsStyle of danger", () => (
-        <Button label='continue' bsStyle='danger' />
-    ))
-    .add("w/ bsStyle of info", () => (
-        <Button label='continue' bsStyle='info' />
+    .addDecorator(withTests({ results }))
+    .addParameters({ jest: ['Button.spec.js'] })
+    .add('W/ bsStyle examples', () => (
+        <React.Fragment>
+            <Button label='success' bsStyle='success' />
+            <Button label='warning' bsStyle='warning' />
+            <Button label='danger' bsStyle='danger' />
+            <Button label='info' bsStyle='info' />
+            <Button label='disabled' disabled />
+        </React.Fragment>
     ))
     .add("w/ inverted prop", () => (
-        <Button label='sign up' bsStyle='success' inverted />
-    ))
-    .add("disabled", () => (
-        <Button label='continue' disabled />
+        <React.Fragment>
+            <Button label='success' bsStyle='success' inverted />
+            <Button label='warning' bsStyle='warning' inverted />
+            <Button label='danger' bsStyle='danger' inverted />
+            <Button label='info' bsStyle='info' inverted />
+            <Button label='diabled' disabled inverted />
+        </React.Fragment>
     ))
     .add("with Icon", () => (
         <Button label='share' icon='share-alt' bsStyle='success' />

@@ -1,0 +1,53 @@
+@import "../../../styles/theme";
+
+@mixin pill-styles($background, $percentage) {
+    background: $background;
+
+    &.active {
+        background: darken($background, $percentage);
+    }
+}
+
+.Pill {
+    border-radius: 0.75rem;
+    @include pill-styles($light-gray, 20%);
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    color: $white;
+    margin: 0.35rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.04rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    svg {
+        margin-right: 0.5rem;
+    }
+
+    &.success {
+        @include pill-styles($success, 20%);
+    }
+
+    &.info {
+        @include pill-styles($info, 20%);
+    }
+
+    &.warning {
+        @include pill-styles($warning, 20%);
+    }
+
+    &.danger {
+        @include pill-styles($danger, 20%);;
+    }
+
+    // &.active {
+    //     @include pill-styles($dark-green);
+    // }
+
+    &.disabled {
+        @include pill-styles($color-text-lighter, 0%);
+        color: $black-20;
+        pointer-events: none;
+        cursor: none;
+    }
+}

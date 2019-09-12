@@ -5,41 +5,39 @@ import MiniButton from "../src/MiniButton";
 import results from '../../../../src/jest-test-results.json';
 import { withTests } from '@storybook/addon-jest';
 
+const commonProps = (type) => ({
+    bsStyle: type,
+    onClick: () => alert(`${type} Button Clicked!`),
+});
+
 storiesOf("MiniButton", module)
     .addDecorator(withTests({ results }))
     .addParameters({ jest: ['MiniButton.spec.js'] })
-    .add("W/ Font Awesome icon", () => (
-        <MiniButton bsStyle="success" icon='home' />
+    .add("W/ bsStyle examples", () => (
+        <React.Fragment>
+            <MiniButton icon='home' {...commonProps('success')} />
+            <span>success</span>
+            <MiniButton icon='plus' {...commonProps('warning')} />
+            <span>warning</span>
+            <MiniButton icon='times'  {...commonProps('danger')} />
+            <span>danger</span>
+            <MiniButton icon='plus' {...commonProps('info')} />
+            <span>info</span>
+            <MiniButton icon='plus' disabled {...commonProps('default')} />
+            <span>disabled</span>
+        </React.Fragment>
     ))
-    .add("With 'success' classname", () => (
-        <MiniButton bsStyle="success" icon='plus' />
-    ))
-    .add("With 'warning' classname", () => (
-        <MiniButton bsStyle="warning" icon='plus' />
-    ))
-    .add("With 'danger' classname", () => (
-        <MiniButton bsStyle="danger" icon='times' />
-    ))
-    .add("With 'info' classname", () => (
-        <MiniButton bsStyle="info" icon='plus' />
-    ))
-    .add("With onClick alert", () => (
-        <MiniButton
-            bsStyle="info"
-            icon='plus'
-            onClick={() => alert('Mini Button Clicked!')}
-        />
-    ))
-    .add("With 'inverted' classname", () => (
-        <MiniButton
-            bsStyle="warning"
-            icon='plus'
-            inverted
-        />
-    ))
-    .add("disabled", () => (
-        <MiniButton
-            icon='plus'
-            disabled
-        />
+    .add("Inverted", () => (
+        <React.Fragment>
+            <MiniButton icon='home' {...commonProps('success')} inverted />
+            <span>success</span>
+            <MiniButton icon='plus' {...commonProps('warning')} inverted />
+            <span>warning</span>
+            <MiniButton icon='times' {...commonProps('danger')} inverted />
+            <span>danger</span>
+            <MiniButton icon='plus' {...commonProps('info')} inverted />
+            <span>info</span>
+            <MiniButton icon='plus' {...commonProps('default')} disabled inverted />
+            <span>disabled</span>
+        </React.Fragment>
     ));
