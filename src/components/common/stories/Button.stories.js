@@ -23,7 +23,7 @@ storiesOf("Button", module)
             <Button label='warning' bsStyle='warning' inverted />
             <Button label='danger' bsStyle='danger' inverted />
             <Button label='info' bsStyle='info' inverted />
-            <Button label='diabled' disabled inverted />
+            <Button label='disabled' disabled inverted />
         </React.Fragment>
     ))
     .add("with Icon", () => (
