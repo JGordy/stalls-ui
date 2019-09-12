@@ -23,9 +23,23 @@ storiesOf("MiniButton", module)
     .add("With 'info' classname", () => (
         <MiniButton bsStyle="info" icon='plus' />
     ))
+    .add("With onClick alert", () => (
+        <MiniButton
+            bsStyle="info"
+            icon='plus'
+            onClick={() => alert('Mini Button Clicked!')}
+        />
+    ))
     .add("With 'inverted' classname", () => (
-        <MiniButton bsStyle="warning" icon='plus' inverted />
+        <MiniButton
+            bsStyle="warning"
+            icon='plus'
+            inverted
+        />
     ))
     .add("disabled", () => (
-        <MiniButton icon='plus' disabled />
+        <MiniButton
+            icon='plus'
+            disabled
+        />
     ));

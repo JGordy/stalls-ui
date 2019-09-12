@@ -5,12 +5,8 @@ import { shallow } from 'enzyme';
 import MiniButton from '../src/MiniButton';
 
 const defaultProps = {
-    className: 'submit',
     icon: 'times',
     bsStyle: 'success',
-    style: {
-        color: 'white'
-    },
     onClick: jest.fn(),
 };
 
@@ -19,7 +15,6 @@ const wrapper = shallow(<MiniButton {...defaultProps} />);
 describe('<MiniButton />', () => {
 
     it('renders without crashing', () => {
-        console.log("Wrapper: ", wrapper.debug());
         expect(wrapper.exists('.btns')).toBe(true);
     });
 
@@ -30,13 +25,13 @@ describe('<MiniButton />', () => {
 
     it('does not call the function if the button is disabled', () => {
         defaultProps.onClick.mockClear();
-        wrapper.setProps({ className: 'disabled' });
+        wrapper.setProps({ disabled: true });
         wrapper.simulate('click');
         expect(defaultProps.onClick).toHaveBeenCalledTimes(0);
     })
 
 
-    it.todo('Accepts style object prop');
+    it.todo('Changes styling via bsStyle prop');
 
-    it.todo('Renders passed children');
+    it.todo('Renders an icon based on props');
 });

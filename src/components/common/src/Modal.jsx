@@ -18,12 +18,12 @@ const Modal = ({
 
     const showModal = () => {
         toggle();
-        // modalRef.current.focus();
+        modalRef.current.focus(); // TODO: Why don't these work??
     }
 
     const hideModal = () => {
         toggle();
-        buttonRef.current.focus();
+        buttonRef.current.focus(); // TODO: Why don't these work??
     }
 
     const onKeyDown = ({ keyCode }) => keyCode === 27 && hideModal();

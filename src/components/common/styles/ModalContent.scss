@@ -40,7 +40,7 @@
     right: 0;
     padding: .5em;
     line-height: 1;
-    background: #f6f6f7;
+    background: $dark-white;
     border: 0;
     box-shadow: 0;
     cursor: pointer;
@@ -50,7 +50,7 @@
     width: 25px;
     height: 25px;
     fill: transparent;
-    stroke: black;
+    stroke: $blackish;
     stroke-linecap: round;
     stroke-width: 2;
 }
