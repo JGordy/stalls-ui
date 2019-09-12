@@ -1,6 +1,7 @@
+@import './index.scss';
 // Fonts
-$primary-font: "Lato", sans-serif;
-$secondary-font: "Open Sans", sans-serif;
+// $primary-font: "Lato", sans-serif;
+// $secondary-font: "Open Sans", sans-serif;
 
 // Font Colors
 $color-text: #4f6c8d;
@@ -70,3 +71,8 @@ $border-radius:     5px;
 $box-shadow:        0.2rem 0.2rem 1.5rem;
 $black-box-shadow:  0.2rem 0.2rem 1.5rem rgba(0,0,0,0.5);
 $mini-box-shadow:   0.2rem 0.2rem 1rem rgba(0,0,0,0.5);
+
+* {
+        font-family: $main-font;
+        -webkit-font-smoothing: antialiased;
+}
