@@ -32,7 +32,7 @@
         "start": "npm-run-all -p watch-css start:react",
         "storybook": "BABEL_ENV=development start-storybook -p 9001 -c .storybook",
         "build:react": "react-scripts build",
-        "build": "npm-run-all -s build:css build:react",
+        "build": "npm-run-all -s build-css build:react",
         "build:babel": "BABEL_ENV=production && babel src --out-dir dist --copy-files --presets=react,env,stage-2 --ignore spec.js,test.js,__snapshots__,__mocks__",
         "build:publish": "npm run build-css && rm -rf dist && npm run build:babel",
         "test": "react-scripts test --env=jsdom --watchAll=false",
