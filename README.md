@@ -18,9 +18,10 @@ const App = () => {
 
     return (
         <div>
-            <h1>Heading</h1>
-            <p>...Content...</p>
-            <Button label="label-text-here"/>
+            <Button
+                bsStyle='success'
+                label='label-text-here'
+            />
         </div>
     );
 }

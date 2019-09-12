@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 
 // Component import
 import Button from '../src/Button';
-import Glyphicon from '../src/Glyphicon';
 
 const defaultProps = {
     icon: '',
@@ -25,8 +24,8 @@ describe('<Button />', () => {
     })
 
     it('should render an icon based on props', () => {
-        wrapper.setProps({ icon: 'times' })
-        expect(wrapper.find('.Button').props().children[0]).toStrictEqual(<Glyphicon icon="times" />);
+        wrapper.setProps({ icon: 'times' });
+        expect(wrapper.find('.Button').props().children.props.children[0].props.icon).toBe("times");
     });
 
     it('should call an onClick handler if passed in as a prop', () => {
@@ -43,4 +42,8 @@ describe('<Button />', () => {
 
 
     it.todo('Changes styling via bsStyle prop');
+
+    it.todo('should be an anchor element if href is present');
+
+    it.todo('should navigate to href upon click');
 });

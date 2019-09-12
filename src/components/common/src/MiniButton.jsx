@@ -19,7 +19,7 @@ const MiniButton = ({
                 ${inverted ? 'inverted' : ''}
                 ${disabled ? 'disabled' : ''}`
             }
-            onClick={!disabled && onClick}
+            onClick={!disabled ? onClick : undefined}
             {...rest}
         >
             <Glyphicon icon={icon} />

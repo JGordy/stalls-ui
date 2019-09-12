@@ -6,14 +6,17 @@ $button-color: $color-text-contrast-lighter;
 @mixin button-styles($background, $color) {
     background: $background;
     box-shadow: 7px 7px 50px 0px rgba($background, 0.5);
+    border: 2px solid $background;
     color: $color;
 
     &.inverted {
         background: $white;
-        border: 2px solid $background;
         color: $background;
-        padding: 0.63rem 0.13rem
     }
+}
+
+a.Button {
+    display: inline-block;
 }
 
 .Button {
@@ -23,9 +26,7 @@ $button-color: $color-text-contrast-lighter;
     justify-content: center;
     align-items: center;
 
-    padding: 0.75rem 0.25rem;
-    width: 100%;
-    max-width: 10rem;
+    padding: 0.5rem;
 
     background: $button-background;
     box-shadow: 0 6px 8px 0 $button-background;

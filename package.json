@@ -23,6 +23,7 @@
         "npm-run-all": "^4.1.5",
         "react": "^16.8.5",
         "react-dom": "^16.8.5",
+        "react-router-dom": "^5.0.1",
         "react-scripts": "^3.0.1"
     },
     "scripts": {
@@ -36,7 +37,7 @@
         "build:babel": "BABEL_ENV=production && babel src --out-dir dist --copy-files --presets=react,env,stage-2 --ignore spec.js,test.js,__snapshots__,__mocks__",
         "build:publish": "npm run build-css && rm -rf dist && npm run build:babel",
         "test": "react-scripts test --env=jsdom --watchAll=false",
-        "test:watch": "react-scripts test --env=jsdom --watch",
+        "test:watch": "react-scripts test --env=jsdom --watch --verbose",
         "test:generate-output": "BABEL_ENV=test jest --json --outputFile=src/jest-test-results.json",
         "eject": "react-scripts eject"
     },
