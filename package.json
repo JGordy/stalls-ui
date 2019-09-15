@@ -1,6 +1,6 @@
 {
     "name": "@jgordy24/stalls-ui",
-    "version": "0.3.3",
+    "version": "0.3.4",
     "author": "JGordy",
     "license": "MIT",
     "main": "dist/index.js",
