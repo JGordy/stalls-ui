@@ -1,0 +1,18 @@
+@import "../../../styles/theme";
+
+.csv-download {
+    align-items: center;
+    color: $medium-blue; /* Test these colors  */
+    color: $text-gray; /* Test these colors  */
+    display: flex;
+    margin-left: 1rem;
+    text-decoration: none;
+
+    svg {
+        background-color: $text-gray;
+        border-radius: 50%;
+        color: $white;
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+    }
+}

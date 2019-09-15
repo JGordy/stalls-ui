@@ -1,4 +1,5 @@
 export { default as Button } from './Button';
+export { default as DownloadCSV } from './DownloadCSV';
 export { default as Glyphicon } from './Glyphicon';
 export { default as MiniButton } from './MiniButton';
 export { default as Modal } from './Modal';

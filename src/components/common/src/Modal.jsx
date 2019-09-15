@@ -26,6 +26,7 @@ const Modal = ({
         buttonRef.current.focus(); // TODO: Why don't these work??
     }
 
+    // TODO: Change this to useKeyPressed hook
     const onKeyDown = ({ keyCode }) => keyCode === 27 && hideModal();
 
     const onClickAway = ({ target }) => {
