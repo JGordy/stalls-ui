@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import DownloadCSV from "../src/DownloadCSV";
+import { DownloadCSV } from "../src/index";
 
 import results from '../../../../src/jest-test-results.json';
 import { withTests } from '@storybook/addon-jest';

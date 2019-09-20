@@ -2,9 +2,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 // Components
-import Modal from '../src/Modal';
-import ProfileImage from '../src/ProfileImage';
-import MiniButton from '../src/MiniButton';
+import {
+    MiniButton,
+    Modal,
+    ProfileImage,
+} from '../src';
 
 storiesOf("Modal", module)
     .add('default w/Children', () => (

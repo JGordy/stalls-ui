@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Glyphicon from "../src/Glyphicon";
+import { Glyphicon } from "../src";
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 let icons = [];

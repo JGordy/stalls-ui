@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Button from "../src/Button";
+import { Button } from "../src";
 
 import results from '../../../../src/jest-test-results.json';
 import { withTests } from '@storybook/addon-jest';

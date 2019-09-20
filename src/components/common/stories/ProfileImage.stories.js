@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import ProfileImage from "../src/ProfileImage";
+import { ProfileImage } from "../src";
 
 const mockImage = 'https://homepages.cae.wisc.edu/~ece533/images/girl.png';
 
