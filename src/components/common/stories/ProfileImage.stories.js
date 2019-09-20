@@ -5,6 +5,7 @@ import { ProfileImage } from "../src";
 const mockImage = 'https://homepages.cae.wisc.edu/~ece533/images/girl.png';
 
 storiesOf("ProfileImage", module)
+    .addParameters({ jest: ['ProfileImage.spec.js'] })
     .add("default", () => (
         <ProfileImage mainImage={mockImage} />
     ))

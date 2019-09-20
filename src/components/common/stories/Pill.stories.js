@@ -2,12 +2,8 @@ import React from 'react';
 import { storiesOf } from "@storybook/react";
 import { Pill } from "../src";
 
-import results from '../../../../src/jest-test-results.json';
-import { withTests } from '@storybook/addon-jest';
-
 storiesOf("Pill", module)
-    .addDecorator(withTests({ results }))
-    // .addParameters({ jest: ['Pill.spec.js']})
+    .addParameters({ jest: ['Pill.spec.js'] })
     .add('With each bsStyle + active', () => (
         <React.Fragment>
             <div>

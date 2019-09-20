@@ -2,11 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Button } from "../src";
 
-import results from '../../../../src/jest-test-results.json';
-import { withTests } from '@storybook/addon-jest';
-
 storiesOf("Button", module)
-    .addDecorator(withTests({ results }))
     .addParameters({ jest: ['Button.spec.js'] })
     .add('W/ bsStyle examples', () => (
         <React.Fragment>

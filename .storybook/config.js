@@ -1,16 +1,16 @@
 import {
-    // addDecorator,
+    addDecorator,
     configure,
 } from '@storybook/react';
-// import { withTests } from '@storybook/addon-jest';
+import { withTests } from '@storybook/addon-jest';
 
-// import results from '../jest-test-results.json';
+import results from '../jest-test-results.json';
 
-// addDecorator(
-//     withTests({
-//         results,
-//     })
-// );
+addDecorator(
+    withTests({
+        results,
+    })
+);
 
 const req = require.context('components', true, /\.stories\.js$/);
 

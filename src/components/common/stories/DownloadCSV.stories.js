@@ -2,9 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { DownloadCSV } from "../src/index";
 
-import results from '../../../../src/jest-test-results.json';
-import { withTests } from '@storybook/addon-jest';
-
 const jsonData = [
     {
         name: 'Joe',
@@ -24,7 +21,6 @@ const jsonData = [
 ];
 
 storiesOf("DownloadCSV", module)
-    .addDecorator(withTests({ results }))
     .addParameters({ jest: ['DownloadCSV.spec.js'] })
     .add('Default', () => (
         <React.Fragment>

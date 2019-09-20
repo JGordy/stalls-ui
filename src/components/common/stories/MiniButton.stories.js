@@ -2,16 +2,12 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { MiniButton } from "../src";
 
-import results from '../../../../src/jest-test-results.json';
-import { withTests } from '@storybook/addon-jest';
-
 const commonProps = (type) => ({
     bsStyle: type,
     onClick: () => alert(`${type} Button Clicked!`),
 });
 
 storiesOf("MiniButton", module)
-    .addDecorator(withTests({ results }))
     .addParameters({ jest: ['MiniButton.spec.js'] })
     .add("W/ bsStyle examples", () => (
         <React.Fragment>
