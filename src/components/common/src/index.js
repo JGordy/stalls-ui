@@ -2,6 +2,7 @@ export { default as Button } from './Button';
 export { default as DownloadCSV } from './DownloadCSV';
 export { default as Glyphicon } from './Glyphicon';
 export { default as FileInput } from './FileInput';
+export { default as HeroImage } from './HeroImage';
 export { default as ImageUploader } from './ImageUploader';
 export { default as MiniButton } from './MiniButton';
 export { default as Modal } from './Modal';
