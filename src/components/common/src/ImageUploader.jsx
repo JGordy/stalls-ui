@@ -40,8 +40,6 @@ const ImageUploader = ({
                     file: file,
                     src: reader.result
                 };
-                console.warn("Image Results: ", imageResults);
-
 
                 if (type === 'cover') setCoverImage({ ...imageResults });
                 if (type === 'profile') setProfileImage({ ...imageResults });
@@ -58,7 +56,7 @@ const ImageUploader = ({
             if (type === 'profile') setProfileImage({ ...imageResults });
         }
     };
-    const handleUpdateState = () => { };
+    // const handleUpdateState = () => { };
 
     const renderCoverButtons = () => (
         <div className='cover_buttons'>
@@ -102,13 +100,12 @@ const ImageUploader = ({
             }
         </div>
     );
-    console.warn("Cover Image: ", coverImage);
-    console.warn("ProfileImage: ", profileImage);
 
     return (
         <div className='ImageUploader'>
             <div className='cover'>
                 {/* TODO: How to do submitting??? */}
+                {/* TODO: Placeholder for Hero image */}
                 <Hero
                     altText={'Some image text'}
                     imgSrc={coverImage.src}
