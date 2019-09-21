@@ -12,10 +12,13 @@ addDecorator(
     })
 );
 
-const req = require.context('components', true, /\.stories\.js$/);
+const loaderFn = () => {
+    const allExports = [require('../src/__stories__/0-Welcome.stories.js')];
+    const req = require.context('../src/components', true, /\.stories\.js$/);
 
-function loadStories() {
-    req.keys().forEach(filename => req(filename));
-}
+    req.keys().forEach(fname => allExports.push(req(fname)));
 
-configure(loadStories, module);
+    return allExports;
+};
+
+configure(loaderFn, module);

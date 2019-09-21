@@ -1,28 +1,27 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 // Components
-import {
-    MiniButton,
-    Modal,
-    ProfileImage,
-} from '../src';
+import { MiniButton, Modal, ProfileImage } from '../src';
 
-storiesOf("Modal", module)
-    .addParameters({ jest: ['Modal.spec.js'] })
-    .addParameters({ component: Modal })
-    .add('default w/Children', () => (
-        <Modal
-            triggerText='Trigger modal'
-        >
-            <ProfileImage
-                mainImage='https://homepages.cae.wisc.edu/~ece533/images/girl.png'
-                roundImage={true}
-            />
-            <MiniButton
-                icon='plus'
-                bsStyle='success'
-                onClick={() => alert('Hey yooooooo!')}
-            />
-        </Modal>
-    ))
+export default {
+  title: 'Molecules/Modal',
+
+  parameters: {
+    jest: ['Modal.spec.js'],
+    component: Modal,
+  },
+};
+
+export const defaultWChildren = () => (
+  <Modal triggerText="Trigger modal">
+    <ProfileImage
+      mainImage="https://homepages.cae.wisc.edu/~ece533/images/girl.png"
+      roundImage={true}
+    />
+    <MiniButton icon="plus" bsStyle="success" onClick={() => alert('Hey yooooooo!')} />
+  </Modal>
+);
+
+defaultWChildren.story = {
+  name: 'default w/Children',
+};

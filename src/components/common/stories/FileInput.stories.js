@@ -1,30 +1,35 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { FileInput } from '../src';
 
-storiesOf('FileInput', module)
-    .addParameters({ jest: ['FileInput.spec.js'] })
-    .addParameters({ component: FileInput })
-    .add('Default', () => {
+export default {
+  title: 'Atoms/FileInput',
 
-        const buttonProps = {
-            bsStyle: 'success',
-            icon: 'upload',
-        };
+  parameters: {
+    jest: ['FileInput.spec.js'],
+    component: FileInput,
+  },
+};
 
-        const inputProps = {
-            classes: 'active another_class',
-            inputName: 'profile',
-            onChange: (event) => console.info("File", event.target.files),
-        };
+export const defaultStory = () => {
+  const buttonProps = {
+    bsStyle: 'success',
+    icon: 'upload',
+  };
 
-        return (
-            <React.Fragment>
-                <FileInput
-                    {...inputProps}
-                    {...buttonProps}
-                />
-                <p>Check out the dev console once you have selected a file!</p>
-            </React.Fragment>
-        );
-    });
+  const inputProps = {
+    classes: 'active another_class',
+    inputName: 'profile',
+    onChange: event => console.info('File', event.target.files),
+  };
+
+  return (
+    <React.Fragment>
+      <FileInput {...inputProps} {...buttonProps} />
+      <p>Check out the dev console once you have selected a file!</p>
+    </React.Fragment>
+  );
+};
+
+defaultStory.story = {
+  name: 'Default',
+};

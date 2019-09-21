@@ -1,14 +1,21 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { ImageUploader } from '../src';
 
-storiesOf('ImageUploader', module)
-    .addParameters({ jest: ['ImageUploader.spec.js'] })
-    .addParameters({ component: ImageUploader })
-    .add('Default', () => {
-        const props = {};
+export default {
+    title: 'Molecules/ImageUploader',
 
-        return (
-            <ImageUploader {...props} />
-        );
-    });
+    parameters: {
+        jest: ['ImageUploader.spec.js'],
+        component: ImageUploader,
+    },
+};
+
+export const defaultStory = () => {
+    const props = {};
+
+    return <ImageUploader {...props} />;
+};
+
+defaultStory.story = {
+    name: 'Default',
+};
