@@ -7,7 +7,7 @@ cache:
     - node_modules
 
 stages:
-  - compile
+  - build
   - test all the things
   - name: npm publish
     if: tags = true
