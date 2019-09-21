@@ -7,10 +7,17 @@ import {
 
 import '../styles/ImageUploader.css';
 
-const ImageUploader = () => {
+/**
+ * `ImageUploader` allows a user to upload an image to your app
+ */
+const ImageUploader = ({
+    onSubmit,
+    ...rest
+}) => {
 
     return (
         <React.Fragment>
+            <div>Image Uploader placeholder</div>
             {/* TODO: Place to render uploaded photos || defaults */}
 
             {/* TODO: Trigger to upload photos in Modal? */}
@@ -20,8 +27,11 @@ const ImageUploader = () => {
     );
 }
 
-ImageUploader.propsTypes = {
-
+ImageUploader.propTypes = {
+    /**
+    * Handler for image upload submissions
+    */
+    onSubmit: PropTypes.func,
 };
 
 ImageUploader.defaultProps = {};
