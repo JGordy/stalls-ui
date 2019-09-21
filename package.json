@@ -57,6 +57,7 @@
     "@storybook/addon-docs": "^5.2.1",
     "@storybook/addon-jest": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
+    "@storybook/addon-viewport": "^5.2.1",
     "@storybook/addons": "^5.2.1",
     "@storybook/react": "^5.2.1",
     "babel-cli": "^6.26.0",
