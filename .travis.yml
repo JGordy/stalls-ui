@@ -18,22 +18,23 @@ before_deploy:
 
 #Deployment information
 deploy:
-  provider: npm
-  email: "$NPM_EMAIL"
-  api_key: "$NPM_TOKEN"
-  skip_cleanup: true
-  on:
-    tags: true
+  # Deploy to npm registry
+  - provider: npm
+    email: "$NPM_EMAIL"
+    api_key: "$NPM_TOKEN"
+    skip_cleanup: true
+    on:
+      tags: true
+
   # deploy master storybook to production
-  provider: script # Tell Travis we want to deploy to Github Pages
-  script: npm run deploy-storybook
-  skip-cleanup: true 
-  github-token: $GITHUB_TOKEN # Will take the environment variable you created on step 5
-  # local_dir: storybook-static # The folder that needs to be deployed
-  repo: jgordy/stalls-ui # Add your username/project_name here
-  target_branch: gh-pages # Tell Travis to deploy on the gh-pages branch
-  on:
-    branch: master # Tell Travis to trigger a deploy only when we push to master
+  - provider: pages # Github Pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    local_dir: storybook-static # The folder that needs to be deployed
+    repo: jgordy/stalls-ui
+    target_branch: gh-pages
+    on:
+      branch: master
 
   # - provider: script
   #   script: npm run deploy-storybook
@@ -41,16 +42,6 @@ deploy:
   #     branch: master
 
 # Deployment information
-# deploy:
-  # provider: pages # Tell Travis we want to deploy to Github Pages
-  # skip-cleanup: true 
-  # github-token: $GITHUB_TOKEN # Will take the environment variable you created on step 5
-  # local_dir: storybook-static # The folder that needs to be deployed
-  # repo: jgordy/stalls-ui # Add your username/project_name here
-  # target_branch: gh-pages # Tell Travis to deploy on the gh-pages branch
-  # on:
-  #   branch: master # Tell Travis to trigger a deploy only when we push to master
-
 # deploy:
 #   provider: pages
 #   github_token: $github_token
