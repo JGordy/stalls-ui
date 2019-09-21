@@ -4,6 +4,7 @@ import { Pill } from "../src";
 
 storiesOf("Pill", module)
     .addParameters({ jest: ['Pill.spec.js'] })
+    .addParameters({ component: Pill })
     .add('With each bsStyle + active', () => (
         <React.Fragment>
             <div>

@@ -22,6 +22,7 @@ const jsonData = [
 
 storiesOf("DownloadCSV", module)
     .addParameters({ jest: ['DownloadCSV.spec.js'] })
+    .addParameters({ component: DownloadCSV })
     .add('Default', () => (
         <React.Fragment>
             <DownloadCSV

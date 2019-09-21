@@ -19,6 +19,7 @@ Object.keys(library.definitions).forEach(key => {
 
 storiesOf("GlyphiconAll", module)
     .addParameters({ jest: ['Glyphicon.spec.js'] })
+    .addParameters({ component: Glyphicon })
     .add("All Icons", () => (
         icons.map(icon => {
             return (
@@ -49,6 +50,7 @@ storiesOf("GlyphiconAll", module)
 icons.forEach(icon => {
     storiesOf("Glyphicon", module)
         .addParameters({ jest: ['Glyphicon.spec.js'] })
+        .addParameters({ component: Glyphicon })
         .add(`${Array.isArray(icon) ? icon[1] : icon}`, () => (
             <Glyphicon icon={icon} />
         ));

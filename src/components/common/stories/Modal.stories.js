@@ -10,6 +10,7 @@ import {
 
 storiesOf("Modal", module)
     .addParameters({ jest: ['Modal.spec.js'] })
+    .addParameters({ component: Modal })
     .add('default w/Children', () => (
         <Modal
             triggerText='Trigger modal'

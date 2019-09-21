@@ -6,12 +6,13 @@ const mockImage = 'https://homepages.cae.wisc.edu/~ece533/images/girl.png';
 
 storiesOf("ProfileImage", module)
     .addParameters({ jest: ['ProfileImage.spec.js'] })
+    .addParameters({ component: ProfileImage })
     .add("default", () => (
-        <ProfileImage mainImage={mockImage} />
+        <ProfileImage src={mockImage} />
     ))
     .add("rounded", () => (
-        <ProfileImage roundImage={true} mainImage={mockImage} />
+        <ProfileImage roundImage={true} src={mockImage} />
     ))
     .add("missing url fallback", () => (
-        <ProfileImage mainImage={''} />
+        <ProfileImage src={''} />
     ))

@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import Glyphicon from './Glyphicon';
 import '../styles/Pill.css';
 
+/**
+ * Use `Pill` to highlight key info with a predefined status. Easy peasy!
+ */
 const Pill = ({
     active,
     bsStyle,

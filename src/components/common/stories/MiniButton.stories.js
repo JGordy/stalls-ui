@@ -9,6 +9,7 @@ const commonProps = (type) => ({
 
 storiesOf("MiniButton", module)
     .addParameters({ jest: ['MiniButton.spec.js'] })
+    .addParameters({ component: MiniButton })
     .add("W/ bsStyle examples", () => (
         <React.Fragment>
             <MiniButton icon='home' {...commonProps('success')} />

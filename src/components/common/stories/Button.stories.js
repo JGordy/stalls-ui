@@ -4,6 +4,7 @@ import { Button } from "../src";
 
 storiesOf("Button", module)
     .addParameters({ jest: ['Button.spec.js'] })
+    .addParameters({ component: Button })
     .add('W/ bsStyle examples', () => (
         <React.Fragment>
             <Button label='success' bsStyle='success' />

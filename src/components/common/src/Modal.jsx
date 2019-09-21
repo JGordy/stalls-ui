@@ -1,4 +1,5 @@
 import React, { Fragment, useRef } from 'react';
+import PropTypes from 'prop-types';
 import ModalTrigger from './ModalTrigger';
 import ModalContent from './ModalContent';
 import '../styles/Modal.css';
@@ -58,5 +59,14 @@ const Modal = ({
         </Fragment>
     );
 }
+
+Modal.propTypes = {
+    /**
+    * Children to render in the modal content
+    */
+    children: PropTypes.node,
+};
+
+Modal.defaultProps = {};
 
 export default Modal;

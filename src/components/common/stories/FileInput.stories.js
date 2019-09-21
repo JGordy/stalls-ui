@@ -4,6 +4,7 @@ import { FileInput } from '../src';
 
 storiesOf('FileInput', module)
     .addParameters({ jest: ['FileInput.spec.js'] })
+    .addParameters({ component: FileInput })
     .add('Default', () => {
 
         const buttonProps = {
