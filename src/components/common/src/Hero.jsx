@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/HeroImage.css'
+import '../styles/Hero.css'
 
 /**
 * > Typical hero section that accepts children components
 */
-const HeroImage = ({
+const Hero = ({
     altText,
     children,
     classes,
@@ -30,7 +30,7 @@ const HeroImage = ({
     );
 }
 
-HeroImage.propTypes = {
+Hero.propTypes = {
     /**
     * Children to render in the hero container
     */
@@ -54,8 +54,8 @@ HeroImage.propTypes = {
     classes: PropTypes.string,
 };
 
-HeroImage.defaultProps = {
+Hero.defaultProps = {
 
 };
 
-export default HeroImage;
+export default Hero;
