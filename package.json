@@ -3,7 +3,7 @@
   "version": "0.3.7",
   "author": "JGordy",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://jgordy.github.io/stalls-ui",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
