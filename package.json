@@ -39,7 +39,7 @@
         "build:publish": "npm run build-css && rm -rf dist && npm run build:babel",
         "test": "react-scripts test --env=jsdom --watchAll=false",
         "test:watch": "react-scripts test --env=jsdom --watch --verbose",
-        "test:generate-output": "BABEL_ENV=test jest --json --outputFile=src/jest-test-results.json",
+        "test:generate-output": "npm run test -- --json --outputFile=./jest-test-results.json",
         "eject": "react-scripts eject"
     },
     "eslintConfig": {

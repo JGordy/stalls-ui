@@ -26,7 +26,14 @@ Pill.propTypes = {
     /**
     * The classname to apply to the root node
     */
-    bsStyle: PropTypes.oneOf(['default', 'success', 'info', 'danger', 'active']),
+    bsStyle: PropTypes.oneOf([
+        'default',
+        'success',
+        'info',
+        'warning',
+        'danger',
+        'active'
+    ]),
     /**
     * The label (usually text) to render at the root nodes
     */
