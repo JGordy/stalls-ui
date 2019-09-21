@@ -38,6 +38,7 @@
     height: 2.5rem;
     width: 2.5rem;
     transition: background 0.3s, border 0.3s, color 0.3s;
+    margin: 0.5rem;
 
     &.success {
         @include button-styles($bright-green);

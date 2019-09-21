@@ -13,7 +13,7 @@ const ProfileImage = ({
             style={{
                 borderRadius: roundImage ? '50%' : '10%',
                 backgroundImage: src && `url(${src})`,
-                backgroundColor: placeholder ? '' : 'var(--white)',
+                backgroundColor: placeholder ? '' : 'white',
                 display: src ? 'block' : 'flex',
                 alignContent: 'center',
                 justifyContent: 'center',

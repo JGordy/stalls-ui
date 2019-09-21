@@ -1,5 +1,8 @@
 import React from 'react';
 import { ImageUploader } from '../src';
+import { images } from '../../../__mocks__/story/images';
+
+const { coverImage, profileImage } = images;
 
 export default {
     title: 'Molecules/ImageUploader',
@@ -11,7 +14,10 @@ export default {
 };
 
 export const defaultStory = () => {
-    const props = {};
+    const props = {
+        coverImgSrc: coverImage,
+        profileImgSrc: profileImage,
+    };
 
     return <ImageUploader {...props} />;
 };
