@@ -18,11 +18,11 @@ const Button = ({
     ...rest
 }) => {
 
+    const disabledClass = disabled ? 'disabled' : '';
+    const invertedClass = inverted ? 'inverted' : '';
+
     const buttonProps = {
-        className: `Button
-                ${bsStyle}
-                ${inverted ? 'inverted' : ''}
-                ${disabled ? 'disabled' : ''}`,
+        className: `Button ${bsStyle} ${invertedClass} ${disabledClass}`,
         onClick: !disabled && onClick ? onClick : undefined,
         ref: buttonRef,
         ...rest

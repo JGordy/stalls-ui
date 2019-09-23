@@ -3,7 +3,7 @@
 $button-background: $light-gray;
 $button-color: $color-text-contrast-lighter;
 
-@mixin button-styles($background, $color) {
+@mixin button-styles($background, $color: $white) {
     background: $background;
     box-shadow: 7px 7px 50px 0px rgba($background, 0.5);
     border: 2px solid $background;
@@ -54,7 +54,7 @@ a.Button {
     cursor: pointer;
 
     &.success {
-        @include button-styles($success, $white);
+        @include button-styles($success);
     }
 
     &.warning {
@@ -62,17 +62,11 @@ a.Button {
     }
 
     &.danger {
-        @include button-styles($danger, $white);
+        @include button-styles($danger);
     }
 
     &.info {
-        @include button-styles($info, $white);
-    }
-
-    &.disabled {
-        @include button-styles($color-text-lighter, $black-20);
-        pointer-events: none;
-        cursor: none;
+        @include button-styles($info);
     }
 
     svg {

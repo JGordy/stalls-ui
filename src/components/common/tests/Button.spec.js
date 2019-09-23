@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Component import
-import Button from '../src/Button';
+import { Button } from '../src';
 
 const defaultProps = {
     icon: '',
