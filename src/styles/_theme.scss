@@ -1,7 +1,4 @@
 @import './index.scss';
-// Fonts
-// $primary-font: "Lato", sans-serif;
-// $secondary-font: "Open Sans", sans-serif;
 
 // Font Colors
 $color-text: #4f6c8d;
@@ -14,25 +11,9 @@ $color-text-contrast-lighter: #5f5f63;
 
 // Background Colors
 $gray: #bec9d1;
-
-// Primary Colors
-$blue: #506e8d;
-$white: #ffffff;
-$green: #6bbfab;
-$red: #f96b6b;
-
-// Dark Primary Colors
-$dark-blue: #33475c;
 $dark-white: #f0f0f0;
-$dark-green: #5ba392;
-$dark-red: #de5e5e;
 
-// Auxiliary Colors
-$bright-blue: #5db8eb;
-$opaque-blue: #4770d6;
-$opaque-yellow: #f3c416;
-$opaque-red: #dd765f;
-
+// Theme colors
 $medium-blue:       #478dff;
 $medium-blue-85:    rgba(71,141,255,0.85);
 $dark-green:        #008C49;
@@ -75,4 +56,11 @@ $mini-box-shadow:   0.2rem 0.2rem 1rem rgba(0,0,0,0.5);
 * {
         font-family: $main-font;
         -webkit-font-smoothing: antialiased;
+}
+
+.disabled {
+        background-color: $light-gray;
+        color: $black-20;
+        pointer-events: none;
+        cursor: none;
 }

@@ -1,0 +1,44 @@
+@import "../../../styles/theme";
+
+@mixin tile-styles($background, $color: $white) {
+    background: $background;
+    box-shadow: 7px 7px 50px 0px rgba($background, 0.5);
+    color: $color;
+
+    &:hover {
+        background: darken($background, 15%);
+    }
+
+    &.active {
+        background: darken($background, 15%);
+    }
+}
+
+.Tile {
+    @include tile-styles($light-gray, $blackish);
+    display: inline-flex;
+    background-color: $light-gray;
+    border-radius: $border-radius;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.04rem;
+    margin: 0.25rem;
+    padding: 0.5rem;
+    transition: background 0.3s, border 0.3s, color 0.3s;
+
+    &.success {
+        @include tile-styles($success);
+    }
+
+    &.warning {
+        @include tile-styles($warning, $blackish);
+    }
+
+    &.danger {
+        @include tile-styles($danger);
+    }
+
+    &.info {
+        @include tile-styles($info);
+    }
+}
