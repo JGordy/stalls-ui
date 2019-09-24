@@ -36,10 +36,10 @@ jobs:
           tags: true
     - stage: Deploy Storybook
       if: branch = master
-      script: echo "Deploying Storybook ..."
-      deploy:
-        before_deploy:
+      script:
+        - echo "Deploying Storybook ..."
         - npm run build-storybook
+      deploy:
         provider: pages # deploy to Github Pages
         skip-cleanup: true
         github-token: $GITHUB_TOKEN
