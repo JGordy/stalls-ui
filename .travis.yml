@@ -24,8 +24,9 @@ before_deploy:
 jobs:
   include:
     - stage: build and test
-      script: npm run build
-      script: npm test
+      script: 
+      - npm run build
+      - npm test
     - stage: npm release
       if: tag IS present
       node_js: "8"
