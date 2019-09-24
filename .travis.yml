@@ -7,8 +7,7 @@ cache:
     - node_modules
 
 stages:
-  - build
-  - test all the things
+  - build and test
   - name: npm publish
     if: tags = true
   - name: deploy Storybook
@@ -30,7 +29,6 @@ jobs:
     - stage: npm release
       if: tag IS present
       node_js: "8"
-      script: npm publish
       before_deploy:
         - npm run build:publish
       deploy:
