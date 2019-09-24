@@ -1,47 +1,54 @@
 os: osx
 language: node_js
-node_js:
+node_js: 
   - "8"
 cache:
   directories:
     - node_modules
 
+stages:
+  - build
+  - test all the things
+  - name: npm publish
+    if: tags = true
+  - name: deploy Storybook
+    if: branch = master
+
 notifications:
   slack: generositymarket:ZeAVzH5Ww7PB50ugNnwl5JuT
 
-stages:
-- build and test
-- name: npm release
-  if: tags = true
-- name: storybook release
-  if: branch = master
+# build dist for npm publishing
+before_deploy:
+  - npm run build:publish
+  - npm run build-storybook
 
 jobs:
   include:
     - stage: build and test
-      script: 
-        - npm install
-        - npm run build
-        - npm test
+      script: npm run build
+      script: npm test
     - stage: npm release
-        script: echo "Deploying package changes to npm registry"
-        before_deploy: npm run build:publish
-        deploy:
-          provider: npm
-          email: $NPM_EMAIL
-          api_key: $NPM_TOKEN
-          skip_cleanup: true
-          on:
-            tags: true
-    - stage: storybook release
-        script: echo "Deploying Storybook changes to Github pages"
-        before_deploy: npm run build-storybook
-        deploy:
-          provider: pages # Tell Travis we want to deploy to Github Pages
-          skip-cleanup: true
-          github-token: $GITHUB_TOKEN # Will take the environment variable you created on step 5
-          local_dir: storybook-static # The folder that needs to be deployed
-          repo: jgordy/stalls-ui # Add your username/project_name here
-          target_branch: gh-pages # Tell Travis to deploy on the gh-pages branch
-          on:
-            branch: master # Tell Travis to trigger a deploy only when we push to master
+      if: tag IS present
+      node_js: "8"
+      script: npm publish
+      before_deploy:
+        - npm run build:publish
+      deploy:
+        provider: npm
+        email: $NPM_EMAIL
+        api_key: $NPM_TOKEN
+        skip_cleanup: true
+        on:
+          tags: true
+    - stage: Deploy Storybook
+      deploy:
+        before_deploy:
+        - npm run build-storybook
+        provider: pages # deploy to Github Pages
+        skip-cleanup: false
+        github-token: $GITHUB_TOKEN
+        local_dir: storybook-static # folder to be deployed
+        repo: jgordy/stalls-ui
+        target_branch: gh-pages
+        on:
+          
