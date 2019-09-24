@@ -1,10 +1,19 @@
 import {
     addDecorator,
+    addParameters,
     configure,
 } from '@storybook/react';
 
 import { withTests } from '@storybook/addon-jest';
 import results from '../jest-test-results.json';
+
+import marketTheme from './generosity-market-theme.js';
+
+addParameters({
+    options: {
+        theme: marketTheme,
+    },
+});
 
 addDecorator(
     withTests({

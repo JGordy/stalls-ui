@@ -8,4 +8,5 @@ export {
     Pill,
     ProfileImage,
     TextInput,
+    Tile,
 } from './common/src';
