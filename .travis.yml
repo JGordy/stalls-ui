@@ -41,7 +41,6 @@ jobs:
         before_deploy:
         - npm run build-storybook
         provider: pages # deploy to Github Pages
-        script: skip
         skip-cleanup: true
         github-token: $GITHUB_TOKEN
         local_dir: storybook-static # folder to be deployed
