@@ -5,32 +5,38 @@ node_js:
 cache:
   directories:
     - node_modules
-script: 
-  - npm install
-  - npm run build
-  - npm test
+
 notifications:
   slack: generositymarket:ZeAVzH5Ww7PB50ugNnwl5JuT
 
-# build dist for npm publishing
-before_deploy:
-  - npm run build:publish
-  - npm run build-storybook
-
-#Deployment information
-deploy:
-  provider: npm
-  email: "$NPM_EMAIL"
-  api_key: "$NPM_TOKEN"
-  skip_cleanup: true
-  on:
-    tags: true
-  # deploy master storybook to production
-  provider: pages # Tell Travis we want to deploy to Github Pages
-  skip-cleanup: false
-  github-token: $GITHUB_TOKEN # Will take the environment variable you created on step 5
-  local_dir: storybook-static # The folder that needs to be deployed
-  repo: jgordy/stalls-ui # Add your username/project_name here
-  target_branch: gh-pages # Tell Travis to deploy on the gh-pages branch
-  on:
-    branch: master # Tell Travis to trigger a deploy only when we push to master
+jobs:
+  include:
+    - stage: Build and test
+      script: 
+        - npm install
+        - npm run build
+        - npm test
+    - stage: Npm Release
+        script: 
+          - echo "Deploying package changes to npm registry"
+          - npm run build:publish
+        deploy:
+          provider: npm
+          email: $NPM_EMAIL
+          api_key: $NPM_TOKEN
+          skip_cleanup: true
+          on:
+            tags: true
+    - stage: Storybook release
+        script: 
+          - echo "Deploying Storybook changes to Github pages"
+          - npm run build-storybook
+        deploy:
+          provider: pages # Tell Travis we want to deploy to Github Pages
+          skip-cleanup: true
+          github-token: $GITHUB_TOKEN # Will take the environment variable you created on step 5
+          local_dir: storybook-static # The folder that needs to be deployed
+          repo: jgordy/stalls-ui # Add your username/project_name here
+          target_branch: gh-pages # Tell Travis to deploy on the gh-pages branch
+          on:
+            branch: master # Tell Travis to trigger a deploy only when we push to master
