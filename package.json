@@ -6,6 +6,11 @@
   "homepage": "https://jgordy.github.io/stalls-ui",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "keywords": [
+    "react",
+    "component-library",
+    "ui-library"
+  ],
   "files": [
     "dist"
   ],

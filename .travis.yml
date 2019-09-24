@@ -21,24 +21,27 @@ jobs:
       - npm run build
       - npm test
     - stage: npm release
-      if: tag IS present
+      if: tag IS present AND branch = master
       node_js: "8"
       script: echo "Deploying to npm ..." # usually you do not want to rerun any tests
       before_deploy:
         - npm run build:publish
       deploy:
         provider: npm
+        script: skip
         email: $NPM_EMAIL
         api_key: $NPM_TOKEN
         skip_cleanup: true
         on:
           tags: true
     - stage: Deploy Storybook
+      if: branch = master
+      script: echo "Deploying Storybook ..."
       deploy:
-        script: echo "Deploying Storybook ..." # usually you do not want to rerun any tests
         before_deploy:
         - npm run build-storybook
         provider: pages # deploy to Github Pages
+        script: skip
         skip-cleanup: false
         github-token: $GITHUB_TOKEN
         local_dir: storybook-static # folder to be deployed
