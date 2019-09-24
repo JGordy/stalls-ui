@@ -23,7 +23,7 @@ jobs:
     - stage: npm release
       if: tag IS present
       node_js: "8"
-      script: skip # usually you do not want to rerun any tests
+      script: echo "Deploying to npm ..." # usually you do not want to rerun any tests
       before_deploy:
         - npm run build:publish
       deploy:
@@ -35,7 +35,7 @@ jobs:
           tags: true
     - stage: Deploy Storybook
       deploy:
-        script: skip # usually you do not want to rerun any tests
+        script: echo "Deploying Storybook ..." # usually you do not want to rerun any tests
         before_deploy:
         - npm run build-storybook
         provider: pages # deploy to Github Pages
