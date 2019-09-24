@@ -8,6 +8,10 @@ cache:
 
 notifications:
   slack: generositymarket:ZeAVzH5Ww7PB50ugNnwl5JuT
+      template:
+      - "Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
+      - "Execution time: *%{duration}*"
+      - "Commit message: %{commit_message}"
 
 # build dist for npm publishing
 # before_deploy:
@@ -38,6 +42,7 @@ jobs:
       if: branch = master
       script:
         - echo "Deploying Storybook ..."
+        - npm run build-css
         - npm run build-storybook
       deploy:
         provider: pages # deploy to Github Pages
