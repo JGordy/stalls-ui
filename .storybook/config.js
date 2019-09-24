@@ -4,10 +4,18 @@ import {
     configure,
 } from '@storybook/react';
 
+import { configureActions } from '@storybook/addon-actions';
+
 import { withTests } from '@storybook/addon-jest';
 import results from '../jest-test-results.json';
 
 import marketTheme from './generosity-market-theme.js';
+
+configureActions({
+    depth: 100,
+    // Limit the number of items logged into the actions panel
+    limit: 20,
+});
 
 addParameters({
     options: {

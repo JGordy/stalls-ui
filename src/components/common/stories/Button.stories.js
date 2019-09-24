@@ -1,4 +1,5 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 import { Button } from '../src';
 
 export default {
@@ -10,13 +11,20 @@ export default {
   },
 };
 
+const getStoryProps = (type, inverted = false) => ({
+  label: type,
+  bsStyle: type,
+  inverted: inverted,
+  onClick: action(`${type} button clicked`),
+});
+
 export const wBsStyleExamples = () => (
   <React.Fragment>
-    <Button label="success" bsStyle="success" />
-    <Button label="warning" bsStyle="warning" />
-    <Button label="danger" bsStyle="danger" />
-    <Button label="info" bsStyle="info" />
-    <Button label="disabled" disabled />
+    <Button {...getStoryProps('success')} />
+    <Button {...getStoryProps('warning')} />
+    <Button {...getStoryProps('danger')} />
+    <Button {...getStoryProps('info')} />
+    <Button {...getStoryProps('disabled')} disabled />
   </React.Fragment>
 );
 
@@ -26,11 +34,11 @@ wBsStyleExamples.story = {
 
 export const wInvertedProp = () => (
   <React.Fragment>
-    <Button label="success" bsStyle="success" inverted />
-    <Button label="warning" bsStyle="warning" inverted />
-    <Button label="danger" bsStyle="danger" inverted />
-    <Button label="info" bsStyle="info" inverted />
-    <Button label="disabled" disabled inverted />
+    <Button {...getStoryProps('success', true)} />
+    <Button {...getStoryProps('warning', true)} />
+    <Button {...getStoryProps('danger', true)} />
+    <Button {...getStoryProps('info', true)} />
+    <Button {...getStoryProps('disabled', true)} disabled />
   </React.Fragment>
 );
 
@@ -38,7 +46,7 @@ wInvertedProp.story = {
   name: 'w/ inverted prop',
 };
 
-export const withIcon = () => <Button label="share" icon="share-alt" bsStyle="success" />;
+export const withIcon = () => <Button {...getStoryProps('share')} bsStyle="success" icon="share-alt" />;
 
 withIcon.story = {
   name: 'with Icon',

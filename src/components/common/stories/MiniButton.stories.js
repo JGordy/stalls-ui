@@ -1,9 +1,10 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 import { MiniButton } from '../src';
 
-const commonProps = type => ({
+const getStoryProps = type => ({
   bsStyle: type,
-  onClick: () => alert(`${type} Button Clicked!`),
+  onClick: action(`${type} button clicked`),
 });
 
 export default {
@@ -17,15 +18,15 @@ export default {
 
 export const wBsStyleExamples = () => (
   <React.Fragment>
-    <MiniButton icon="home" {...commonProps('success')} />
+    <MiniButton icon="home" {...getStoryProps('success')} />
     <span>success</span>
-    <MiniButton icon="plus" {...commonProps('warning')} />
+    <MiniButton icon="plus" {...getStoryProps('warning')} />
     <span>warning</span>
-    <MiniButton icon="times" {...commonProps('danger')} />
+    <MiniButton icon="times" {...getStoryProps('danger')} />
     <span>danger</span>
-    <MiniButton icon="plus" {...commonProps('info')} />
+    <MiniButton icon="plus" {...getStoryProps('info')} />
     <span>info</span>
-    <MiniButton icon="plus" disabled {...commonProps('default')} />
+    <MiniButton icon="plus" disabled {...getStoryProps('default')} />
     <span>disabled</span>
   </React.Fragment>
 );
@@ -36,15 +37,15 @@ wBsStyleExamples.story = {
 
 export const inverted = () => (
   <React.Fragment>
-    <MiniButton icon="home" {...commonProps('success')} inverted />
+    <MiniButton icon="home" {...getStoryProps('success')} inverted />
     <span>success</span>
-    <MiniButton icon="plus" {...commonProps('warning')} inverted />
+    <MiniButton icon="plus" {...getStoryProps('warning')} inverted />
     <span>warning</span>
-    <MiniButton icon="times" {...commonProps('danger')} inverted />
+    <MiniButton icon="times" {...getStoryProps('danger')} inverted />
     <span>danger</span>
-    <MiniButton icon="plus" {...commonProps('info')} inverted />
+    <MiniButton icon="plus" {...getStoryProps('info')} inverted />
     <span>info</span>
-    <MiniButton icon="plus" {...commonProps('default')} disabled inverted />
+    <MiniButton icon="plus" {...getStoryProps('default')} disabled inverted />
     <span>disabled</span>
   </React.Fragment>
 );
