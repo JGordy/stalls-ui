@@ -6,13 +6,6 @@ cache:
   directories:
     - node_modules
 
-stages:
-  - build and test
-  - name: npm publish
-    if: tags = true
-  - name: deploy Storybook
-    if: branch = master
-
 notifications:
   slack: generositymarket:ZeAVzH5Ww7PB50ugNnwl5JuT
 
