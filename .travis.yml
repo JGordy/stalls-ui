@@ -10,9 +10,9 @@ notifications:
   slack: generositymarket:ZeAVzH5Ww7PB50ugNnwl5JuT
 
 # build dist for npm publishing
-before_deploy:
-  - npm run build:publish
-  - npm run build-storybook
+# before_deploy:
+#   - npm run build:publish
+#   - npm run build-storybook
 
 jobs:
   include:
@@ -21,12 +21,12 @@ jobs:
       - npm run build
       - npm test
     - stage: npm release
-      if: tag IS present AND branch = master
+      if: tag IS present
       node_js: "8"
       script: echo "Deploying to npm ..." # usually you do not want to rerun any tests
-      before_deploy:
-        - npm run build:publish
       deploy:
+        before_deploy:
+          - npm run build:publish
         provider: npm
         script: skip
         email: $NPM_EMAIL
@@ -42,7 +42,7 @@ jobs:
         - npm run build-storybook
         provider: pages # deploy to Github Pages
         script: skip
-        skip-cleanup: false
+        skip-cleanup: true
         github-token: $GITHUB_TOKEN
         local_dir: storybook-static # folder to be deployed
         repo: jgordy/stalls-ui

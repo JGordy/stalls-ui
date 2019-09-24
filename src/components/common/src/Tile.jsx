@@ -7,7 +7,7 @@ import "../styles/Tile.css";
 const Tile = ({
     bsStyle,
     children,
-    classes = '',
+    classes,
     disabled,
     icon,
     onClick,
@@ -56,6 +56,7 @@ Tile.propTypes = {
 };
 
 Tile.defaultProps = {
+    classes: '',
     disabled: false,
 };
 
