@@ -10,5 +10,6 @@ export { default as ModalContent } from './ModalContent';
 export { default as ModalTrigger } from './ModalTrigger';
 export { default as Pill } from './Pill';
 export { default as ProfileImage } from './ProfileImage';
+export { default as ProgressBar } from './ProgressBar';
 export { default as TextInput } from './TextInput';
 export { default as Tile } from './Tile';

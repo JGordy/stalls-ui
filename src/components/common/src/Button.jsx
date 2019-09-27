@@ -86,7 +86,7 @@ Button.propTypes = {
     disabled: PropTypes.bool,
     /**
     * The text to render in the root component
-*/
+    */
     label: PropTypes.string,
     /**
     * On click handler

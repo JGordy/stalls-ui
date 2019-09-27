@@ -1,0 +1,52 @@
+@import "../../../styles/theme";
+
+@mixin filler-styles($background) {
+    background: $background;
+
+    & .label {
+        color: darken($background, 45%);
+    }
+}
+
+.ProgressBar {
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 2rem auto;
+    min-width: 30%;
+    padding: 0.5rem;
+    position: relative;
+    overflow: hidden;
+
+    .filler {
+        border-radius: inherit;
+        padding: 0.65rem 0rem;
+        transition: width 0.3s;
+        text-align: center;
+
+
+        .label {
+            letter-spacing: 0.1rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &.success {
+            @include filler-styles($light-green);
+        }
+
+        &.warning {
+            @include filler-styles($warning);
+        }
+
+        &.danger {
+            @include filler-styles(lighten($danger, 5%));
+        }
+
+        &.info {
+            @include filler-styles(lighten($info, 5%));
+        }
+    }
+}
