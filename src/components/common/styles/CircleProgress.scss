@@ -1,0 +1,13 @@
+@import "../../../styles/theme";
+
+.CircleProgress {
+    transition: all 0.3s linear;
+
+    .circle-background {
+        // stroke: $light-gray;
+    }
+
+    .circle-text {
+        font-weight: bold;
+    }
+}

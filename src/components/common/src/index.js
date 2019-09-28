@@ -1,4 +1,5 @@
 export { default as Button } from './Button';
+export { default as CircleProgress } from './CircleProgress';
 export { default as DownloadCSV } from './DownloadCSV';
 export { default as Glyphicon } from './Glyphicon';
 export { default as FileInput } from './FileInput';
