@@ -20,7 +20,6 @@ const getStoryProps = (type, inverted = false) => ({
     rounded: true,
     // bsStyle: type,
     // inverted: inverted,
-    // onClick: action(`${type} button clicked`),
 });
 
 export const primary = () => (
@@ -31,4 +30,21 @@ export const primary = () => (
 
 primary.story = {
     name: 'Primary',
+};
+
+const secondaryProps = {
+    ...getStoryProps(''),
+    fillColor: 'red',
+    strokeColor: 'white',
+    rounded: false,
+}
+
+export const secondary = () => (
+    <React.Fragment>
+        <CircleProgress {...secondaryProps} />
+    </React.Fragment>
+);
+
+secondary.story = {
+    name: 'Secondary',
 };
