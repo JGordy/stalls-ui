@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // Component import
-import { CircleProgress } from '../src';
+import { ProgressCircle } from '../src';
 
 const defaultProps = {
     // current: 0,
@@ -11,11 +11,11 @@ const defaultProps = {
     // label: 'Great Job!',
 };
 
-const wrapper = shallow(<CircleProgress {...defaultProps} />);
+const wrapper = shallow(<ProgressCircle {...defaultProps} />);
 
-describe('<CircleProgress />', () => {
+describe('<ProgressCircle />', () => {
 
     it('renders without crashing', () => {
-        expect(wrapper.exists('.CircleProgress')).toBe(true);
+        expect(wrapper.exists('.ProgressCircle')).toBe(true);
     });
 });

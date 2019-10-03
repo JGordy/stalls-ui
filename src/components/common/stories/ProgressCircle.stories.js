@@ -1,13 +1,13 @@
 import React from 'react';
 // import { action } from '@storybook/addon-actions';
-import { CircleProgress } from '../src';
+import { ProgressCircle } from '../src';
 
 export default {
-    title: 'Atoms/CircleProgress',
+    title: 'Atoms/ProgressCircle',
 
     parameters: {
-        jest: ['CircleProgress.spec.js'],
-        component: CircleProgress,
+        jest: ['ProgressCircle.spec.js'],
+        component: ProgressCircle,
     },
 };
 
@@ -24,7 +24,7 @@ const getStoryProps = (type, inverted = false) => ({
 
 export const primary = () => (
     <React.Fragment>
-        <CircleProgress {...getStoryProps('')} />
+        <ProgressCircle {...getStoryProps('')} />
     </React.Fragment>
 );
 
@@ -41,7 +41,7 @@ const secondaryProps = {
 
 export const secondary = () => (
     <React.Fragment>
-        <CircleProgress {...secondaryProps} />
+        <ProgressCircle {...secondaryProps} />
     </React.Fragment>
 );
 

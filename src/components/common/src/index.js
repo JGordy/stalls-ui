@@ -1,5 +1,4 @@
 export { default as Button } from './Button';
-export { default as CircleProgress } from './CircleProgress';
 export { default as DownloadCSV } from './DownloadCSV';
 export { default as Glyphicon } from './Glyphicon';
 export { default as FileInput } from './FileInput';
@@ -12,5 +11,6 @@ export { default as ModalTrigger } from './ModalTrigger';
 export { default as Pill } from './Pill';
 export { default as ProfileImage } from './ProfileImage';
 export { default as ProgressBar } from './ProgressBar';
+export { default as ProgressCircle } from './ProgressCircle';
 export { default as TextInput } from './TextInput';
 export { default as Tile } from './Tile';

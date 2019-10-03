@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/CircleProgress.css';
+import '../styles/ProgressCircle.css';
 
 
-// const CircleProgress = ({
+// const ProgressCircle = ({
 //     // bsStyle,
 //     // bsSize,
 //     current,
@@ -20,7 +20,7 @@ import '../styles/CircleProgress.css';
 //     console.warn('%%%', percentage);
 
 //     return (
-//         <div className='CircleProgress'>
+//         <div className='ProgressCircle'>
 //             <svg
 //                 width="100px"
 //                 height="100px"
@@ -43,7 +43,7 @@ import '../styles/CircleProgress.css';
 //     );
 // };
 
-// CircleProgress.propTypes = {
+// ProgressCircle.propTypes = {
 //     /**
 //     * The size name to apply to the component
 //     */
@@ -58,16 +58,16 @@ import '../styles/CircleProgress.css';
 //     goal: PropTypes.number,
 // };
 
-// CircleProgress.defaultProps = {
+// ProgressCircle.defaultProps = {
 //     current: 0,
 //     goal: 100,
 //     strokeWidth: 6,
 // };
 
-// export default CircleProgress;
+// export default ProgressCircle;
 
 
-const CircleProgress = ({
+const ProgressCircle = ({
     current,
     fillColor,
     goal,
@@ -94,7 +94,7 @@ const CircleProgress = ({
 
     return (
         <svg
-            className='CircleProgress'
+            className='ProgressCircle'
             width={sqSize}
             height={sqSize}
             viewBox={viewBox}
@@ -138,7 +138,7 @@ const CircleProgress = ({
     );
 }
 
-CircleProgress.propTypes = {
+ProgressCircle.propTypes = {
     /**
     * The size name to apply to the component
     */
@@ -153,10 +153,10 @@ CircleProgress.propTypes = {
     goal: PropTypes.number,
 };
 
-CircleProgress.defaultProps = {
+ProgressCircle.defaultProps = {
     current: 0,
     goal: 100,
     strokeWidth: 6,
 };
 
-export default CircleProgress;
+export default ProgressCircle;
