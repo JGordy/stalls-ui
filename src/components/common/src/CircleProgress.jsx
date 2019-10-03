@@ -77,8 +77,8 @@ const CircleProgress = ({
     strokeWidth,
 }) => {
     const percentage = (current / goal) * 100;
-    const complete = percentage === 100;
-    const notMoved = percentage === 1;
+    // const complete = percentage === 100;
+    // const notMoved = percentage === 1;
 
     // SVG centers the stroke width on the radius, subtract out so circle fits in square
     const radius = (sqSize - strokeWidth) / 2;
