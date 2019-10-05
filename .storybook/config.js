@@ -5,6 +5,7 @@ import {
 } from '@storybook/react';
 
 import { configureActions } from '@storybook/addon-actions';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 import { withTests } from '@storybook/addon-jest';
 import results from '../jest-test-results.json';
@@ -20,6 +21,12 @@ configureActions({
 addParameters({
     options: {
         theme: marketTheme,
+    },
+});
+
+addParameters({
+    viewport: {
+        viewports: INITIAL_VIEWPORTS,
     },
 });
 
