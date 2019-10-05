@@ -1,0 +1,31 @@
+@import "../../../styles/mixins";
+
+// TODO: Add breakpionts for mobile and desktop
+.HeroSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 29vh;
+
+    @include respond-to(medium-screens) {
+        max-height: 100vh;
+        min-height: 50vh;
+    }
+    
+    
+    & .Hero {
+        width: 100%;
+        position: relative;
+    }
+
+    & .ProfileImage {
+        position: absolute;
+        bottom: -25%;
+        overflow: visible;
+        @include respond-to(medium-screens) {
+            bottom: -20%;
+        }
+    }
+}

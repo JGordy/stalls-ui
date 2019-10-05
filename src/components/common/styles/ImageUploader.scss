@@ -1,12 +1,27 @@
+@import "../../../styles/mixins";
+
 .ImageUploader {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    height: 29vh;
+
+    @include respond-to(medium-screens) {
+        max-height: 100vh;
+        min-height: 50vh;
+    }
 
     .cover {
         align-self: stretch;
         position: relative;
+        height: 29vh;
+
+        @include respond-to(medium-screens) {
+            max-height: 100vh;
+            min-height: 50vh;
+        }
 
         .cover_buttons {
             display: flex;
@@ -21,7 +36,7 @@
 
     .profile {
         position: absolute;
-        bottom: -10%;
+        bottom: -19%;
 
         .profile_buttons {
             display: flex;

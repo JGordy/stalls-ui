@@ -1,16 +1,20 @@
+@import "../../../styles/mixins";
+
 .Hero {
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-
     color: white;
-
+    height: 29vh;
     position: relative;
-
-    min-height: 100vh;
     overflow: hidden;
+    
+    @include respond-to(medium-screens) {
+        max-height: 100vh;
+        min-height: 50vh;
+    }
 
 
     .HeroImage {
@@ -23,5 +27,13 @@
         max-width: 150%;
         max-height: 150%;
         z-index: -1;
+    }
+
+    & h1 {
+        font-size: 1rem;
+
+        @include respond-to(medium-screens) {
+            font-size: 2rem;
+        }
     }
 }
