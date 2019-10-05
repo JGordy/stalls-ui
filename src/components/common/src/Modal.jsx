@@ -7,9 +7,9 @@ import '../styles/Modal.css';
 import { useModal } from '@jgordy24/react-hooks-lib';
 
 const Modal = ({
-    ariaLabel,
+    ariaLabel = 'modal',
     children,
-    role,
+    role = 'modal',
     triggerText,
 }) => {
     const buttonRef = useRef();
@@ -65,6 +65,10 @@ Modal.propTypes = {
     * Children to render in the modal content
     */
     children: PropTypes.node,
+    /**
+    * Text to render in the modal trigger button
+    */
+    triggerText: PropTypes.string,
 };
 
 Modal.defaultProps = {};
