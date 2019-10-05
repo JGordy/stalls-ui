@@ -1,4 +1,5 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 import { FileInput } from '../src';
 
 export default {
@@ -19,13 +20,13 @@ export const defaultStory = () => {
   const inputProps = {
     classes: 'active another_class',
     inputName: 'profile',
-    onChange: event => console.info('File', event.target.files),
+    onChange: action('File Uploaded'),
   };
 
   return (
     <React.Fragment>
       <FileInput {...inputProps} {...buttonProps} />
-      <p>Check out the dev console once you have selected a file!</p>
+      <p>Check out the action tab once you have selected a file!</p>
     </React.Fragment>
   );
 };
