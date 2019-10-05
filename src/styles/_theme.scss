@@ -46,12 +46,23 @@ $warning-85:        rgba(255,185,92,0.85);
 $success:           $medium-green;
 $success-85:        $medium-green-85;
 
+        /* Font styles */
 $main-font:         'Futura', 'Century Gothic', sans-serif;
-$border:            1px solid $light-gray;
-$border-radius:     5px;
+
+        /* Shadow styles */
 $box-shadow:        0.2rem 0.2rem 1.5rem;
 $black-box-shadow:  0.2rem 0.2rem 1.5rem rgba(0,0,0,0.5);
 $mini-box-shadow:   0.2rem 0.2rem 1rem rgba(0,0,0,0.5);
+
+        /* Border styles */
+$border:            1px solid $light-gray;
+$border-radius:     5px;
+
+        /* Viewport breakpoints */
+$viewport-s: 576px;
+$viewport-m: 768px;
+$viewport-l: 992px;
+$viewport-xl: 1200px;
 
 * {
         font-family: $main-font;
