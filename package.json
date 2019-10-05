@@ -41,6 +41,7 @@
     "storybook": "BABEL_ENV=development start-storybook -p 9001 -s .storybook",
     "build-storybook": "build-storybook -s .storybook",
     "deploy-storybook": "storybook-to-ghpages",
+    "build:sass": "npm rebuild node-sass",
     "build:react": "react-scripts build",
     "build": "npm-run-all -s build-css build:react",
     "build:babel": "BABEL_ENV=production && babel src --out-dir dist --copy-files --presets=react,env,stage-2 --ignore spec.js,test.js,__snapshots__,__mocks__",
