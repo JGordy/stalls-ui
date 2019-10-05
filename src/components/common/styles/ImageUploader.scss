@@ -36,7 +36,8 @@
 
     .profile {
         position: absolute;
-        bottom: -19%;
+        bottom: 0%;
+        transform: translateY(50%);
 
         .profile_buttons {
             display: flex;

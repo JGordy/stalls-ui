@@ -22,10 +22,8 @@
 
     & .ProfileImage {
         position: absolute;
-        bottom: -25%;
+        bottom: 0%;
         overflow: visible;
-        @include respond-to(medium-screens) {
-            bottom: -20%;
-        }
+        transform: translateY(50%);
     }
 }
