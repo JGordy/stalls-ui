@@ -16,6 +16,16 @@
         min-height: 50vh;
     }
 
+    @include respond-to(wide-screens) {
+        max-height: 100vh;
+        min-height: 60vh;
+    }
+
+    @include respond-to(extra-wide-screens) {
+        max-height: 100vh;
+        min-height: 80vh;
+    }
+
 
     .HeroImage {
         position: absolute;
@@ -33,6 +43,10 @@
         font-size: 1rem;
 
         @include respond-to(medium-screens) {
+            font-size: 2rem;
+        }
+
+        @include respond-to(wide-screens) {
             font-size: 2rem;
         }
     }

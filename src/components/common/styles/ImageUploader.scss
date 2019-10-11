@@ -13,6 +13,16 @@
         min-height: 50vh;
     }
 
+    @include respond-to(wide-screens) {
+        max-height: 100vh;
+        min-height: 60vh;
+    }
+
+    @include respond-to(extra-wide-screens) {
+        max-height: 100vh;
+        min-height: 80vh;
+    }
+
     .cover {
         align-self: stretch;
         position: relative;
@@ -21,6 +31,17 @@
         @include respond-to(medium-screens) {
             max-height: 100vh;
             min-height: 50vh;
+        }
+
+
+        @include respond-to(wide-screens) {
+            max-height: 100vh;
+            min-height: 60vh;
+        }
+
+        @include respond-to(extra-wide-screens) {
+            max-height: 100vh;
+            min-height: 80vh;
         }
 
         .cover_buttons {
