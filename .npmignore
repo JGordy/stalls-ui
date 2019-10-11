@@ -1,11 +1,11 @@
 src/**/*.scss
-
-src/components/common/stories
+src/**/*.stories.js
 
 # dependencies
 /node_modules
 
 /build
+/stalls-scripts
 
 # tests
 __mocks__/

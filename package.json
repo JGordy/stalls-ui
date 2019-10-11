@@ -36,6 +36,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "add-component": "sh ./stalls-scripts/create_component.sh",
     "start:react": "react-scripts start",
     "start": "npm-run-all -p watch-css start:react",
     "storybook": "BABEL_ENV=development start-storybook -p 9001 -s .storybook",
