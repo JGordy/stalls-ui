@@ -5,7 +5,7 @@
         @media only screen and (max-width: $viewport-s) { @content; }
     }
     @else if $media == medium-screens {
-        @media only screen and (min-width: $viewport-s + 1) and (max-width: $viewport-l - 1) { @content; }
+        @media only screen and (min-width: $viewport-s + 1) { @content; }
     }
     @else if $media == wide-screens {
         @media only screen and (min-width: $viewport-l) { @content; }
