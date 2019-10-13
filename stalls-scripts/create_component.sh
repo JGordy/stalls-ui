@@ -50,8 +50,13 @@ else
                     \e[0m├── \e[33m...other components tests\e[0m\n"
 
     # git status
+    FULLCOMPSRC="$COMPONENTSRC$SOURCEPATH$component.jsx"
+    FULLCOMPSTORY="$COMPONENTSRC$STORYPATH$component.stories.js"
+    FULLCOMPSTYLES="$COMPONENTSRC$STYLEPATH$component.scss"
+    FULLCOMPTEST="$COMPONENTSRC$TESTPATH$component.spec.js"
+    UPDATEDINDEX="src/components/common/src/index.js"
 
-    git add "$SOURCEPATH$component.jsx" "$STORYPATH$component.stories.js" "$STYLEPATH$component.scss" "$TESTPATH$component.spec.js"
+    git add $FULLCOMPSRC $FULLCOMPSTORY $FULLCOMPSTYLES $FULLCOMPTEST $UPDATEDINDEX
 
     git status
 

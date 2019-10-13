@@ -1,7 +1,10 @@
+// Do not update this file manually
+// Use the command "npm run update-index"
+
 export { default as Button } from './Button';
 export { default as DownloadCSV } from './DownloadCSV';
-export { default as Glyphicon } from './Glyphicon';
 export { default as FileInput } from './FileInput';
+export { default as Glyphicon } from './Glyphicon';
 export { default as Hero } from './Hero';
 export { default as HeroSection } from './HeroSection';
 export { default as ImageUploader } from './ImageUploader';
