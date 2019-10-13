@@ -8,4 +8,4 @@ echo "@import \"../../../styles/theme\";
     /* styles here */
 }" > $COMPONENTPATH'.scss'
 
-echo "\e[33m$COMPONENT styles created in location $COMPONENTPATH\e[0m"
+printf "\e[33m$COMPONENT styles created in location $COMPONENTPATH\e[0m\n"

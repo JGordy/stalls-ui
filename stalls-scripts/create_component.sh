@@ -1,5 +1,4 @@
 echo 'Component Name: '
-
 read component
 
 COMPONENTSRC="src/components/common/"
@@ -8,44 +7,49 @@ STORYPATH="stories/"
 STYLEPATH+="styles/"
 TESTPATH+="tests/"
 
-echo "\e[33m$SOURCEPATH$component\e[0m"
-
 # Check to see if file already exists
-if [ -f $SOURCEPATH$component.jsx ]
+if [ -f $COMPONENTSRC$SOURCEPATH$component.jsx ]
 then
     # file already exists
-    echo "\e[33m$component already exists, exiting.\e[0m"
+    printf "\e[33m$component already exists, exiting.\e[0m\n"
     exit 1
 else
-    echo '\n \e[33mCreating -> '$component ' files\e[0m'
+    printf "\e[33mCreating Component -> '$component'... \e[0m\n"
 
+    # Create jsx file
     sh ./stalls-scripts/create_src.sh $component $COMPONENTSRC$SOURCEPATH
 
+    # Create story file
     sh ./stalls-scripts/create_story.sh $component $COMPONENTSRC$STORYPATH
 
+    # Create styles file
     sh ./stalls-scripts/create_styles.sh $component $COMPONENTSRC$STYLEPATH
 
+    # Create test file
     sh ./stalls-scripts/create_tests.sh $component $COMPONENTSRC$TESTPATH
 
-    echo "\n directory now looks like this after file creation: \e[33m
+    # Update index file
+    node ./stalls-scripts/create-index.js
 
-    ├── src/
-        ├── components/
-            ├── common/
-                ├── src/
-                    ├── $component.jsx
-                    ├── ...other components
-                ├── stories/
-                    ├── $component.stories.js
-                    ├── ...other component stories
-                ├── styles/
-                    ├── $component.scss
-                    ├── ...other components styles
-                ├── tests/
-                    ├── $component.spec.js
-                    ├── ...other components tests\e[0m"
+    printf "\n Directory now looks like this after file creation:
 
-    git status
+    \e[0m├── \e[33msrc/
+        \e[0m├── \e[33mcomponents/
+            \e[0m├── \e[33mcommon/
+                \e[0m├── \e[33msrc/
+                    \e[0m├── \e[33m$component.jsx
+                    \e[0m├── \e[33m...other components
+                \e[0m├── \e[33mstories/
+                    \e[0m├── \e[33m$component.stories.js
+                    \e[0m├── \e[33m...other component stories
+                \e[0m├── \e[33mstyles/
+                    \e[0m├── \e[33m$component.scss
+                    \e[0m├── \e[33m...other components styles
+                \e[0m├── \e[33mtests/
+                    \e[0m├── \e[33m$component.spec.js
+                    \e[0m├── \e[33m...other components tests\e[0m\n"
+
+    # git status
 
     git add "$SOURCEPATH$component.jsx" "$STORYPATH$component.stories.js" "$STYLEPATH$component.scss" "$TESTPATH$component.spec.js"
 

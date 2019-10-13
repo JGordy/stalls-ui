@@ -34,4 +34,4 @@ default.story = {
     name: 'default'
 };" > $COMPONENTPATH'.stories.js'
 
-echo "\e[33m$COMPONENT stories created in location $COMPONENTPATH\e[0m"
+printf "\e[33m$COMPONENT stories created in location $COMPONENTPATH\e[0m\n"

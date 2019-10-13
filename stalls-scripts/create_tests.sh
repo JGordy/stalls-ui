@@ -20,4 +20,4 @@ describe('<$COMPONENT />', () => {
     });
 });" > $COMPONENTPATH'.spec.js'
 
-echo "\e[33m$COMPONENT tests created in location $COMPONENTPATH\e[0m"
+printf "\e[33m$COMPONENT tests created in location $COMPONENTPATH\e[0m\n"

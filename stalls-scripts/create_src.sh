@@ -85,11 +85,11 @@ while true; do
 		"class") class_component
             break   ;;
 
-		*)	echo "\e[33mYou must specify either functional or class\e[0m"
+		*)	printf "\e[33mYou must specify either functional or class\e[0m\n"
 			continue	;;
 
 	esac
 
 done
 
-echo "\e[33m$COMPONENT created in location $COMPONENTPATH\e[0m"
+printf "\e[33m$COMPONENT created in location $COMPONENTPATH\e[0m\n"
