@@ -36,7 +36,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "add-component": "sh ./stalls-scripts/create_component.sh",
+    "create-component": "sh ./stalls-scripts/create_component.sh",
     "start:react": "react-scripts start",
     "start": "npm-run-all -p watch-css start:react",
     "storybook": "BABEL_ENV=development start-storybook -p 9001 -s .storybook",
@@ -76,6 +76,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "create-index": "^2.4.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "eslint-plugin-react": "^7.15.1",
