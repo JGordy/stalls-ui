@@ -1,0 +1,17 @@
+{
+    "dirs": [
+        {
+            "pathToIndex": "./src",
+            "importFrom": "./src/components/common/src/"
+        },
+        {
+            "pathToIndex": "./src/components/",
+            "importFrom": "./src/components/common/src/"
+        },
+        {
+            "pathToIndex": "./src/components/common/src/",
+            "importFrom": "./src/components/common/src/"
+        }
+    ],
+    "entryFile": "index.js"
+}

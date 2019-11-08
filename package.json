@@ -43,6 +43,7 @@
     "storybook": "BABEL_ENV=development start-storybook -p 9001 -s .storybook",
     "build-storybook": "build-storybook -s .storybook",
     "deploy-storybook": "storybook-to-ghpages",
+    "build-index": "idx-compose -c",
     "build:sass": "npm rebuild node-sass",
     "build:react": "react-scripts build",
     "build": "npm-run-all -s build-css build:react",
@@ -84,7 +85,8 @@
     "jest": "^24.8.0",
     "jest-cli": "^24.8.0",
     "lint-staged": "^9.4.1",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "write-index": "^1.1.1"
   },
   "publishConfig": {
     "access": "public"
