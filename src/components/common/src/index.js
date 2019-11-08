@@ -1,5 +1,5 @@
 // Do not update this file manually
-// Use the command "npm run update-index"
+// Use the command "npm run build-index"
 
 export { default as Button } from './Button';
 export { default as DownloadCSV } from './DownloadCSV';
