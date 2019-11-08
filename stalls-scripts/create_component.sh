@@ -1,3 +1,5 @@
+# TODO: Make this an npm package for others to use
+
 echo 'Component Name: '
 read component
 
@@ -28,8 +30,8 @@ else
     # Create test file
     sh ./stalls-scripts/create_tests.sh $component $COMPONENTSRC$TESTPATH
 
-    # Update index file
-    node ./stalls-scripts/create-index.js
+    # Update index file (NPM package write-index)
+    npm run build-index
 
     printf "\n Directory now looks like this after file creation:
 
