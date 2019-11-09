@@ -7,6 +7,7 @@ import "../styles/Button.css";
 
 const Button = ({
     bsStyle,
+    bsSize,
     buttonRef,
     linkContext,
     disabled,
@@ -22,7 +23,7 @@ const Button = ({
     const invertedClass = inverted ? 'inverted' : '';
 
     const buttonProps = {
-        className: `Button ${bsStyle} ${invertedClass} ${disabledClass}`,
+        className: `Button ${bsStyle} ${bsSize} ${invertedClass} ${disabledClass}`,
         onClick: !disabled && onClick ? onClick : undefined,
         ref: buttonRef,
         ...rest
@@ -36,7 +37,7 @@ const Button = ({
     );
 
     if (href) {
-        const isExternalLink = (href) => href.includes('https://');
+        const isExternalLink = href.includes('https://');
         if (isExternalLink) {
             return (
                 <a
@@ -79,6 +80,16 @@ Button.propTypes = {
         'warning',
         'danger',
         'info',
+    ]),
+    /**
+    * The size name to apply to the button
+    */
+    bsSize: PropTypes.oneOf([
+        'sm',
+        'md',
+        'lg',
+        'full',
+        'long',
     ]),
     /**
     * Is the button disabled?
