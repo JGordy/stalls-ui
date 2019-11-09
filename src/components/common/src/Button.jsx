@@ -36,7 +36,7 @@ const Button = ({
     );
 
     if (href) {
-        const isExternalLink = (href) => href.includes('https://');
+        const isExternalLink = href.includes('https://');
         if (isExternalLink) {
             return (
                 <a
