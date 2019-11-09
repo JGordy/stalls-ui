@@ -19,7 +19,7 @@ const FileInput = ({
 
     return (
         <label
-            className={`${labelClass} ${classes}`}
+            className={`FileInput ${labelClass} ${classes}`}
             {...rest}
         >
             <MiniButton
