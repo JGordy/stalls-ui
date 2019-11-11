@@ -34,7 +34,7 @@
     "build:react": "react-scripts build",
     "build": "npm-run-all -s build-css build:react",
     "build:babel": "BABEL_ENV=production && babel src --out-dir dist --copy-files --presets=react,env,stage-2 --ignore spec.js,test.js,stories.js,__stories__,__snapshots__,__mocks__",
-    "build:publish": "npm run build-css && rm -rf dist && npm run build:babel && npm publish",
+    "build:publish": "npm run build-css && rm -rf dist && npm run build:babel",
     "lint": "eslint src",
     "lint-staged": "lint-staged",
     "test": "react-scripts test --env=jsdom --watchAll=false",
