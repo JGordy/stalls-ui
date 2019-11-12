@@ -32,6 +32,20 @@ wBsStyleExamples.story = {
   name: 'W/ bsStyle examples',
 };
 
+export const wBsSizeExamples = () => (
+  <React.Fragment>
+    <Button {...getStoryProps('success')} label='bsSize: sm' bsSize='sm' />
+    <Button {...getStoryProps('success')} label='bsSize: md' bsSize='md' />
+    <Button {...getStoryProps('success')} label='bsSize: lg' bsSize='lg' />
+    <Button {...getStoryProps('success')} label='bsSize: full' bsSize='full' />
+    <Button {...getStoryProps('success')} label='bsSize: long' bsSize='long' />
+  </React.Fragment>
+);
+
+wBsSizeExamples.story = {
+  name: 'W/ bsSize examples'
+}
+
 export const wInvertedProp = () => (
   <React.Fragment>
     <Button {...getStoryProps('success', true)} />
@@ -52,7 +66,7 @@ withIcon.story = {
   name: 'with Icon',
 };
 
-export const withHref = () => <Button label="navigate" bsStyle="info" href="#" />;
+export const withHref = () => <Button label="navigate" bsStyle="info" href="https://localhost:9001/?path=/story/atoms-button--with-href" />;
 
 withHref.story = {
   name: 'with href',

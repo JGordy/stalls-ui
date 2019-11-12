@@ -114,6 +114,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+    bsSize: 'lg',
     disabled: false,
     inverted: false,
 };
