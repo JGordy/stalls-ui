@@ -43,8 +43,6 @@ jobs:
         fi
       script: echo "Deploying to npm ..."
       deploy:
-        before_deploy:
-          - npm run build:publish
         provider: npm
         tag: "$NPM_TAG"
         # script: skip
@@ -54,15 +52,14 @@ jobs:
         on:
           branch: master
     - stage: Deploy Storybook
-      script:
-        - echo "Deploying Storybook ..."
-        - npm run build-css
-        - npm run build-storybook
+      before_deploy:
+        - echo "Deploying Storybook to gh-pages ..."
+        - npm run predeploy-storybook
       deploy:
         provider: pages # deploy to Github Pages
         skip-cleanup: true
         github-token: $GITHUB_TOKEN
-        local_dir: storybook-static # folder to be deployed
+        local_dir: ./storybook-static # folder to be deployed
         repo: jgordy/stalls-ui
         target_branch: gh-pages
         on:
