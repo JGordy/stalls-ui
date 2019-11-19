@@ -2,7 +2,6 @@
 
 @mixin tile-styles($background, $color: $white) {
     background: $background;
-    box-shadow: 7px 7px 50px 0px rgba($background, 0.5);
     color: $color;
 
     &:hover {
@@ -25,6 +24,10 @@
     margin: 0.25rem;
     padding: 0.5rem;
     transition: background 0.3s, border 0.3s, color 0.3s;
+
+    &.active {
+        @include tile-styles($dark-green);
+    }
 
     &.success {
         @include tile-styles($success);

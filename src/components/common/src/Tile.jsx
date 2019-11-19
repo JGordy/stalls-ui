@@ -36,6 +36,7 @@ Tile.propTypes = {
     * The style name to apply to the tile
     */
     bsStyle: PropTypes.oneOf([
+        'active',
         'success',
         'warning',
         'danger',
