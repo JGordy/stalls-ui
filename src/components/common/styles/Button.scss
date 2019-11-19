@@ -24,6 +24,10 @@ $button-color: $color-text-contrast-lighter;
         background: darken($background, 15%);
         border: 2px solid darken($background, 15%);
     }
+
+    &.transparent {
+        background: rgba($background, 0.85);
+    }
 }
 
 a.Button {
@@ -55,6 +59,10 @@ a.Button {
 
     cursor: pointer;
 
+    &.active {
+        @include button-styles($dark-green);
+    }
+
     &.success {
         @include button-styles($success);
     }
@@ -69,6 +77,10 @@ a.Button {
 
     &.info {
         @include button-styles($info);
+    }
+
+    &.pale {
+        @include button-styles($white-85, $dark-green);
     }
 
     &.sm {
