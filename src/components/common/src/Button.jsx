@@ -16,14 +16,16 @@ const Button = ({
     inverted,
     label,
     onClick,
+    transparent,
     ...rest
 }) => {
 
     const disabledClass = disabled ? 'disabled' : '';
     const invertedClass = inverted ? 'inverted' : '';
+    const transparentClass = transparent ? 'transparent' : '';
 
     const buttonProps = {
-        className: `Button ${bsStyle} ${bsSize} ${invertedClass} ${disabledClass}`,
+        className: `Button ${bsStyle} ${transparentClass} ${bsSize} ${invertedClass || ''} ${disabledClass || ''}`,
         onClick: !disabled && onClick ? onClick : undefined,
         ref: buttonRef,
         ...rest
@@ -76,10 +78,12 @@ Button.propTypes = {
     * The style name to apply to the button
     */
     bsStyle: PropTypes.oneOf([
+        'active',
         'success',
         'warning',
         'danger',
         'info',
+        'pale',
     ]),
     /**
     * The size name to apply to the button
@@ -115,6 +119,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
     bsSize: 'lg',
+    transparent: false,
     disabled: false,
     inverted: false,
 };
