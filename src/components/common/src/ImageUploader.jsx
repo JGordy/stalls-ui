@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/ImageUploader.css';
 
@@ -15,9 +15,11 @@ import {
  */
 const ImageUploader = ({
     coverImgSrc,
+    getImageState,
     heading,
     profileImgSrc,
     onSubmit,
+    roundImage = true,
     ...rest
 }) => {
     const [coverImage, setCoverImage] = useState({
@@ -28,7 +30,18 @@ const ImageUploader = ({
         file: '',
         src: profileImgSrc || '',
     });
-    const [roundedProfile, setRoundedProfile] = useState(true);
+    const [roundedProfile, setRoundedProfile] = useState(roundImage);
+
+    useEffect(() => {
+        // Sends state data to parent in use cases where this component isn't used to save images
+        if (getImageState) {
+            getImageState({
+                coverImage,
+                profileImage,
+                roundedProfile,
+            });
+        }
+    }, [getImageState, coverImage, profileImage, roundedProfile]);
 
     const handleImageChange = (event, type) => {
         event.preventDefault();
@@ -109,7 +122,6 @@ const ImageUploader = ({
                 <Hero
                     altText={'Some image text'}
                     imgSrc={coverImage.src}
-                    overlayColor={'rgba(0, 0, 0, 0.2)'}
                 >
                     <h1>{heading}</h1>
                 </Hero>
