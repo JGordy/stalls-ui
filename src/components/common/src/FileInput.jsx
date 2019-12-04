@@ -11,6 +11,7 @@ const FileInput = ({
     inputName,
     inverted,
     onChange,
+    onClick,
     ...rest
 }) => {
 
@@ -31,6 +32,7 @@ const FileInput = ({
             <input
                 className={inputClass}
                 onChange={onChange}
+                onClick={onClick}
                 type="file"
             />
         </label>
