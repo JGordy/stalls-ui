@@ -12,6 +12,7 @@ const DownloadCSV = ({
     filename,
     headers,
     label,
+    ...rest
 }) => {
     // console.warn("CSV Data: ", csvData);
 
@@ -23,6 +24,7 @@ const DownloadCSV = ({
                 data={data}
                 headers={headers && headers}
                 target="_blank"
+                {...rest}
             >
                 <Glyphicon icon='download' />
                 {label}
