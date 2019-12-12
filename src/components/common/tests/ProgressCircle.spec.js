@@ -6,10 +6,14 @@ import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 import { ProgressCircle } from '../src';
 
 const defaultProps = {
-    // current: 0,
-    // goal: 100,
-    // bsStyle: 'success',
-    // label: 'Great Job!',
+    current: 50,
+    goal: 100,
+    strokeColor: 'red',
+    fillColor: 'white',
+    sqSize: 100,
+    rounded: true,
+    // bsStyle: type,
+    // inverted: inverted,
 };
 
 const testElement = <ProgressCircle {...defaultProps} />;
