@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 
 // Component import
 import MiniButton from '../src/MiniButton';
@@ -10,13 +11,12 @@ const defaultProps = {
     onClick: jest.fn(),
 };
 
-const wrapper = shallow(<MiniButton {...defaultProps} />);
+const testElement = <MiniButton {...defaultProps} />;
+const wrapper = shallow(testElement);
 
 describe('<MiniButton />', () => {
 
-    it('renders without crashing', () => {
-        expect(wrapper.exists('.btns')).toBe(true);
-    });
+    runStandardComponentTests(testElement);
 
     it('calls an onClick handler if passed in as a prop', () => {
         wrapper.simulate('click');

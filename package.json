@@ -1,6 +1,6 @@
 {
   "name": "@jgordy24/stalls-ui",
-  "version": "0.3.34",
+  "version": "0.3.35",
   "author": "JGordy",
   "license": "MIT",
   "homepage": "https://jgordy.github.io/stalls-ui",
@@ -66,7 +66,7 @@
     "react-csv": "^1.1.1",
     "react-dom": "^16.8.5",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.3.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.2.1",
@@ -86,8 +86,8 @@
     "enzyme-adapter-react-16": "^1.11.2",
     "eslint-plugin-react": "^7.15.1",
     "husky": "^3.0.8",
-    "jest": "^24.8.0",
-    "jest-cli": "^24.8.0",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
     "lint-staged": "^9.4.1",
     "prop-types": "^15.7.2",
     "write-index": "^1.1.1"

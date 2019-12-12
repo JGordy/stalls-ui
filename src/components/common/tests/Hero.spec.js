@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 import { images } from '../../../__mocks__/story/images';
 import { Hero } from '../src';
 
@@ -14,13 +15,12 @@ const defaultProps = {
     overlayColor: 'rgba(0, 0, 0, 0.3)',
 }
 
-const wrapper = mount(<Hero {...defaultProps} />);
+const testElement = <Hero {...defaultProps} />;
+const wrapper = mount(testElement);
 
 describe('<Hero />', () => {
 
-    it('renders without crashing', () => {
-        expect(wrapper.exists('.Hero')).toBe(true);
-    });
+    runStandardComponentTests(testElement);
 
     it('renders hero image', () => {
         expect(wrapper.find('.HeroImage').prop("src")).toBe(coverImage);

@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+// import { shallow } from 'enzyme';
+import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 
 // Component import
 import { ProgressBar } from '../src';
@@ -11,13 +12,12 @@ const defaultProps = {
     label: 'Great Job!',
 };
 
-const wrapper = shallow(<ProgressBar {...defaultProps} />);
+const testElement = <ProgressBar {...defaultProps} />;
+// const wrapper = shallow(testElement);
 
 describe('<ProgressBar />', () => {
 
-    it('renders without crashing', () => {
-        expect(wrapper.exists('.ProgressBar')).toBe(true);
-    });
+    runStandardComponentTests(testElement);
 
     it.todo('should render a fill bar');
 

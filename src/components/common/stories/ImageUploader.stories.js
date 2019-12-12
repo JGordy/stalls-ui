@@ -1,4 +1,5 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 import { ImageUploader } from '../src';
 import { images } from '../../../__mocks__/story/images';
 
@@ -17,6 +18,7 @@ export const defaultStory = () => {
     const props = {
         coverImgSrc: coverImage,
         profileImgSrc: profileImage,
+        onSubmit: action('Image changes submitted'),
     };
 
     return <ImageUploader {...props} />;

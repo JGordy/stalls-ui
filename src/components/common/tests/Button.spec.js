@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 
 // Component import
 import { Button } from '../src';
@@ -10,14 +11,13 @@ const defaultProps = {
     onClick: jest.fn(),
     label: 'Submit',
 };
+const testElement = <Button {...defaultProps} />;
 
-const wrapper = shallow(<Button {...defaultProps} />);
+const wrapper = shallow(testElement);
 
 describe('<Button />', () => {
 
-    it('renders without crashing', () => {
-        expect(wrapper.exists('.Button')).toBe(true);
-    });
+    runStandardComponentTests(testElement);
 
     it('should render a label', () => {
         expect(wrapper.text()).toBe('Submit');

@@ -3,23 +3,16 @@ import React from 'react';
 import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 
 // Component import
-import { ProgressCircle } from '../src';
+import { Modal } from '../src';
 
 const defaultProps = {
-    current: 50,
-    goal: 100,
-    strokeColor: 'red',
-    fillColor: 'white',
-    sqSize: 100,
-    rounded: true,
-    // bsStyle: type,
-    // inverted: inverted,
+    // props
 };
 
-const testElement = <ProgressCircle {...defaultProps} />;
+const testElement = <Modal {...defaultProps} />;
 // const wrapper = shallow(testElement);
 
-describe('<ProgressCircle />', () => {
+describe('<Modal />', () => {
 
     runStandardComponentTests(testElement);
 
