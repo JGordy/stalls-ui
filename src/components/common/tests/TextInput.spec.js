@@ -3,19 +3,19 @@ import React from 'react';
 import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 
 // Component import
-import { ProgressCircle } from '../src';
+import { TextInput } from '../src';
 
 const defaultProps = {
-    // current: 0,
-    // goal: 100,
-    // bsStyle: 'success',
-    // label: 'Great Job!',
+    type: 'text',
+    label: 'Name',
+    value: '',
+    onChange: jest.fn(),
 };
 
-const testElement = <ProgressCircle {...defaultProps} />;
+const testElement = <TextInput {...defaultProps} />;
 // const wrapper = shallow(testElement);
 
-describe('<ProgressCircle />', () => {
+describe('<TextInput />', () => {
 
     runStandardComponentTests(testElement);
 

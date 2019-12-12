@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 
 // Component import
 import Pill from '../src/Pill';
@@ -12,13 +13,12 @@ const defaultProps = {
     label: 'Submit',
 };
 
-const wrapper = shallow(<Pill {...defaultProps} />);
+const testElement = <Pill {...defaultProps} />;
+const wrapper = shallow(testElement);
 
 describe('<Pill />', () => {
 
-    it('renders without crashing', () => {
-        expect(wrapper.exists('.Pill')).toBe(true);
-    });
+    runStandardComponentTests(testElement);
 
     it('should render a label', () => {
         expect(wrapper.text()).toBe('Submit');

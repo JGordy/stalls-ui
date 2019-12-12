@@ -3,19 +3,16 @@ import React from 'react';
 import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 
 // Component import
-import { ProgressCircle } from '../src';
+import { ModalTrigger } from '../src';
 
 const defaultProps = {
-    // current: 0,
-    // goal: 100,
-    // bsStyle: 'success',
-    // label: 'Great Job!',
+    // props
 };
 
-const testElement = <ProgressCircle {...defaultProps} />;
+const testElement = <ModalTrigger {...defaultProps} />;
 // const wrapper = shallow(testElement);
 
-describe('<ProgressCircle />', () => {
+describe('<ModalTrigger />', () => {
 
     runStandardComponentTests(testElement);
 

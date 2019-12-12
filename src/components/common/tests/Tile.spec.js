@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 
 // Component import
 import { Tile } from '../src';
@@ -12,13 +13,12 @@ const defaultProps = {
     disabled: false,
 };
 
-const wrapper = shallow(<Tile {...defaultProps} />);
+const testElement = <Tile {...defaultProps} />;
+const wrapper = shallow(testElement);
 
 describe('<Tile />', () => {
 
-    it('renders without crashing', () => {
-        expect(wrapper.exists('.Tile')).toBe(true);
-    });
+    runStandardComponentTests(testElement);
 
     it('should render a label', () => {
         expect(wrapper.text()).toBe('$5');

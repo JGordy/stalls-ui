@@ -3,19 +3,16 @@ import React from 'react';
 import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 
 // Component import
-import { ProgressCircle } from '../src';
+import { Glyphicon } from '../src';
 
 const defaultProps = {
-    // current: 0,
-    // goal: 100,
-    // bsStyle: 'success',
-    // label: 'Great Job!',
+    icon: 'times',
 };
 
-const testElement = <ProgressCircle {...defaultProps} />;
+const testElement = <Glyphicon {...defaultProps} />;
 // const wrapper = shallow(testElement);
 
-describe('<ProgressCircle />', () => {
+describe('<Glyphicon />', () => {
 
     runStandardComponentTests(testElement);
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { runStandardComponentTests } from '../../../testUtils/standard-tests';
 import { images } from '../../../__mocks__/story/images';
 import {
     Hero,
@@ -19,9 +20,12 @@ const defaultProps = {
     roundedProfile: true,
 }
 
-const wrapper = mount(<HeroSection {...defaultProps} />);
+const testElement = <HeroSection {...defaultProps} />;
+const wrapper = mount(testElement);
 
 describe('<HeroSection />', () => {
+
+    runStandardComponentTests(testElement);
 
     it('renders without crashing', () => {
         expect(wrapper.exists()).toBe(true);
