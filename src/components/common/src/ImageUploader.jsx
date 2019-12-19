@@ -22,12 +22,12 @@ const ImageUploader = ({
     ...rest
 }) => {
     const [coverImage, setCoverImage] = useState({
-        file: '',
-        src: coverImgSrc || '',
+        file: null,
+        src: coverImgSrc || null,
     });
     const [profileImage, setProfileImage] = useState({
-        file: '',
-        src: profileImgSrc || '',
+        file: null,
+        src: profileImgSrc || null,
     });
     const [roundedProfile, setRoundedProfile] = useState(roundImage);
     const [imagesChanged, setImagesChanged] = useState(false);
@@ -45,8 +45,8 @@ const ImageUploader = ({
 
     // TODO: Fix issue where if I select a photo then cancel changes, I can't reselect the same photo??
     const handleImageChange = (event, type) => {
+        event.preventDefault();
         if (event && event.target.files) {
-            event.preventDefault();
             let reader = new FileReader();
             let file = event.target.files[0];
             reader.onloadend = () => {
@@ -63,14 +63,16 @@ const ImageUploader = ({
         } else {
 
             const imageResults = {
-                file: '',
-                src: '',
+                file: null,
+                src: null,
             };
 
             setImagesChanged(true);
             if (type === 'cover') setCoverImage({ ...imageResults });
             if (type === 'profile') setProfileImage({ ...imageResults });
         }
+        event.target.value = null;
+        event.target.files = null;
     };
 
     const handleSubmit = () => {
@@ -79,8 +81,8 @@ const ImageUploader = ({
     }
 
     const handleUndoChanges = () => {
-        setCoverImage({ file: '', src: coverImgSrc || '' });
-        setProfileImage({ file: '', src: profileImgSrc || '' });
+        setCoverImage({ file: null, src: coverImgSrc || null });
+        setProfileImage({ file: null, src: profileImgSrc || null });
         setImagesChanged(false);
     }
 
