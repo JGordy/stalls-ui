@@ -1,6 +1,7 @@
 import React from 'react';
 import { MiniButton } from './index';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import '../styles/FileInput.css';
 
 const FileInput = ({
@@ -14,13 +15,12 @@ const FileInput = ({
     onClick,
     ...rest
 }) => {
-
-    const labelClass = `${inputName}_label`;
-    const inputClass = `${inputName}_input`;
+    const inputClass = classnames('FileInput', `${inputName}_input`);
+    const labelClass = classnames('FileInput', `${inputName}_label`, classes);
 
     return (
         <label
-            className={`FileInput ${labelClass} ${classes}`}
+            className={labelClass}
             {...rest}
         >
             <MiniButton

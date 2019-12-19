@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import '../styles/ProgressBar.css';
 
 const Filler = ({
@@ -7,9 +8,12 @@ const Filler = ({
     fillColor,
     label,
     percentage,
-}) => (
+}) => {
+    const barClass = classnames('filler', !fillColor && bsStyle);
+
+    return (
         <div
-            className={`filler ${!fillColor ? bsStyle : ''}`}
+            className={barClass}
             style={{
                 color: `${fillColor}`,
                 width: `${percentage}%`
@@ -17,7 +21,8 @@ const Filler = ({
         >
             {label && <span className="label">{label}</span>}
         </div>
-    );
+    )
+};
 
 
 

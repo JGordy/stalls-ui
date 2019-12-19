@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import '../styles/Hero.css'
 
 /**
@@ -13,6 +14,7 @@ const Hero = ({
     overlayColor,
     ...rest
 }) => {
+    const imgClass = classnames('HeroImage', classes);
 
     return (
         <div
@@ -22,7 +24,7 @@ const Hero = ({
         >
             {children}
             <img
-                className={`HeroImage ${classes ? classes : ''}`}
+                className={imgClass}
                 src={imgSrc}
                 alt={altText}
             />

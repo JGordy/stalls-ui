@@ -39,6 +39,10 @@
             min-height: 80vh;
         }
 
+        .btns {
+            border-color: transparent !important;
+        }
+
         .cover_buttons {
             display: flex;
             flex-direction: column;
@@ -68,6 +72,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
             min-width: 150%;
+        }
+
+        .btns {
+            border-color: transparent !important;
         }
     }
 

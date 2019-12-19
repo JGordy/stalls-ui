@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Glyphicon from './Glyphicon';
+import classnames from 'classnames';
 import '../styles/Pill.css';
 
 /**
@@ -13,10 +14,11 @@ const Pill = ({
     label,
     onClick,
 }) => {
+    const pillClass = classnames('Pill', bsStyle, { active });
 
     return (
         <div
-            className={`Pill ${bsStyle} ${active ? 'active' : ''}`}
+            className={pillClass}
             onClick={onClick}
         >
             {icon && <Glyphicon icon={icon} />}
