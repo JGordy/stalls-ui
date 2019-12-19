@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Glyphicon from './Glyphicon';
+import classnames from 'classnames';
 
 import "../styles/Tile.css";
 
@@ -13,12 +14,11 @@ const Tile = ({
     onClick,
     ...rest
 }) => {
-
-    const disabledClass = disabled ? 'disabled' : '';
+    const tileClass = classnames('Tile', classes, bsStyle, { disabled });
 
     return (
         <div
-            className={`Tile ${classes} ${bsStyle} ${disabledClass}`}
+            className={tileClass}
             onClick={!disabled && onClick ? onClick : undefined}
             {...rest}
         >

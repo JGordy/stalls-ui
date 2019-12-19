@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Glyphicon from './Glyphicon';
 import { Link } from 'react-router-dom';
+import classnames from 'classnames';
 
 import "../styles/Button.css";
 
@@ -19,13 +20,19 @@ const Button = ({
     transparent,
     ...rest
 }) => {
-
-    const disabledClass = disabled ? 'disabled' : '';
-    const invertedClass = inverted ? 'inverted' : '';
-    const transparentClass = transparent ? 'transparent' : '';
+    const btnClass = classnames(
+        'Button',
+        bsStyle,
+        bsSize,
+        {
+            inverted,
+            disabled,
+            transparent,
+        }
+    );
 
     const buttonProps = {
-        className: `Button ${bsStyle} ${transparentClass} ${bsSize} ${invertedClass || ''} ${disabledClass || ''}`,
+        className: btnClass,
         onClick: !disabled && onClick ? onClick : undefined,
         ref: buttonRef,
         ...rest
