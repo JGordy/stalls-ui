@@ -32,7 +32,7 @@ const HeroSection = ({
 
             <ProfileImage
                 placeholder={null}
-                roundImage={roundedProfile}
+                round_image={roundedProfile}
                 src={profileImgSrc}
             />
         </div>

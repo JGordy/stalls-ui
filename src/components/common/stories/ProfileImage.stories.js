@@ -4,24 +4,24 @@ import { ProfileImage } from '../src';
 const mockImage = 'https://homepages.cae.wisc.edu/~ece533/images/girl.png';
 
 export default {
-  title: 'Atoms/ProfileImage',
+    title: 'Atoms/ProfileImage',
 
-  parameters: {
-    jest: ['ProfileImage.spec.js'],
-    component: ProfileImage,
-  },
+    parameters: {
+        jest: ['ProfileImage.spec.js'],
+        component: ProfileImage,
+    },
 };
 
 export const defaultStory = () => <ProfileImage src={mockImage} />;
 
 defaultStory.story = {
-  name: 'default',
+    name: 'default',
 };
 
-export const rounded = () => <ProfileImage roundImage={true} src={mockImage} />;
+export const rounded = () => <ProfileImage round_image={true} src={mockImage} />;
 
 export const missingUrlFallback = () => <ProfileImage src={''} />;
 
 missingUrlFallback.story = {
-  name: 'missing url fallback',
+    name: 'missing url fallback',
 };
