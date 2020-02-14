@@ -5,12 +5,12 @@ import { images } from '../../../__mocks__/story/images';
 import { Hero } from '../src';
 
 // Mock Images
-const { coverImage } = images;
+const { cover_image } = images;
 
 
 const defaultProps = {
     altText: 'Some image text',
-    imgSrc: coverImage,
+    imgSrc: cover_image,
     children: <h1>Here's some sample text</h1>,
     overlayColor: 'rgba(0, 0, 0, 0.3)',
 }
@@ -23,7 +23,7 @@ describe('<Hero />', () => {
     runStandardComponentTests(testElement);
 
     it('renders hero image', () => {
-        expect(wrapper.find('.HeroImage').prop("src")).toBe(coverImage);
+        expect(wrapper.find('.HeroImage').prop("src")).toBe(cover_image);
     });
 
     it('should have a colored overlay', () => {

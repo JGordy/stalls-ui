@@ -2,7 +2,7 @@ import React from 'react';
 import { HeroSection } from '../src';
 import { images } from '../../../__mocks__/story/images';
 
-const { coverImage, profileImage } = images;
+const { cover_image, profile_image } = images;
 
 export default {
     title: 'Molecules/HeroSection',
@@ -18,8 +18,8 @@ export default {
 export const defaultStory = () => {
     const defaultProps = {
         coverAltText: 'Some image text',
-        coverImgSrc: coverImage,
-        profileImgSrc: profileImage,
+        coverImgSrc: cover_image,
+        profileImgSrc: profile_image,
         children: <h1>Here's some sample text</h1>,
         overlayColor: 'rgba(0, 0, 0, 0.3)',
         roundedProfile: true,
