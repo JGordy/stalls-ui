@@ -18,7 +18,7 @@ const ImageUploader = ({
     heading,
     profileImgSrc,
     onSubmit,
-    roundImage = true,
+    round_image = true,
     ...rest
 }) => {
     const [coverImage, setCoverImage] = useState({
@@ -29,7 +29,7 @@ const ImageUploader = ({
         file: null,
         src: profileImgSrc || null,
     });
-    const [roundedProfile, setRoundedProfile] = useState(roundImage);
+    const [roundedProfile, setRoundedProfile] = useState(round_image);
     const [imagesChanged, setImagesChanged] = useState(false);
 
     useEffect(() => {
@@ -175,7 +175,7 @@ const ImageUploader = ({
             <div className='profile'>
                 <ProfileImage
                     placeholder={null}
-                    roundImage={roundedProfile}
+                    round_image={roundedProfile}
                     src={profileImage.src}
                 />
                 {profileButtons}

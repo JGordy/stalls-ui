@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { ImageUploader } from '../src';
 import { images } from '../../../__mocks__/story/images';
 
-const { coverImage, profileImage } = images;
+const { cover_image, profile_image } = images;
 
 export default {
     title: 'Molecules/ImageUploader',
@@ -16,8 +16,8 @@ export default {
 
 export const defaultStory = () => {
     const props = {
-        coverImgSrc: coverImage,
-        profileImgSrc: profileImage,
+        coverImgSrc: cover_image,
+        profileImgSrc: profile_image,
         onSubmit: action('Image changes submitted'),
     };
 

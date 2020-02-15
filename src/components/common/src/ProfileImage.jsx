@@ -4,14 +4,14 @@ import Glyphicon from './Glyphicon';
 import '../styles/ProfileImage.css';
 
 const ProfileImage = ({
-    roundImage,
+    round_image,
     src,
     placeholder,
 }) => (
         <div
             className="ProfileImage"
             style={{
-                borderRadius: roundImage ? '50%' : '10%',
+                borderRadius: round_image ? '50%' : '10%',
                 backgroundImage: src && `url(${src})`,
                 backgroundColor: placeholder ? '' : 'white',
                 display: src ? 'block' : 'flex',
@@ -27,7 +27,7 @@ ProfileImage.propTypes = {
     /**
     *   Boolean to render round or squircle shaped image
     */
-    roundImage: PropTypes.bool,
+    round_image: PropTypes.bool,
     /**
     * The url source of the image to render
     */

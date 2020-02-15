@@ -9,12 +9,12 @@ import {
 } from '../src';
 
 // Mock Images
-const { coverImage, profileImage } = images;
+const { cover_image, profile_image } = images;
 
 const defaultProps = {
     coverAltText: 'Some image text',
-    coverImgSrc: coverImage,
-    profileImgSrc: profileImage,
+    coverImgSrc: cover_image,
+    profileImgSrc: profile_image,
     children: <h1>Here's some sample text</h1>,
     overlayColor: 'rgba(0, 0, 0, 0.3)',
     roundedProfile: true,
