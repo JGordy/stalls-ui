@@ -8,7 +8,7 @@ cache:
 
 notifications:
   slack: 
-    rooms: generositymarket:ZeAVzH5Ww7PB50ugNnwl5JuT#ui-library-builds
+    rooms: generositymarket:ZeAVzH5Ww7PB50ugNnwl5JuT#cs-ui-library-builds
     on_success: always  # change: send a notification when the build status changes.
     on_failure: always  # always: always send a notification.
     template:
