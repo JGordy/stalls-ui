@@ -8,6 +8,7 @@ export { default as Glyphicon } from './Glyphicon';
 export { default as Hero } from './Hero';
 export { default as HeroSection } from './HeroSection';
 export { default as ImageUploader } from './ImageUploader';
+export { default as LinkButton } from './LinkButton';
 export { default as MiniButton } from './MiniButton';
 export { default as Modal } from './Modal';
 export { default as ModalContent } from './ModalContent';

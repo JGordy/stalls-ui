@@ -1,12 +1,11 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import Glyphicon from './Glyphicon';
-import { Link } from 'react-router-dom';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
+import Glyphicon from './Glyphicon';
+import '../styles/LinkButton.css';
 
-import "../styles/Button.css";
-
-const Button = ({
+const LinkButton = ({
     bsStyle,
     bsSize,
     buttonRef,
@@ -16,12 +15,11 @@ const Button = ({
     icon,
     inverted,
     label,
-    onClick,
     transparent,
     ...rest
 }) => {
     const btnClass = classnames(
-        'Button',
+        'LinkButton',
         bsStyle,
         bsSize,
         {
@@ -33,7 +31,6 @@ const Button = ({
 
     const buttonProps = {
         className: btnClass,
-        onClick: !disabled && onClick ? onClick : undefined,
         ref: buttonRef,
         ...rest
     }
@@ -45,42 +42,34 @@ const Button = ({
         </React.Fragment>
     );
 
-    if (href) {
-        const isExternalLink = href.includes('https://');
-        if (isExternalLink) {
-            return (
-                <a
-                    href={href}
-                    target='_blank'
-                    rel='nofollow noopener noreferrer'
-                    {...buttonProps}
-                >
-                    {children}
-                </a>
-            );
-        } else {
-            return (
-                <Link
-                    to={{
-                        pathname: href,
-                        state: { linkContext }
-                    }}
-                    {...buttonProps}
-                >
-                    {children}
-                </Link>
-            );
-        }
+    const isExternalLink = href.includes('https://');
+    if (isExternalLink) {
+        return (
+            <a
+                href={href}
+                target='_blank'
+                rel='nofollow noopener noreferrer'
+                {...buttonProps}
+            >
+                {children}
+            </a>
+        );
+    } else {
+        return (
+            <Link
+                to={{
+                    pathname: href,
+                    state: { linkContext }
+                }}
+                {...buttonProps}
+            >
+                {children}
+            </Link>
+        );
     }
-
-    return (
-        <button {...buttonProps}>
-            {children}
-        </button>
-    )
 };
 
-Button.propTypes = {
+LinkButton.propTypes = {
     /**
     * The style name to apply to the button
     */
@@ -124,11 +113,11 @@ Button.propTypes = {
     inverted: PropTypes.bool,
 };
 
-Button.defaultProps = {
+LinkButton.defaultProps = {
     bsSize: 'lg',
     transparent: false,
     disabled: false,
     inverted: false,
 };
 
-export default Button;
+export default LinkButton;
