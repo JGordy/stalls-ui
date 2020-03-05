@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import Glyphicon from './Glyphicon';
-import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
 import "../styles/Button.css";
@@ -10,9 +9,7 @@ const Button = ({
     bsStyle,
     bsSize,
     buttonRef,
-    linkContext,
     disabled,
-    href,
     icon,
     inverted,
     label,
@@ -38,44 +35,10 @@ const Button = ({
         ...rest
     }
 
-    const children = (
-        <React.Fragment>
-            {icon && <Glyphicon icon={icon} />}
-            {label}
-        </React.Fragment>
-    );
-
-    if (href) {
-        const isExternalLink = href.includes('https://');
-        if (isExternalLink) {
-            return (
-                <a
-                    href={href}
-                    target='_blank'
-                    rel='nofollow noopener noreferrer'
-                    {...buttonProps}
-                >
-                    {children}
-                </a>
-            );
-        } else {
-            return (
-                <Link
-                    to={{
-                        pathname: href,
-                        state: { linkContext }
-                    }}
-                    {...buttonProps}
-                >
-                    {children}
-                </Link>
-            );
-        }
-    }
-
     return (
         <button {...buttonProps}>
-            {children}
+            {icon && <Glyphicon icon={icon} />}
+            {label}
         </button>
     )
 };

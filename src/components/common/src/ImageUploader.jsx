@@ -21,11 +21,11 @@ const ImageUploader = ({
     round_image = true,
     ...rest
 }) => {
-    const [coverImage, setCoverImage] = useState({
+    const [cover_image, setCoverImage] = useState({
         file: null,
         src: coverImgSrc || null,
     });
-    const [profileImage, setProfileImage] = useState({
+    const [profile_image, setProfileImage] = useState({
         file: null,
         src: profileImgSrc || null,
     });
@@ -36,12 +36,12 @@ const ImageUploader = ({
         // Sends state data to parent in use cases where this component isn't used to save images
         if (getImageState) {
             getImageState({
-                coverImage,
-                profileImage,
+                cover_image,
+                profile_image,
                 roundedProfile,
             });
         }
-    }, [getImageState, coverImage, profileImage, roundedProfile]);
+    }, [getImageState, cover_image, profile_image, roundedProfile]);
 
     // TODO: Fix issue where if I select a photo then cancel changes, I can't reselect the same photo??
     const handleImageChange = (event, type) => {
@@ -76,7 +76,7 @@ const ImageUploader = ({
     };
 
     const handleSubmit = () => {
-        onSubmit({ profileImage, coverImage, roundedProfile });
+        onSubmit({ profile_image, cover_image, roundedProfile });
         setImagesChanged(false);
     }
 
@@ -88,7 +88,7 @@ const ImageUploader = ({
 
     const coverButtons = (
         <div className='cover_buttons'>
-            {coverImage.src &&
+            {cover_image.src &&
                 <MiniButton
                     bsStyle='danger'
                     icon='times'
@@ -98,9 +98,9 @@ const ImageUploader = ({
             }
             <FileInput
                 bsStyle='success'
-                inputName='coverImage'
+                inputName='cover_image'
                 inverted
-                icon={coverImage.src ? 'pencil-alt' : 'plus'}
+                icon={cover_image.src ? 'pencil-alt' : 'plus'}
                 onChange={(event) => handleImageChange(event, 'cover')}
             />
         </div>
@@ -110,12 +110,12 @@ const ImageUploader = ({
         <div className='profile_buttons'>
             <FileInput
                 bsStyle='success'
-                inputName='profileImage'
+                inputName='profile_image'
                 inverted
-                icon={profileImage.src ? 'pencil-alt' : 'plus'}
+                icon={profile_image.src ? 'pencil-alt' : 'plus'}
                 onChange={(event) => handleImageChange(event, 'profile')}
             />
-            {profileImage.src &&
+            {profile_image.src &&
                 <React.Fragment>
                     <MiniButton
                         bsStyle='info'
@@ -165,7 +165,7 @@ const ImageUploader = ({
                 {/* TODO: Placeholder for Hero image */}
                 <Hero
                     altText={'Some image text'}
-                    imgSrc={coverImage.src}
+                    imgSrc={cover_image.src}
                 >
                     <h1>{heading}</h1>
                 </Hero>
@@ -176,7 +176,7 @@ const ImageUploader = ({
                 <ProfileImage
                     placeholder={null}
                     round_image={roundedProfile}
-                    src={profileImage.src}
+                    src={profile_image.src}
                 />
                 {profileButtons}
             </div>

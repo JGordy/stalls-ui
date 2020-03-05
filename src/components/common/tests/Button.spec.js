@@ -25,7 +25,7 @@ describe('<Button />', () => {
 
     it('should render an icon based on props', () => {
         wrapper.setProps({ icon: 'times' });
-        expect(wrapper.find('.Button').props().children.props.children[0].props.icon).toBe("times");
+        expect(wrapper.find('Glyphicon').props().icon).toBe("times");
     });
 
     it('should call an onClick handler if passed in as a prop', () => {
