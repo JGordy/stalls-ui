@@ -1,14 +1,14 @@
 import {
     addDecorator,
     addParameters,
-    configure,
 } from '@storybook/react';
 
 import { configureActions } from '@storybook/addon-actions';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { DocsPage } from 'storybook-addon-deps/blocks';
 
 import { withTests } from '@storybook/addon-jest';
-import results from '../jest-test-results.json';
+import results from '../src/jest-test-results.json';
 
 import marketTheme from './generosity-market-theme.js';
 
@@ -31,19 +31,13 @@ addParameters({
     },
 });
 
+addParameters({
+    docs: { page: DocsPage },
+    dependencies: { withStoriesOnly: true, hideEmpty: true }
+});
+
 addDecorator(
     withTests({
         results,
     })
 );
-
-const loaderFn = () => {
-    const allExports = [require('../src/__stories__/0-Welcome.stories.js')];
-    const req = require.context('../src/components', true, /\.stories\.js$/);
-
-    req.keys().forEach(fname => allExports.push(req(fname)));
-
-    return allExports;
-};
-
-configure(loaderFn, module);
