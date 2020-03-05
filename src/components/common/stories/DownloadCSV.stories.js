@@ -1,5 +1,5 @@
 import React from 'react';
-import { DownloadCSV } from '../src/index';
+import DownloadCSV from '../src/DownloadCSV';
 
 const jsonData = [
     {

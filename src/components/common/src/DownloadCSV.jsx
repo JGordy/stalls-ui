@@ -4,7 +4,7 @@ import { CSVLink } from 'react-csv';
 
 import '../styles/DownloadCSV.css';
 
-import { Glyphicon } from './';
+import Glyphicon from './Glyphicon';
 
 const DownloadCSV = ({
     className,
@@ -14,7 +14,6 @@ const DownloadCSV = ({
     label,
     ...rest
 }) => {
-    // console.warn("CSV Data: ", csvData);
 
     return (
         <Fragment>
@@ -24,6 +23,7 @@ const DownloadCSV = ({
                 data={data}
                 headers={headers && headers}
                 target="_blank"
+                rel='nofollow'
                 {...rest}
             >
                 <Glyphicon icon='download' />
