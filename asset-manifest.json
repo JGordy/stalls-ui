@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/stalls-ui/static/css/main.a068b7dd.chunk.css",
+    "main.js": "/stalls-ui/main.0124154633e8f95892e7.bundle.js",
+    "main.css.map": "/stalls-ui/static/css/main.a068b7dd.chunk.css.map",
+    "main.js.map": "/stalls-ui/main.0124154633e8f95892e7.bundle.js.map",
+    "runtime~main.js": "/stalls-ui/runtime~main.0124154633e8f95892e7.bundle.js",
+    "runtime~main.js.map": "/stalls-ui/runtime~main.0124154633e8f95892e7.bundle.js.map",
+    "vendors~main.js": "/stalls-ui/vendors~main.0124154633e8f95892e7.bundle.js",
+    "vendors~main.js.map": "/stalls-ui/vendors~main.0124154633e8f95892e7.bundle.js.map",
+    "iframe.html": "/stalls-ui/iframe.html",
+    "precache-manifest.0dc46d83ec95533d4150e5be317abf7a.js": "/stalls-ui/precache-manifest.0dc46d83ec95533d4150e5be317abf7a.js",
+    "service-worker.js": "/stalls-ui/service-worker.js",
+    "static/media/Tile.css": "/stalls-ui/static/media/futura-book-font.f9f02ed0.ttf",
+    "vendors~main.0124154633e8f95892e7.bundle.js.LICENSE.txt": "/stalls-ui/vendors~main.0124154633e8f95892e7.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.0124154633e8f95892e7.bundle.js",
+    "vendors~main.0124154633e8f95892e7.bundle.js",
+    "static/css/main.a068b7dd.chunk.css",
+    "main.0124154633e8f95892e7.bundle.js"
+  ]
+}

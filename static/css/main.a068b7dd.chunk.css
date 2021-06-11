@@ -1,0 +1,1273 @@
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+a.Button {
+  display: inline-block; }
+
+.Button {
+  background: #ddd;
+  box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(221, 221, 221, 0.5);
+  border: 2px solid #ddd;
+  color: #5f5f63;
+  -webkit-transition: background 0.3s, border 0.3s, color 0.3s;
+  transition: background 0.3s, border 0.3s, color 0.3s;
+  display: inline-block;
+  align-self: center;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  max-width: 20rem;
+  background: #ddd;
+  box-shadow: 0.2rem 0.2rem 1.5rem 0rem #ddd;
+  color: #5f5f63;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer; }
+  .Button.inverted {
+    background: white;
+    color: #ddd; }
+    .Button.inverted:hover {
+      border: 2px solid #ddd;
+      background: #ddd;
+      color: white; }
+  .Button:hover {
+    background: #b7b7b7;
+    border: 2px solid #b7b7b7; }
+  .Button.transparent {
+    background: rgba(221, 221, 221, 0.85); }
+  .Button.active {
+    background: #008C49;
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(0, 140, 73, 0.5);
+    border: 2px solid #008C49;
+    color: white; }
+    .Button.active.inverted {
+      background: white;
+      color: #008C49; }
+      .Button.active.inverted:hover {
+        border: 2px solid #008C49;
+        background: #008C49;
+        color: white; }
+    .Button.active:hover {
+      background: #004021;
+      border: 2px solid #004021; }
+    .Button.active.transparent {
+      background: rgba(0, 140, 73, 0.85); }
+  .Button.success {
+    background: #3ABF49;
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(58, 191, 73, 0.5);
+    border: 2px solid #3ABF49;
+    color: white; }
+    .Button.success.inverted {
+      background: white;
+      color: #3ABF49; }
+      .Button.success.inverted:hover {
+        border: 2px solid #3ABF49;
+        background: #3ABF49;
+        color: white; }
+    .Button.success:hover {
+      background: #288433;
+      border: 2px solid #288433; }
+    .Button.success.transparent {
+      background: rgba(58, 191, 73, 0.85); }
+  .Button.warning {
+    background: #ffb95c;
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(255, 185, 92, 0.5);
+    border: 2px solid #ffb95c;
+    color: #1e301b; }
+    .Button.warning.inverted {
+      background: white;
+      color: #ffb95c; }
+      .Button.warning.inverted:hover {
+        border: 2px solid #ffb95c;
+        background: #ffb95c;
+        color: white; }
+    .Button.warning:hover {
+      background: #ff9810;
+      border: 2px solid #ff9810; }
+    .Button.warning.transparent {
+      background: rgba(255, 185, 92, 0.85); }
+  .Button.danger {
+    background: #ff2828;
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(255, 40, 40, 0.5);
+    border: 2px solid #ff2828;
+    color: white; }
+    .Button.danger.inverted {
+      background: white;
+      color: #ff2828; }
+      .Button.danger.inverted:hover {
+        border: 2px solid #ff2828;
+        background: #ff2828;
+        color: white; }
+    .Button.danger:hover {
+      background: #db0000;
+      border: 2px solid #db0000; }
+    .Button.danger.transparent {
+      background: rgba(255, 40, 40, 0.85); }
+  .Button.info {
+    background: #478dff;
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(71, 141, 255, 0.5);
+    border: 2px solid #478dff;
+    color: white; }
+    .Button.info.inverted {
+      background: white;
+      color: #478dff; }
+      .Button.info.inverted:hover {
+        border: 2px solid #478dff;
+        background: #478dff;
+        color: white; }
+    .Button.info:hover {
+      background: #005ffa;
+      border: 2px solid #005ffa; }
+    .Button.info.transparent {
+      background: rgba(71, 141, 255, 0.85); }
+  .Button.pale {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    color: #008C49; }
+    .Button.pale.inverted {
+      background: white;
+      color: rgba(255, 255, 255, 0.85); }
+      .Button.pale.inverted:hover {
+        border: 2px solid rgba(255, 255, 255, 0.85);
+        background: rgba(255, 255, 255, 0.85);
+        color: white; }
+    .Button.pale:hover {
+      background: rgba(217, 217, 217, 0.85);
+      border: 2px solid rgba(217, 217, 217, 0.85); }
+    .Button.pale.transparent {
+      background: rgba(255, 255, 255, 0.85); }
+  .Button.sm {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem; }
+  .Button.md {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem; }
+  .Button.lg {
+    font-size: 1.1rem;
+    padding: 1.1rem 3rem; }
+  .Button.full {
+    margin: 2rem auto 3rem;
+    padding: 1.1rem 3rem;
+    width: 80%; }
+  .Button.long {
+    font-size: 1.1rem;
+    margin: 2rem auto 3rem;
+    padding: 0.75rem 0rem;
+    width: 80%; }
+  .Button svg {
+    margin-right: 0.5rem; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+.csv-download {
+  align-items: center;
+  color: #478dff;
+  /* Test these colors  */
+  color: #707070;
+  /* Test these colors  */
+  display: flex;
+  margin-left: 1rem;
+  text-decoration: none; }
+  .csv-download svg {
+    background-color: #707070;
+    border-radius: 50%;
+    color: white;
+    margin-right: 0.5rem;
+    padding: 0.5rem; }
+
+.FileInput input {
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0.1px;
+  z-index: -1; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+/*
+* Example usage
+*
+* .profile-pic {
+*     width: 250px;
+*     @include respond-to(handhelds) {
+*         width: 100% ;
+*     }
+*     @include respond-to(medium-screens) {
+*         width: 125px;
+*     }
+*     @include respond-to(wide-screens) {
+*         width: 350px;
+*     }
+*     @include respond-to(extra-wide-screens) {
+*         width: 550px;
+*     }
+* }
+*/
+.Hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  height: 29vh;
+  position: relative;
+  overflow: hidden; }
+  @media only screen and (min-width: 577px) {
+    .Hero {
+      max-height: 100vh;
+      min-height: 50vh; } }
+  @media only screen and (min-width: 992px) {
+    .Hero {
+      min-height: 60vh; } }
+  @media only screen and (min-width: 1200px) {
+    .Hero {
+      min-height: 80vh; } }
+  .Hero .HeroImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 150%;
+    max-height: 150%;
+    z-index: -1; }
+  .Hero h1 {
+    font-size: 1rem; }
+    @media only screen and (min-width: 577px) {
+      .Hero h1 {
+        font-size: 2rem; } }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+/*
+* Example usage
+*
+* .profile-pic {
+*     width: 250px;
+*     @include respond-to(handhelds) {
+*         width: 100% ;
+*     }
+*     @include respond-to(medium-screens) {
+*         width: 125px;
+*     }
+*     @include respond-to(wide-screens) {
+*         width: 350px;
+*     }
+*     @include respond-to(extra-wide-screens) {
+*         width: 550px;
+*     }
+* }
+*/
+.HeroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 29vh; }
+  @media only screen and (min-width: 577px) {
+    .HeroSection {
+      max-height: 100vh;
+      min-height: 50vh; } }
+  @media only screen and (min-width: 992px) {
+    .HeroSection {
+      min-height: 60vh; } }
+  @media only screen and (min-width: 1200px) {
+    .HeroSection {
+      min-height: 80vh; } }
+  .HeroSection .Hero {
+    width: 100%;
+    position: relative; }
+  .HeroSection .ProfileImage {
+    position: absolute;
+    bottom: 0%;
+    overflow: visible;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+/*
+* Example usage
+*
+* .profile-pic {
+*     width: 250px;
+*     @include respond-to(handhelds) {
+*         width: 100% ;
+*     }
+*     @include respond-to(medium-screens) {
+*         width: 125px;
+*     }
+*     @include respond-to(wide-screens) {
+*         width: 350px;
+*     }
+*     @include respond-to(extra-wide-screens) {
+*         width: 550px;
+*     }
+* }
+*/
+.ImageUploader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 29vh; }
+  @media only screen and (min-width: 577px) {
+    .ImageUploader {
+      max-height: 100vh;
+      min-height: 50vh; } }
+  @media only screen and (min-width: 992px) {
+    .ImageUploader {
+      min-height: 60vh; } }
+  @media only screen and (min-width: 1200px) {
+    .ImageUploader {
+      min-height: 80vh; } }
+  .ImageUploader .cover {
+    align-self: stretch;
+    position: relative;
+    height: 29vh; }
+    @media only screen and (min-width: 577px) {
+      .ImageUploader .cover {
+        max-height: 100vh;
+        min-height: 50vh; } }
+    @media only screen and (min-width: 992px) {
+      .ImageUploader .cover {
+        min-height: 60vh; } }
+    @media only screen and (min-width: 1200px) {
+      .ImageUploader .cover {
+        min-height: 80vh; } }
+    .ImageUploader .cover .btns {
+      border-color: transparent !important; }
+    .ImageUploader .cover .cover_buttons {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      justify-content: space-around;
+      bottom: 0rem;
+      right: 0rem; }
+      @media only screen and (min-width: 577px) {
+        .ImageUploader .cover .cover_buttons {
+          bottom: 1rem;
+          right: 1rem; } }
+  .ImageUploader .profile {
+    position: absolute;
+    bottom: 0%;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
+    .ImageUploader .profile .profile_buttons {
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      bottom: -75%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      min-width: 150%; }
+    .ImageUploader .profile .btns {
+      border-color: transparent !important; }
+  .ImageUploader .save_buttons {
+    position: absolute;
+    bottom: -6.75rem;
+    right: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    .ImageUploader .save_buttons .save, .ImageUploader .save_buttons .cancel {
+      display: flex;
+      align-items: center; }
+      .ImageUploader .save_buttons .save span, .ImageUploader .save_buttons .cancel span {
+        font-size: 0.75rem;
+        color: #707070; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+a.LinkButton {
+  display: inline-block; }
+
+.LinkButton {
+  background: #ddd;
+  box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(221, 221, 221, 0.5);
+  border: 2px solid #ddd;
+  color: #5f5f63;
+  -webkit-transition: background 0.3s, border 0.3s, color 0.3s;
+  transition: background 0.3s, border 0.3s, color 0.3s;
+  display: inline-block;
+  align-self: center;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  max-width: 20rem;
+  background: #ddd;
+  box-shadow: 0.2rem 0.2rem 1.5rem 0rem #ddd;
+  color: #5f5f63;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer; }
+  .LinkButton.inverted {
+    background: white;
+    color: #ddd; }
+    .LinkButton.inverted:hover {
+      border: 2px solid #ddd;
+      background: #ddd;
+      color: white; }
+  .LinkButton:hover {
+    background: #b7b7b7;
+    border: 2px solid #b7b7b7; }
+  .LinkButton.transparent {
+    background: rgba(221, 221, 221, 0.85); }
+  .LinkButton.active {
+    background: #008C49;
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(0, 140, 73, 0.5);
+    border: 2px solid #008C49;
+    color: white; }
+    .LinkButton.active.inverted {
+      background: white;
+      color: #008C49; }
+      .LinkButton.active.inverted:hover {
+        border: 2px solid #008C49;
+        background: #008C49;
+        color: white; }
+    .LinkButton.active:hover {
+      background: #004021;
+      border: 2px solid #004021; }
+    .LinkButton.active.transparent {
+      background: rgba(0, 140, 73, 0.85); }
+  .LinkButton.success {
+    background: #3ABF49;
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(58, 191, 73, 0.5);
+    border: 2px solid #3ABF49;
+    color: white; }
+    .LinkButton.success.inverted {
+      background: white;
+      color: #3ABF49; }
+      .LinkButton.success.inverted:hover {
+        border: 2px solid #3ABF49;
+        background: #3ABF49;
+        color: white; }
+    .LinkButton.success:hover {
+      background: #288433;
+      border: 2px solid #288433; }
+    .LinkButton.success.transparent {
+      background: rgba(58, 191, 73, 0.85); }
+  .LinkButton.warning {
+    background: #ffb95c;
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(255, 185, 92, 0.5);
+    border: 2px solid #ffb95c;
+    color: #1e301b; }
+    .LinkButton.warning.inverted {
+      background: white;
+      color: #ffb95c; }
+      .LinkButton.warning.inverted:hover {
+        border: 2px solid #ffb95c;
+        background: #ffb95c;
+        color: white; }
+    .LinkButton.warning:hover {
+      background: #ff9810;
+      border: 2px solid #ff9810; }
+    .LinkButton.warning.transparent {
+      background: rgba(255, 185, 92, 0.85); }
+  .LinkButton.danger {
+    background: #ff2828;
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(255, 40, 40, 0.5);
+    border: 2px solid #ff2828;
+    color: white; }
+    .LinkButton.danger.inverted {
+      background: white;
+      color: #ff2828; }
+      .LinkButton.danger.inverted:hover {
+        border: 2px solid #ff2828;
+        background: #ff2828;
+        color: white; }
+    .LinkButton.danger:hover {
+      background: #db0000;
+      border: 2px solid #db0000; }
+    .LinkButton.danger.transparent {
+      background: rgba(255, 40, 40, 0.85); }
+  .LinkButton.info {
+    background: #478dff;
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(71, 141, 255, 0.5);
+    border: 2px solid #478dff;
+    color: white; }
+    .LinkButton.info.inverted {
+      background: white;
+      color: #478dff; }
+      .LinkButton.info.inverted:hover {
+        border: 2px solid #478dff;
+        background: #478dff;
+        color: white; }
+    .LinkButton.info:hover {
+      background: #005ffa;
+      border: 2px solid #005ffa; }
+    .LinkButton.info.transparent {
+      background: rgba(71, 141, 255, 0.85); }
+  .LinkButton.pale {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0.2rem 0.2rem 1.5rem 0rem rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    color: #008C49; }
+    .LinkButton.pale.inverted {
+      background: white;
+      color: rgba(255, 255, 255, 0.85); }
+      .LinkButton.pale.inverted:hover {
+        border: 2px solid rgba(255, 255, 255, 0.85);
+        background: rgba(255, 255, 255, 0.85);
+        color: white; }
+    .LinkButton.pale:hover {
+      background: rgba(217, 217, 217, 0.85);
+      border: 2px solid rgba(217, 217, 217, 0.85); }
+    .LinkButton.pale.transparent {
+      background: rgba(255, 255, 255, 0.85); }
+  .LinkButton.sm {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem; }
+  .LinkButton.md {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem; }
+  .LinkButton.lg {
+    font-size: 1.1rem;
+    padding: 1.1rem 3rem; }
+  .LinkButton.full {
+    margin: 2rem auto 3rem;
+    padding: 1.1rem 3rem;
+    width: 80%; }
+  .LinkButton.long {
+    font-size: 1.1rem;
+    margin: 2rem auto 3rem;
+    padding: 0.75rem 0rem;
+    width: 80%; }
+  .LinkButton svg {
+    margin-right: 0.5rem; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+/*
+* Example usage
+*
+* .profile-pic {
+*     width: 250px;
+*     @include respond-to(handhelds) {
+*         width: 100% ;
+*     }
+*     @include respond-to(medium-screens) {
+*         width: 125px;
+*     }
+*     @include respond-to(wide-screens) {
+*         width: 350px;
+*     }
+*     @include respond-to(extra-wide-screens) {
+*         width: 550px;
+*     }
+* }
+*/
+.btns {
+  background: #ddd;
+  color: white;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+  height: 2.25rem;
+  width: 2.25rem;
+  -webkit-transition: background 0.3s, border 0.3s, color 0.3s;
+  transition: background 0.3s, border 0.3s, color 0.3s;
+  margin: 0.5rem; }
+  .btns.shadow {
+    box-shadow: 7px 7px 50px 0px rgba(221, 221, 221, 0.5); }
+  .btns.inverted {
+    background: white;
+    border: 2px solid #ddd;
+    color: #ddd;
+    height: 2rem;
+    width: 2rem; }
+    @media only screen and (min-width: 577px) {
+      .btns.inverted {
+        height: 2.25rem;
+        width: 2.25rem; } }
+    .btns.inverted:hover {
+      border: 2px solid #ddd;
+      background: #ddd;
+      color: white; }
+  .btns:hover {
+    background: #aaaaaa; }
+  @media only screen and (min-width: 577px) {
+    .btns {
+      height: 2.5rem;
+      width: 2.5rem;
+      margin: 0.5rem; } }
+  .btns.success {
+    background: #3ABF49;
+    color: white; }
+    .btns.success.shadow {
+      box-shadow: 7px 7px 50px 0px rgba(58, 191, 73, 0.5); }
+    .btns.success.inverted {
+      background: white;
+      border: 2px solid #3ABF49;
+      color: #3ABF49;
+      height: 2rem;
+      width: 2rem; }
+      @media only screen and (min-width: 577px) {
+        .btns.success.inverted {
+          height: 2.25rem;
+          width: 2.25rem; } }
+      .btns.success.inverted:hover {
+        border: 2px solid #3ABF49;
+        background: #3ABF49;
+        color: white; }
+    .btns.success:hover {
+      background: #22712b; }
+  .btns.warning {
+    background: #ffb95c;
+    color: white; }
+    .btns.warning.shadow {
+      box-shadow: 7px 7px 50px 0px rgba(255, 185, 92, 0.5); }
+    .btns.warning.inverted {
+      background: white;
+      border: 2px solid #ffb95c;
+      color: #ffb95c;
+      height: 2rem;
+      width: 2rem; }
+      @media only screen and (min-width: 577px) {
+        .btns.warning.inverted {
+          height: 2.25rem;
+          width: 2.25rem; } }
+      .btns.warning.inverted:hover {
+        border: 2px solid #ffb95c;
+        background: #ffb95c;
+        color: white; }
+    .btns.warning:hover {
+      background: #f58c00; }
+  .btns.danger {
+    background: #ff2828;
+    color: white; }
+    .btns.danger.shadow {
+      box-shadow: 7px 7px 50px 0px rgba(255, 40, 40, 0.5); }
+    .btns.danger.inverted {
+      background: white;
+      border: 2px solid #ff2828;
+      color: #ff2828;
+      height: 2rem;
+      width: 2rem; }
+      @media only screen and (min-width: 577px) {
+        .btns.danger.inverted {
+          height: 2.25rem;
+          width: 2.25rem; } }
+      .btns.danger.inverted:hover {
+        border: 2px solid #ff2828;
+        background: #ff2828;
+        color: white; }
+    .btns.danger:hover {
+      background: #c10000; }
+  .btns.info {
+    background: #478dff;
+    color: white; }
+    .btns.info.shadow {
+      box-shadow: 7px 7px 50px 0px rgba(71, 141, 255, 0.5); }
+    .btns.info.inverted {
+      background: white;
+      border: 2px solid #478dff;
+      color: #478dff;
+      height: 2rem;
+      width: 2rem; }
+      @media only screen and (min-width: 577px) {
+        .btns.info.inverted {
+          height: 2.25rem;
+          width: 2.25rem; } }
+      .btns.info.inverted:hover {
+        border: 2px solid #478dff;
+        background: #478dff;
+        color: white; }
+    .btns.info:hover {
+      background: #0055e0; }
+  .btns.disabled {
+    background: #ccd6e1;
+    color: white;
+    color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    cursor: none; }
+    .btns.disabled.shadow {
+      box-shadow: 7px 7px 50px 0px rgba(204, 214, 225, 0.5); }
+    .btns.disabled.inverted {
+      background: white;
+      border: 2px solid #ccd6e1;
+      color: #ccd6e1;
+      height: 2rem;
+      width: 2rem; }
+      @media only screen and (min-width: 577px) {
+        .btns.disabled.inverted {
+          height: 2.25rem;
+          width: 2.25rem; } }
+      .btns.disabled.inverted:hover {
+        border: 2px solid #ccd6e1;
+        background: #ccd6e1;
+        color: white; }
+    .btns.disabled:hover {
+      background: #8ca2bb; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+/*
+* Example usage
+*
+* .profile-pic {
+*     width: 250px;
+*     @include respond-to(handhelds) {
+*         width: 100% ;
+*     }
+*     @include respond-to(medium-screens) {
+*         width: 125px;
+*     }
+*     @include respond-to(wide-screens) {
+*         width: 350px;
+*     }
+*     @include respond-to(extra-wide-screens) {
+*         width: 550px;
+*     }
+* }
+*/
+.c-modal-cover {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  width: 100%;
+  z-index: 10; }
+
+.c-modal {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+  min-height: 20%;
+  padding: 2.5em 1.5em 1.5em 1.5em;
+  position: relative;
+  overflow-y: auto;
+  width: 75%;
+  -webkit-overflow-scrolling: touch; }
+  @media only screen and (min-width: 577px) {
+    .c-modal {
+      max-width: 25em;
+      width: 100%; } }
+  @media only screen and (min-width: 992px) {
+    .c-modal {
+      max-width: 40em; } }
+  @media only screen and (min-width: 1200px) {
+    .c-modal {
+      max-width: 45em; } }
+
+.c-modal__close {
+  background: #f0f0f0;
+  border: 0;
+  cursor: pointer;
+  padding: .5em;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.c-modal__close-icon {
+  fill: transparent;
+  height: 25px;
+  width: 25px;
+  stroke: #1e301b;
+  stroke-linecap: round;
+  stroke-width: 2; }
+
+.c-modal__body {
+  padding-top: .25em; }
+
+.u-hide-visually {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important; }
+
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+.Pill {
+  border-radius: 0.75rem;
+  background: #ddd;
+  display: inline-block;
+  padding: 0.1rem 0.65rem 0.25rem;
+  color: white;
+  margin: 0.35rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.04rem;
+  font-weight: bold;
+  cursor: pointer; }
+  .Pill.active {
+    background: #aaaaaa; }
+  .Pill svg {
+    margin-right: 0.5rem; }
+  .Pill.success {
+    background: #3ABF49; }
+    .Pill.success.active {
+      background: #22712b; }
+  .Pill.info {
+    background: #478dff; }
+    .Pill.info.active {
+      background: #0055e0; }
+  .Pill.warning {
+    background: #ffb95c; }
+    .Pill.warning.active {
+      background: #f58c00; }
+  .Pill.danger {
+    background: #ff2828; }
+    .Pill.danger.active {
+      background: #c10000; }
+  .Pill.disabled {
+    background: #ccd6e1;
+    color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    cursor: none; }
+    .Pill.disabled.active {
+      background: #ccd6e1; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+.ProfileImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid #3ABF49;
+  box-shadow: 0.2rem 0.3rem 2.5rem rgba(0, 0, 0, 0.5);
+  height: 6.5rem;
+  overflow: hidden;
+  text-align: center;
+  width: 6.5rem;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease; }
+  .ProfileImage .fa-camera {
+    align-self: center;
+    color: #707070;
+    font-size: 2.75rem; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+.ProgressBar {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 2rem auto;
+  min-width: 30%;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden; }
+  .ProgressBar .filler {
+    border-radius: inherit;
+    padding: 0.65rem 0rem;
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s;
+    text-align: center; }
+    .ProgressBar .filler .label {
+      letter-spacing: 0.1rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 100%; }
+    .ProgressBar .filler.success {
+      background: #acd147; }
+      .ProgressBar .filler.success .label {
+        color: #101405; }
+    .ProgressBar .filler.warning {
+      background: #ffb95c; }
+      .ProgressBar .filler.warning .label {
+        color: #5c3400; }
+    .ProgressBar .filler.danger {
+      background: #ff4242; }
+      .ProgressBar .filler.danger .label {
+        color: #420000; }
+    .ProgressBar .filler.info {
+      background: #619dff; }
+      .ProgressBar .filler.info .label {
+        color: #002561; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+.ProgressCircle {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
+  .ProgressCircle .circle-text {
+    font-weight: bold; }
+
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Futura"), url(static/media/futura-book-font.f9f02ed0.ttf) format("ttf"); }
+
+/* status colors */
+/* Font styles */
+/* Shadow styles */
+/* Border styles */
+/* Viewport breakpoints */
+* {
+  font-family: "Futura", "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.disabled {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  cursor: none; }
+
+.Tile {
+  background: #ddd;
+  color: #1e301b;
+  display: inline-flex;
+  background-color: #ddd;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.04rem;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  -webkit-transition: background 0.3s, border 0.3s, color 0.3s;
+  transition: background 0.3s, border 0.3s, color 0.3s; }
+  .Tile:hover {
+    background: #b7b7b7; }
+  .Tile.active {
+    background: #b7b7b7; }
+  .Tile.success {
+    background: #3ABF49;
+    color: white; }
+    .Tile.success:hover {
+      background: #288433; }
+    .Tile.success.active {
+      background: #288433; }
+  .Tile.warning {
+    background: #ffb95c;
+    color: #1e301b; }
+    .Tile.warning:hover {
+      background: #ff9810; }
+    .Tile.warning.active {
+      background: #ff9810; }
+  .Tile.danger {
+    background: #ff2828;
+    color: white; }
+    .Tile.danger:hover {
+      background: #db0000; }
+    .Tile.danger.active {
+      background: #db0000; }
+  .Tile.info {
+    background: #478dff;
+    color: white; }
+    .Tile.info:hover {
+      background: #005ffa; }
+    .Tile.info.active {
+      background: #005ffa; }
+
+
+/*# sourceMappingURL=main.a068b7dd.chunk.css.map*/
