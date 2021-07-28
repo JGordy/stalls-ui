@@ -30,7 +30,7 @@ jobs:
       - npm run build
       - npm test
     - stage: Npm Release
-      node_js: "lts/*"
+      node_js: "12"
       before_deploy: |
         PKG_VERSION=$(node -p "require('./package.json').version")
         NPM_TAG="latest"
