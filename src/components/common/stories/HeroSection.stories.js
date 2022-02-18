@@ -30,6 +30,4 @@ export const defaultStory = () => {
     );
 };
 
-defaultStory.story = {
-    name: 'Default with example images',
-};
+defaultStory.storyName = 'Default with example images';

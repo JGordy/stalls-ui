@@ -39,6 +39,4 @@ export const defaultStory = () => (
     </React.Fragment>
 );
 
-defaultStory.story = {
-    name: 'Default',
-};
+defaultStory.storyName = 'Default';

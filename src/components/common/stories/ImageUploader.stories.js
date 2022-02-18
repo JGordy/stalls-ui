@@ -24,6 +24,4 @@ export const defaultStory = () => {
     return <ImageUploader {...props} />;
 };
 
-defaultStory.story = {
-    name: 'Default',
-};
+defaultStory.storyName = 'Default';

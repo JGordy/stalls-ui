@@ -20,6 +20,4 @@ export const defaultStory = () => (
     </Hero>
 );
 
-defaultStory.story = {
-    name: 'Default',
-};
+defaultStory.storyName = 'Default';

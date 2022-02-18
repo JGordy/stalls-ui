@@ -22,6 +22,4 @@ export const defaultWChildren = () => (
     </Modal>
 );
 
-defaultWChildren.story = {
-    name: 'default w/Children',
-};
+defaultWChildren.storyName = 'default w/Children';

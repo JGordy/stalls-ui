@@ -24,7 +24,5 @@ export const defaultInput = () => (
     </React.Fragment>
 );
 
-defaultInput.story = {
-    name: 'WIP: Default Text Input'
-};
+defaultInput.storyName = 'WIP: Default Text Input';
 

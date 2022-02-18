@@ -52,15 +52,4 @@ export const allIcons = () => (
     })
 );
 
-allIcons.story = {
-    name: 'All Icons',
-};
-
-// icons.forEach(icon => {
-//     storiesOf("Glyphicon", module)
-//         .addParameters({ jest: ['Glyphicon.spec.js'] })
-//         .addParameters({ component: Glyphicon })
-//         .add(`${Array.isArray(icon) ? icon[1] : icon}`, () => (
-//             <Glyphicon icon={icon} />
-//         ));
-// })
+allIcons.storyName = 'All Icons';

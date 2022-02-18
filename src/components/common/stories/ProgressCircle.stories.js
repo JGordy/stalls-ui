@@ -28,9 +28,7 @@ export const primary = () => (
     </React.Fragment>
 );
 
-primary.story = {
-    name: 'Primary',
-};
+primary.storyName = 'Primary';
 
 const secondaryProps = {
     ...getStoryProps(''),
@@ -45,6 +43,4 @@ export const secondary = () => (
     </React.Fragment>
 );
 
-secondary.story = {
-    name: 'Secondary',
-};
+secondary.storyName = 'Secondary';

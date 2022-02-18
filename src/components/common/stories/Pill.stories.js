@@ -35,6 +35,4 @@ export const withEachBsStyleActive = () => (
     </React.Fragment>
 );
 
-withEachBsStyleActive.story = {
-    name: 'With each bsStyle + active',
-};
+withEachBsStyleActive.storyName = 'With each bsStyle + active';

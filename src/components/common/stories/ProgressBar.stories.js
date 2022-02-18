@@ -27,9 +27,7 @@ export const primary = () => (
     </React.Fragment>
 );
 
-primary.story = {
-    name: 'Primary w/',
-};
+primary.storyName = 'Primary w/';
 
 export const withLabel = () => (
     <React.Fragment>
@@ -37,6 +35,4 @@ export const withLabel = () => (
     </React.Fragment>
 );
 
-withLabel.story = {
-    name: 'W/ Label',
-};
+withLabel.storyName = 'W/ Label';
