@@ -3,9 +3,10 @@ import {
     addParameters,
 } from '@storybook/react';
 
+import { addons } from '@storybook/addons';
+
 import { configureActions } from '@storybook/addon-actions';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { DocsPage } from 'storybook-addon-deps/blocks';
 
 import { withTests } from '@storybook/addon-jest';
 import results from '../src/jest-test-results.json';
@@ -18,10 +19,8 @@ configureActions({
     limit: 20,
 });
 
-addParameters({
-    options: {
-        theme: marketTheme,
-    },
+addons.setConfig({
+    theme: marketTheme,
 });
 
 addParameters({
@@ -29,11 +28,6 @@ addParameters({
         viewports: INITIAL_VIEWPORTS,
         defaultViewport: 'iphonex',
     },
-});
-
-addParameters({
-    docs: { page: DocsPage },
-    dependencies: { withStoriesOnly: true, hideEmpty: true }
 });
 
 addDecorator(
