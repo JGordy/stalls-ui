@@ -2,6 +2,7 @@ import React from 'react';
 // import { action } from '@storybook/addon-actions';
 import { ProgressBar } from '../src';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/ProgressBar',
 

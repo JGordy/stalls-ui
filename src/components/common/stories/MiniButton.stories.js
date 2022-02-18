@@ -7,6 +7,7 @@ const getStoryProps = type => ({
     onClick: action(`${type} button clicked`),
 });
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/MiniButton',
 

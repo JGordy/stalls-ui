@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { LinkButton } from '../src';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/LinkButton',
 

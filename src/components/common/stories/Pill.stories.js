@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pill } from '../src';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/Pill',
 

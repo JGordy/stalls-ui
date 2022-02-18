@@ -3,6 +3,7 @@ import { ProfileImage } from '../src';
 
 const mockImage = 'https://homepages.cae.wisc.edu/~ece533/images/girl.png';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/ProfileImage',
 

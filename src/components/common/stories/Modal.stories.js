@@ -3,6 +3,7 @@ import React from 'react';
 // Components
 import { MiniButton, Modal, ProfileImage } from '../src';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Molecules/Modal',
 
