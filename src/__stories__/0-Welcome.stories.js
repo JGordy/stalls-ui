@@ -26,6 +26,4 @@ export const toStorybook = () => (
   </div>
 )
 
-toStorybook.story = {
-  name: 'to Storybook',
-};
+toStorybook.storyName = 'to Storybook';
