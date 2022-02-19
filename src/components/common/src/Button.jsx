@@ -54,6 +54,7 @@ Button.propTypes = {
         'danger',
         'info',
         'pale',
+        'disabled',
     ]),
     /**
     * The size name to apply to the button
