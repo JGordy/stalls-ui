@@ -11,6 +11,7 @@ const defaultProps = {
     onClick: jest.fn(),
     label: 'Submit',
 };
+
 const testElement = <Button {...defaultProps} />;
 
 const wrapper = shallow(testElement);
