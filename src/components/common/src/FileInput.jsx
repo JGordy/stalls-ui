@@ -49,6 +49,7 @@ FileInput.propTypes = {
         'warning',
         'danger',
         'info',
+        'disabled',
     ]),
     /**
     * Is the button disabled?
