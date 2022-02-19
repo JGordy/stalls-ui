@@ -16,6 +16,7 @@ Object.keys(library.definitions).forEach(key => {
     });
 });
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/GlyphiconAll',
 
@@ -52,15 +53,4 @@ export const allIcons = () => (
     })
 );
 
-allIcons.story = {
-    name: 'All Icons',
-};
-
-// icons.forEach(icon => {
-//     storiesOf("Glyphicon", module)
-//         .addParameters({ jest: ['Glyphicon.spec.js'] })
-//         .addParameters({ component: Glyphicon })
-//         .add(`${Array.isArray(icon) ? icon[1] : icon}`, () => (
-//             <Glyphicon icon={icon} />
-//         ));
-// })
+allIcons.storyName = 'All Icons';

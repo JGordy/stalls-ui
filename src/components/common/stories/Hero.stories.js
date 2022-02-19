@@ -1,6 +1,7 @@
 import React from 'react';
 import { Hero } from '../src';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/Hero',
 
@@ -20,6 +21,4 @@ export const defaultStory = () => (
     </Hero>
 );
 
-defaultStory.story = {
-    name: 'Default',
-};
+defaultStory.storyName = 'Default';

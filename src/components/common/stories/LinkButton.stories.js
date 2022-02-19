@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { LinkButton } from '../src';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/LinkButton',
 
@@ -32,9 +33,7 @@ export const wBsStyleExamples = () => (
     </React.Fragment>
 );
 
-wBsStyleExamples.story = {
-    name: 'W/ bsStyle examples',
-};
+wBsStyleExamples.storyName = 'W/ bsStyle examples';
 
 export const wBsSizeExamples = () => (
     <React.Fragment>
@@ -48,9 +47,7 @@ export const wBsSizeExamples = () => (
     </React.Fragment>
 );
 
-wBsSizeExamples.story = {
-    name: 'W/ bsSize examples'
-}
+wBsSizeExamples.storyName = 'W/ bsSize examples';
 
 export const wInvertedProp = () => (
     <React.Fragment>
@@ -64,6 +61,4 @@ export const wInvertedProp = () => (
     </React.Fragment>
 );
 
-wInvertedProp.story = {
-    name: 'w/ inverted prop',
-};
+wInvertedProp.storyName = 'w/ inverted prop';

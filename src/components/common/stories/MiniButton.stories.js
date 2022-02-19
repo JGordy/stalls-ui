@@ -7,6 +7,7 @@ const getStoryProps = type => ({
     onClick: action(`${type} button clicked`),
 });
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/MiniButton',
 
@@ -31,9 +32,7 @@ export const wBsStyleExamples = () => (
     </React.Fragment>
 );
 
-wBsStyleExamples.story = {
-    name: 'W/ bsStyle examples',
-};
+wBsStyleExamples.storyName = 'W/ bsStyle examples';
 
 export const inverted = () => (
     <React.Fragment>
@@ -50,6 +49,4 @@ export const inverted = () => (
     </React.Fragment>
 );
 
-inverted.story = {
-    name: 'Inverted',
-};
+inverted.storyName = 'Inverted';

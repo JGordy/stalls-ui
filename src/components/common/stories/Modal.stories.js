@@ -3,6 +3,7 @@ import React from 'react';
 // Components
 import { MiniButton, Modal, ProfileImage } from '../src';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Molecules/Modal',
 
@@ -22,6 +23,4 @@ export const defaultWChildren = () => (
     </Modal>
 );
 
-defaultWChildren.story = {
-    name: 'default w/Children',
-};
+defaultWChildren.storyName = 'default w/Children';

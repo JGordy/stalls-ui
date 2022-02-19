@@ -2,6 +2,7 @@ import React from 'react';
 // import { action } from '@storybook/addon-actions';
 import { ProgressCircle } from '../src';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/ProgressCircle',
 
@@ -28,9 +29,7 @@ export const primary = () => (
     </React.Fragment>
 );
 
-primary.story = {
-    name: 'Primary',
-};
+primary.storyName = 'Primary';
 
 const secondaryProps = {
     ...getStoryProps(''),
@@ -45,6 +44,4 @@ export const secondary = () => (
     </React.Fragment>
 );
 
-secondary.story = {
-    name: 'Secondary',
-};
+secondary.storyName = 'Secondary';

@@ -4,6 +4,7 @@ import { images } from '../../../__mocks__/story/images';
 
 const { cover_image, profile_image } = images;
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Molecules/HeroSection',
 
@@ -30,6 +31,4 @@ export const defaultStory = () => {
     );
 };
 
-defaultStory.story = {
-    name: 'Default with example images',
-};
+defaultStory.storyName = 'Default with example images';

@@ -9,7 +9,7 @@ module.exports = {
         '@storybook/addon-links',
         '@storybook/addon-viewport',
         'storybook-addon-deps',
-        '@storybook/preset-create-react-app',
+        // '@storybook/preset-create-react-app',
         {
             name: '@storybook/addon-docs',
             options: { configureJSX: true },

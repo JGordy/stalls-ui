@@ -3,6 +3,7 @@ import { ProfileImage } from '../src';
 
 const mockImage = 'https://homepages.cae.wisc.edu/~ece533/images/girl.png';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/ProfileImage',
 
@@ -14,14 +15,10 @@ export default {
 
 export const defaultStory = () => <ProfileImage src={mockImage} />;
 
-defaultStory.story = {
-    name: 'default',
-};
+defaultStory.storyName = 'default';
 
 export const rounded = () => <ProfileImage round_image={true} src={mockImage} />;
 
 export const missingUrlFallback = () => <ProfileImage src={''} />;
 
-missingUrlFallback.story = {
-    name: 'missing url fallback',
-};
+missingUrlFallback.storyName = 'missing url fallback';

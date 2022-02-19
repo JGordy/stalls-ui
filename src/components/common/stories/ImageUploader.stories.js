@@ -5,6 +5,7 @@ import { images } from '../../../__mocks__/story/images';
 
 const { cover_image, profile_image } = images;
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Molecules/ImageUploader',
 
@@ -24,6 +25,4 @@ export const defaultStory = () => {
     return <ImageUploader {...props} />;
 };
 
-defaultStory.story = {
-    name: 'Default',
-};
+defaultStory.storyName = 'Default';

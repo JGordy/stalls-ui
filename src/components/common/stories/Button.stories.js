@@ -2,6 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { Button } from '../src';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/Button',
 
@@ -28,9 +29,7 @@ export const wBsStyleExamples = () => (
     </React.Fragment>
 );
 
-wBsStyleExamples.story = {
-    name: 'W/ bsStyle examples',
-};
+wBsStyleExamples.storyName = 'W/ bsStyle examples';
 
 export const wBsSizeExamples = () => (
     <React.Fragment>
@@ -42,9 +41,7 @@ export const wBsSizeExamples = () => (
     </React.Fragment>
 );
 
-wBsSizeExamples.story = {
-    name: 'W/ bsSize examples'
-}
+wBsSizeExamples.storyName = 'W/ bsSize examples';
 
 export const wInvertedProp = () => (
     <React.Fragment>
@@ -56,18 +53,12 @@ export const wInvertedProp = () => (
     </React.Fragment>
 );
 
-wInvertedProp.story = {
-    name: 'w/ inverted prop',
-};
+wInvertedProp.storyName = 'w/ inverted prop';
 
 export const withIcon = () => <Button {...getStoryProps('share')} bsStyle="success" icon="share-alt" />;
 
-withIcon.story = {
-    name: 'with Icon',
-};
+withIcon.storyName = 'with Icon';
 
 export const withHref = () => <Button label="navigate" bsStyle="info" href="https://localhost:9001/?path=/story/atoms-button--with-href" />;
 
-withHref.story = {
-    name: 'with href',
-};
+withHref.storyName = 'with href';

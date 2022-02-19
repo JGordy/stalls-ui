@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tile } from '../src';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/Tile',
 
@@ -18,6 +19,4 @@ export const asDefault = () => (
     </React.Fragment>
 );
 
-asDefault.story = {
-    name: 'Default',
-}
+asDefault.storyName = 'Default';

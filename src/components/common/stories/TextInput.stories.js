@@ -2,6 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { TextInput } from '../src';
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Forms/TextInput',
 
@@ -24,7 +25,5 @@ export const defaultInput = () => (
     </React.Fragment>
 );
 
-defaultInput.story = {
-    name: 'WIP: Default Text Input'
-};
+defaultInput.storyName = 'WIP: Default Text Input';
 

@@ -19,6 +19,7 @@ const jsonData = [
     },
 ];
 
+/* eslint-disable-next-line import/no-anonymous-default-export */
 export default {
     title: 'Atoms/DownloadCSV',
 
@@ -39,6 +40,4 @@ export const defaultStory = () => (
     </React.Fragment>
 );
 
-defaultStory.story = {
-    name: 'Default',
-};
+defaultStory.storyName = 'Default';
