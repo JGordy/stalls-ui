@@ -36,8 +36,6 @@ const Modal = ({
         toggle();
     };
 
-
-
     return (
         <Fragment>
             <ModalTrigger
