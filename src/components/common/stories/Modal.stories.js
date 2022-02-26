@@ -13,8 +13,13 @@ export default {
     },
 };
 
+const triggerProps = {
+    label: 'Trigger Modal',
+    bsStyle: 'md',
+}
+
 export const defaultWChildren = () => (
-    <Modal triggerText="Trigger modal">
+    <Modal triggerProps={triggerProps}>
         <ProfileImage
             src="https://homepages.cae.wisc.edu/~ece533/images/girl.png"
             round_image={true}

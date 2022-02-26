@@ -10,7 +10,7 @@ const Modal = ({
     ariaLabel = 'modal',
     children,
     role = 'modal',
-    triggerText,
+    triggerProps = {},
 }) => {
     const buttonRef = useRef();
     const modalRef = useRef();
@@ -39,9 +39,9 @@ const Modal = ({
     return (
         <Fragment>
             <ModalTrigger
-                text={triggerText}
-                show={showModal}
+                onClick={showModal}
                 buttonRef={buttonRef}
+                {...triggerProps}
             />
             {isShowing &&
                 <ModalContent
