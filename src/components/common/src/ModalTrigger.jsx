@@ -4,7 +4,7 @@ import '../styles/ModalTrigger.css';
 
 const ModalTrigger = ({
     buttonRef,
-    bsStyle = 'sucess',
+    bsStyle = 'success',
     disabled = false,
     ...rest
 }) => (
