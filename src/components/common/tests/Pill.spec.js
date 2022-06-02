@@ -5,7 +5,6 @@ import { componentExists, checkConsoleWarnOrErrors } from 'testUtils/standard-te
 
 // Component import
 import Pill from '../src/Pill';
-import Glyphicon from '../src/Glyphicon';
 
 const onClick = jest.fn();
 const defaultProps = {
