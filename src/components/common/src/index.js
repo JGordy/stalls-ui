@@ -19,3 +19,4 @@ export { default as ProgressBar } from './ProgressBar';
 export { default as ProgressCircle } from './ProgressCircle';
 export { default as TextInput } from './TextInput';
 export { default as Tile } from './Tile';
+export { default as QrCode } from './QrCode';

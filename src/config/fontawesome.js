@@ -26,6 +26,7 @@ import {
     faUndoAlt,
     faUpload,
     faUser,
+    faQrcode,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -68,5 +69,6 @@ library.add(
     faUndoAlt,
     faUpload,
     faUser,
+    faQrcode,
     // add additional icons here
 );
