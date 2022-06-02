@@ -31,7 +31,7 @@ export const canReceiveClass = (Component, props, selector, options = {}) => {
 }
 
 export const checkConsoleWarnOrErrors = (hasAllowableConsole = false) => {
-    // RUn this seperately for each block/describe/test if there are allowable errors
+    // Run this seperately for each block/describe/test if there are allowable errors
     let isConsoleWarningOrError;
     let hasReactWarningOrError;
 
