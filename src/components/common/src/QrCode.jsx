@@ -4,6 +4,7 @@ import QRCode from 'qrcode';
 const QrCode = ({
     url,
     colors = {},
+    altText,
 }) => {
 
     const [qr, setQr] = useState('');
@@ -31,11 +32,7 @@ const QrCode = ({
         generateCode();
     });
 
-    return qr && (
-        <>
-            <img src={qr} alt="qr code" />
-        </>
-    );
+    return qr && <img src={qr} alt={altText ?? "qr code"} />;
 };
 
 export default QrCode;
