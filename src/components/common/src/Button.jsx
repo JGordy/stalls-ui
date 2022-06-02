@@ -9,6 +9,7 @@ const Button = ({
     bsStyle,
     bsSize,
     buttonRef,
+    className,
     disabled,
     icon,
     inverted,
@@ -29,7 +30,7 @@ const Button = ({
     );
 
     const buttonProps = {
-        className: btnClass,
+        className: `${btnClass} ${className}`,
         onClick: !disabled && onClick ? onClick : undefined,
         ref: buttonRef,
         ...rest

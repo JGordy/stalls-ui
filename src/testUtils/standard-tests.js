@@ -1,18 +1,32 @@
-import { shallow, mount } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
-const componentExists = (testElement, options) => {
+export const componentExists = (Component, props, selector, options = {}) => {
+    let container;
+
+    beforeEach(() => {
+        ({ container } = render(<Component {...props} />));
+    });
+
     it('should exist', () => {
-        const wrapper = shallow(testElement, options);
-        expect(wrapper.exists()).toBe(true);
+        if (options.debug) {
+            screen.debug();
+        }
+        expect(container.querySelector(selector)).toBeInTheDocument();
     });
 }
 
-const canReceiveClass = (testElement, options) => {
-    it('should be able to receive a className', () => {
-        const wrapper = mount(testElement, options);
-        wrapper.setProps({ className: 'test_class' });
+export const canReceiveClass = (Component, props, selector, options = {}) => {
+    let container;
+    const className = 'some-class';
 
-        expect(wrapper.hasClass('test_class')).toBe(true);
+    beforeEach(() => {
+        ({ container } = render(<Component {...props} className={className} />));
+    });
+    it('should be able to receive a className', () => {
+        if (options.debug) {
+            screen.debug();
+        }
+        expect(container.querySelector(selector)).toHaveClass(className);
     });
 }
 
@@ -59,9 +73,9 @@ export const checkConsoleWarnOrErrors = (hasAllowableConsole = false) => {
     });
 }
 
-export const runStandardComponentTests = (testElement, options) => {
+export const runStandardComponentTests = (Component, props, selector, options = {}) => {
     describe('Standard component tests', () => {
-        componentExists(testElement, options);
-        canReceiveClass(testElement, options);
+        componentExists(Component, props, selector, options);
+        canReceiveClass(Component, props, selector, options);
     });
 };

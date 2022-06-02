@@ -1,6 +1,5 @@
-import React from 'react';
-// import { shallow } from 'enzyme';
-import { runStandardComponentTests } from '../../../testUtils/standard-tests';
+// import React from 'react';
+import { componentExists, checkConsoleWarnOrErrors } from 'testUtils/standard-tests';
 
 // Component import
 import { ProgressCircle } from '../src';
@@ -16,12 +15,14 @@ const defaultProps = {
     // inverted: inverted,
 };
 
-const testElement = <ProgressCircle {...defaultProps} />;
+// const testElement = <ProgressCircle {...defaultProps} />;
 // const wrapper = shallow(testElement);
 
 describe('<ProgressCircle />', () => {
 
-    runStandardComponentTests(testElement);
+    checkConsoleWarnOrErrors();
+
+    componentExists(ProgressCircle, defaultProps, '.ProgressCircle');
 
     it.todo('write quite a few more tests here...');
 });

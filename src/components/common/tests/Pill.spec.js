@@ -1,37 +1,52 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { runStandardComponentTests } from '../../../testUtils/standard-tests';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { componentExists, checkConsoleWarnOrErrors } from 'testUtils/standard-tests';
 
 // Component import
 import Pill from '../src/Pill';
 import Glyphicon from '../src/Glyphicon';
 
+const onClick = jest.fn();
 const defaultProps = {
-    icon: '',
+    icon: 'times',
     bsStyle: 'success',
-    onClick: jest.fn(),
+    onClick,
     label: 'Submit',
 };
 
-const testElement = <Pill {...defaultProps} />;
-const wrapper = shallow(testElement);
+const testComponent = <Pill {...defaultProps} />;
 
 describe('<Pill />', () => {
 
-    runStandardComponentTests(testElement);
+    let container;
+    let getAllByText;
+
+    beforeEach(() => {
+        ({
+            container,
+            getAllByText,
+        } = render(testComponent));
+    });
+
+    checkConsoleWarnOrErrors();
+
+    componentExists(Pill, defaultProps, '.Pill');
 
     it('should render a label', () => {
-        expect(wrapper.text()).toBe('Submit');
+        expect(getAllByText('Submit')[1]).toBeInTheDocument();
     })
 
     it('should render an icon based on props', () => {
-        wrapper.setProps({ icon: 'times' });
-        expect(wrapper.find('.Pill').props().children[0]).toStrictEqual(<Glyphicon icon="times" />);
+        expect(container.querySelector('.svg-inline--fa.fa-xmark')).toBeInTheDocument();
     });
 
-    it('should call an onClick handler if passed in as a prop', () => {
-        wrapper.simulate('click');
-        expect(defaultProps.onClick).toHaveBeenCalledTimes(1);
+    it('should call an onClick handler if passed in as a prop', async () => {
+        const submitButton = container.querySelector('.Pill');
+
+        const user = userEvent.setup();
+        await user.click(submitButton);
+        expect(onClick).toHaveBeenCalledTimes(1);
     });
 
     it.todo('Changes styling via bsStyle prop');

@@ -1,6 +1,7 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { checkConsoleWarnOrErrors } from 'testUtils/standard-tests';
 
 // Shared UI Components
 import { LinkButton } from '../src';
@@ -12,14 +13,22 @@ const defaultProps = {
     label: 'Submit',
 };
 
-const wrapper = mount(
+const testComponent = (
     <BrowserRouter>
         <LinkButton {...defaultProps} />
     </BrowserRouter>
 );
 
 describe('<LinkButton />', () => {
+    let container;
+
+    beforeEach(() => {
+        ({ container } = render(testComponent));
+    });
+
+    checkConsoleWarnOrErrors();
+
     it('should render without crashing', () => {
-        expect(wrapper.exists('a.LinkButton')).toEqual(true);
+        expect(container.querySelector('a.LinkButton')).toBeInTheDocument();
     });
 });

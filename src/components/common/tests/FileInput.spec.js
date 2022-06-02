@@ -1,6 +1,5 @@
-import React from 'react';
-// import { shallow } from 'enzyme';
-import { runStandardComponentTests } from '../../../testUtils/standard-tests';
+// import React from 'react';
+import { componentExists, checkConsoleWarnOrErrors } from 'testUtils/standard-tests';
 
 // Component import
 import { FileInput } from '../src';
@@ -9,12 +8,13 @@ const defaultProps = {
     // props
 };
 
-const testElement = <FileInput {...defaultProps} />;
-// const wrapper = shallow(testElement);
+// const testComponent = <FileInput {...defaultProps} />;
 
 describe('<FileInput />', () => {
 
-    runStandardComponentTests(testElement);
+    checkConsoleWarnOrErrors();
+
+    componentExists(FileInput, defaultProps, '.FileInput');
 
     it.todo('write quite a few more tests here...');
 });
