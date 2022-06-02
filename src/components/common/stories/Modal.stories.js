@@ -16,6 +16,8 @@ export default {
 const triggerProps = {
     label: 'Trigger Modal',
     bsStyle: 'md',
+    iconOnly: true,
+    icon: 'qrcode',
 }
 
 export const defaultWChildren = () => (
