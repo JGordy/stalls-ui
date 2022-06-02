@@ -1,11 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import { runStandardComponentTests } from '../../../testUtils/standard-tests';
-import { images } from '../../../__mocks__/story/images';
+import { render } from '@testing-library/react';
+import { componentExists, checkConsoleWarnOrErrors } from 'testUtils/standard-tests';
+import { images } from '__mocks__/story/images';
 import {
-    Hero,
     HeroSection,
-    ProfileImage,
 } from '../src';
 
 // Mock Images
@@ -20,27 +18,35 @@ const defaultProps = {
     roundedProfile: true,
 }
 
-const testElement = <HeroSection {...defaultProps} />;
-const wrapper = mount(testElement);
+const testComponent = <HeroSection {...defaultProps} />;
 
 describe('<HeroSection />', () => {
 
-    runStandardComponentTests(testElement);
+    let container;
+    let getAllByText;
+    let getAllByAltText;
 
-    it('renders without crashing', () => {
-        expect(wrapper.exists()).toBe(true);
+    beforeEach(() => {
+        ({
+            container,
+            getAllByText,
+            getAllByAltText,
+        } = render(testComponent));
     });
 
+    checkConsoleWarnOrErrors();
+
+    componentExists(HeroSection, defaultProps, '.Hero');
+
     it('renders hero image', () => {
-        expect(wrapper.find('.HeroSection').childAt(0).type()).toBe(Hero);
+        expect(getAllByAltText(defaultProps.coverAltText)[0].src).toContain(cover_image);
     });
 
     it('renders profile image', () => {
-        expect(wrapper.find('.HeroSection').childAt(1).type()).toBe(ProfileImage);
+        expect(container.querySelector('.ProfileImage')).toBeInTheDocument();
     });
 
-    it.skip('renders children inside hero', () => {
-        console.warn('Wrapper: ', wrapper.find('.HeroSection').childAt(0))
-        expect(wrapper.find('.HeroSection').childAt(0).childAt(0)).toBe('h1')
+    it('renders children inside hero', () => {
+        expect(getAllByText('Here\'s some sample text')[0]).toBeInTheDocument();
     });
 })

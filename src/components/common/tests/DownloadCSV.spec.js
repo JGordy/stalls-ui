@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { runStandardComponentTests } from '../../../testUtils/standard-tests';
+import { render } from '@testing-library/react';
+import { runStandardComponentTests, checkConsoleWarnOrErrors } from 'testUtils/standard-tests';
 
 // Component import
 import DownloadCSV from '../src/DownloadCSV';
@@ -29,15 +29,21 @@ const defaultProps = {
     label: 'Download File',
 };
 
-const testElement = <DownloadCSV {...defaultProps} />;
-const wrapper = shallow(testElement);
+const testComponent = <DownloadCSV {...defaultProps} />;
 
 describe('<DownloadCSV />', () => {
 
-    runStandardComponentTests(testElement);
+    let container;
+
+    beforeEach(() => {
+        ({ container } = render(testComponent));
+    });
+
+    checkConsoleWarnOrErrors();
+
+    runStandardComponentTests(DownloadCSV, defaultProps, '.csv-download');
 
     it('should have text', () => {
-        // console.log(wrapper.find('.csv-download').props().children.props);
-        expect(wrapper.find('.csv-download').props().children[1]).toEqual('Download File');
+        expect(container.querySelector('.csv-download')).toBeInTheDocument();
     })
 })

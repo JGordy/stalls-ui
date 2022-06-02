@@ -1,6 +1,5 @@
-import React from 'react';
-// import { shallow } from 'enzyme';
-import { runStandardComponentTests } from '../../../testUtils/standard-tests';
+// import React from 'react';
+import { componentExists, checkConsoleWarnOrErrors } from 'testUtils/standard-tests';
 
 // Component import
 import { TextInput } from '../src';
@@ -12,12 +11,13 @@ const defaultProps = {
     onChange: jest.fn(),
 };
 
-const testElement = <TextInput {...defaultProps} />;
-// const wrapper = shallow(testElement);
+// const testComponent = <TextInput {...defaultProps} />;
 
 describe('<TextInput />', () => {
 
-    runStandardComponentTests(testElement);
+    checkConsoleWarnOrErrors();
+
+    componentExists(TextInput, defaultProps, '.simple-text-input');
 
     it.todo('write quite a few more tests here...');
 });
