@@ -10,11 +10,12 @@ const ModalTrigger = ({
     iconOnly,
     icon,
     label,
+    onClick,
     ...rest
 }) => {
     if (iconOnly) {
         return (
-            <div className="trigger-glyph-container">
+            <div className="trigger-glyph-container" onClick={onClick}>
                 <Glyphicon icon={icon} {...rest} />
                 <span style={{ marginLeft: '5px' }}>{label}</span>
             </div>
@@ -27,6 +28,7 @@ const ModalTrigger = ({
             buttonRef={buttonRef}
             disabled={disabled}
             label={label}
+            onClick={onClick}
             {...rest}
         />
     )
