@@ -32,7 +32,7 @@ const QrCode = ({
         generateCode();
     });
 
-    return qr && <img src={qr} alt={altText ?? "qr code"} />;
+    return qr && <img src={qr} alt={altText ? altText : "qr code"} />;
 };
 
 export default QrCode;
