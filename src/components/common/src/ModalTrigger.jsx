@@ -11,13 +11,16 @@ const ModalTrigger = ({
     icon,
     label,
     onClick,
+    style,
     ...rest
 }) => {
     if (iconOnly) {
         return (
-            <div className="trigger-glyph-container" onClick={onClick}>
+            <div className="trigger-glyph-container" onClick={onClick} style={style}>
                 <Glyphicon icon={icon} {...rest} />
-                <span style={{ marginLeft: '5px' }}>{label}</span>
+                {label && (
+                    <span style={{ marginLeft: '5px' }}>{label}</span>
+                )}
             </div>
         );
     };
@@ -29,6 +32,7 @@ const ModalTrigger = ({
             disabled={disabled}
             label={label}
             onClick={onClick}
+            style={style}
             {...rest}
         />
     )
