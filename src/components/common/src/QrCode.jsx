@@ -47,7 +47,7 @@ const QrCode = ({
                 alt={altText ? altText : "qr code"}
                 className={imgClass}
             />
-            {download && downloadTrigger}
+            {(download && downloadTrigger) && downloadTrigger(qrSrc)}
         </React.Fragment>
     );
 };
