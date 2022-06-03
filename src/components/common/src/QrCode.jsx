@@ -7,6 +7,8 @@ const QrCode = ({
     colors = {},
     altText,
     className,
+    download,
+    downloadTrigger,
 }) => {
     const imgClass = classnames(
         'qr-code',
@@ -39,11 +41,14 @@ const QrCode = ({
     });
 
     return qrSrc && (
-        <img
-            src={qrSrc}
-            alt={altText ? altText : "qr code"}
-            className={imgClass}
-        />
+        <React.Fragment>
+            <img
+                src={qrSrc}
+                alt={altText ? altText : "qr code"}
+                className={imgClass}
+            />
+            {download && downloadTrigger}
+        </React.Fragment>
     );
 };
 
