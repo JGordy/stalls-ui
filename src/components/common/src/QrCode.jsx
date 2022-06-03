@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import QRCode from 'qrcode';
+import classnames from 'classnames';
 
 const QrCode = ({
     url,
     colors = {},
     altText,
+    className,
 }) => {
+    const imgClass = classnames(
+        'qr-code',
+        className,
+    );
 
-    const [qr, setQr] = useState('');
+    const [qrSrc, setQrSrc] = useState('');
 
     const generateCode = () => {
         QRCode.toDataURL(url, {
@@ -19,12 +25,12 @@ const QrCode = ({
                 // light: '#EEEEEEFF'
                 light: colors.dark,
             }
-        }, (err, _url) => {
+        }, (err, src) => {
             if (err) {
                 // eslint-disable-next-line no-console
                 return console.error(err);
             }
-            setQr(_url);
+            setQrSrc(src);
         });
     };
 
@@ -32,7 +38,13 @@ const QrCode = ({
         generateCode();
     });
 
-    return qr && <img src={qr} alt={altText ? altText : "qr code"} />;
+    return qrSrc && (
+        <img
+            src={qrSrc}
+            alt={altText ? altText : "qr code"}
+            className={imgClass}
+        />
+    );
 };
 
 export default QrCode;
