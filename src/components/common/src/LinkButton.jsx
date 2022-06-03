@@ -42,7 +42,7 @@ const LinkButton = ({
         </React.Fragment>
     );
 
-    const isExternalLink = href.includes('https://');
+    const isExternalLink = href.includes('https://') || href.includes('data:');
     if (isExternalLink) {
         return (
             <a
