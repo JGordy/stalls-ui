@@ -19,12 +19,16 @@ const Modal = ({
 
     const showModal = () => {
         toggle();
-        modalRef.current.focus(); // TODO: Why don't these work??
+        if (modalRef && modalRef.current) {
+            modalRef.current.focus(); // TODO: Why don't these work??
+        }
     }
 
     const hideModal = () => {
         toggle();
-        buttonRef.current.focus(); // TODO: Why don't these work??
+        if (buttonRef && buttonRef.current) {
+            buttonRef.current.focus(); // TODO: Why don't these work??
+        }
     }
 
     // TODO: Change this to useKeyPressed hook

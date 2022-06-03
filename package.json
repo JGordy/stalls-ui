@@ -71,6 +71,7 @@
         "react-scripts": "^5.0.1"
     },
     "devDependencies": {
+        "@babel/plugin-proposal-optional-chaining": "^7.17.12",
         "@storybook/addon-actions": "^6.4.19",
         "@storybook/addon-docs": "^6.4.19",
         "@storybook/addon-jest": "^6.4.19",
